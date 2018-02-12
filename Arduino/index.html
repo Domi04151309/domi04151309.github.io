@@ -82,56 +82,12 @@
 			param4 = true for asynchronous beat-LED, false for normal beat-LED (default is false)<br>
 			<i>For param1 you can also use keywords which you can find <a href="./pitches.html">here</a></i>
 		</p>
-		<h2>Example</h2>
-		<pre>
-int g=396;
-int a=440;
-int b=495;
-int hc=528;
-int hd=594;
-int he=660;
-
-#include &ltNotes.h&gt			//Includes the library
-
-Notes n(64,16);				//Sets the beatLEDtime to 64 and the noToneDelay to 16
-
-void setup()
-{
-  n.speakerSetup(11,120);		//Sets the speakerPort to 11 and the beats per minute to 120
-  n.toneLEDSetup(2,3,4,5,6,7,8,9);	//Sets the beatLED to port 2 and the toneLEDs to the ports 3, 4, 5, 6, 7, 8 and 9
-}
-
-void loop()
-{
-  n.note(g,4,false,false);		//Plays the song
-  n.note(a,4,false,false);
-  n.note(b,4,false,false);
-  n.note(hc,4,false,false);
-  n.note(hd,2,false,false);
-  n.note(hd,2,false,false);
-  n.note(he,4,false,false);
-  n.note(he,4,false,false);
-  n.note(he,4,false,false);
-  n.note(he,4,false,false);
-  n.note(hd,1,false,false);
-  n.note(he,4,false,false);
-  n.note(he,4,false,false);
-  n.note(he,4,false,false);
-  n.note(he,4,false,false);
-  n.note(hd,1,false,false);
-  n.note(hc,4,false,false);
-  n.note(hc,4,false,false);
-  n.note(hc,4,false,false);
-  n.note(hc,4,false,false);
-  n.note(b,2,false,false);
-  n.note(b,2,false,false);
-  n.note(a,4,false,false);
-  n.note(a,4,false,false);
-  n.note(a,4,false,false);
-  n.note(a,4,false,false);
-  n.note(g,1,false,false);
-}
-		</pre>
+		<h2>Examples</h2>
+		<p>
+			You can find examples <a href="./examples.html">here</a> and in the library.
+			The examples show you how to use this library and what you can do with it.
+			It also has an example circuit.<br><br><br>
+		</p>
 	</div>
 	<footer>
 		<script src="../js/topScript.js"></script>
