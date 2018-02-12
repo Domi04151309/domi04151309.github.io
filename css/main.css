@@ -1,0 +1,151 @@
+*{
+	padding:0;
+	margin:0;
+}
+html,body{
+	height:100%;
+	width:100%;
+	font:14px verdana, sans-serif;
+}
+h1{
+	color:#fff;
+	display:inline-block;
+	font-weight:500;
+	font-size:14px;
+	letter-spacing:3px;
+	line-height:18px;
+	padding:18px 9px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+div.header{
+	background-image:url(../images/header_bg.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	font-size:13px;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:3;
+	height:54px;
+	overflow:hidden;
+}
+a.logo{
+	float:left;
+	background-position:20px 11px;
+	height:32px;
+	padding:11px 30px;
+	width:43px;
+	background-image:url(../images/logo.png);
+	background-repeat:no-repeat;
+	background-size:58px 32px;
+	box-sizing:content-box;
+	display:block;
+	left:0;
+	position:relative;
+}
+button#CloseButton{
+	float:right;
+	height:48px;
+	width:48px;
+	margin:3px;
+	outline:none;
+	border:0 none;
+	background-color:rgba(0, 0, 0, 0);
+	background-image:url(../images/close.png);
+	background-repeat:no-repeat;
+	background-size:48px 48px;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+div.home{
+	display:none;
+}
+img.home{
+	display:none;
+}
+h1.home{
+	display:none;
+}
+div.base{
+	max-width:780px;
+	padding: 74px 10px;
+	margin:0 auto;
+}
+a{
+	color:#1369BF;
+	font-style:italic;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+h2{
+	color:#1369BF;
+	font-size:18px;
+	font-weight:400;
+	letter-spacing:1px;
+	line-height:25px;
+	margin-bottom:3px;
+	margin-top:32px;
+}
+p{
+	color:#374146;
+	letter-spacing:.5px;
+	line-height:22px;
+}
+p.preview{
+	text-align:center;
+}
+img.preview{
+	display:inline-block;
+	max-width:190px;
+}
+footer{
+	position:fixed;
+	height:64px;
+	width:100%;
+	bottom:0px;
+	background-color:#1369BF;
+	color:#fff;
+	z-index:3;
+}
+.sources{
+	font-style:normal;
+	margin:5px;
+}
+button#TopButton{
+	float:right;
+	height:48px;
+	width:48px;
+	margin:8px;
+	outline:none;
+	border:0 none;
+	background-color:#1369BF;
+	background-image:url(../images/to_top.png);
+	background-repeat:no-repeat;
+	background-size:48px 48px;
+}
+@media only screen and (min-width: 600px) {
+	div.home{
+		display:block;
+		height:512px;
+		width:100%;
+		padding-top:54px;
+		text-align:center;
+		background-image:url(../images/home_bg.png);
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+	img.home{
+		display:inline-block;
+		height:384px;
+	}
+	h1.home{
+		display:inline-block;
+		font-weight:bold;
+		font-size:48px;
+	}
+}

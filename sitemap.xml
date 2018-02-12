@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">+
+<url>
+  <loc>https://domi04151309.github.io/</loc>
+  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://domi04151309.github.io/index.html</loc>
+  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://domi04151309.github.io/gpl3.html</loc>
+  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://domi04151309.github.io/Arduino/index.html</loc>
+  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://domi04151309.github.io/Windows/Tool.html</loc>
+  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://domi04151309.github.io/javascript.html</loc>
+  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://domi04151309.github.io/Android/AlwaysOn.html</loc>
+  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://domi04151309.github.io/Android/AMOLED_Custom.html</loc>
+  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://domi04151309.github.io/Android/Lucitheme.html</loc>
+  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://domi04151309.github.io/sources.html</loc>
+  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://domi04151309.github.io/Arduino/pitches.html</loc>
+  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

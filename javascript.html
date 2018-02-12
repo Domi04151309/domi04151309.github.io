@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Domi04151309 - Javascript Testsite</title>
+	<meta charset="utf-8">  
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<link rel="stylesheet" type="text/css" href="./css/main.css" />
+	<link rel="icon" href="./images/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.PNG"/>
+	<meta name="theme-color" content="#000000">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="header">
+		<a href="./index.html" class="logo"></a>
+		<h1>Domi04151309</h1>
+		<button onclick="closeFunction()" id="CloseButton" title="Back"></button>
+		<script src="./js/googleClose.js"></script>
+	</div>
+	<div class="base">
+		<h2>Testsite</h2>
+
+		<b>Testing Javascript version</b><br>
+
+		<noscript>Your browser isn't able to use Javascript!</noscript><br>
+		<text>If there is no "Ok" or "Yes" nothing was found!</text><br><br>
+
+		<text>Is Javascript activated?</text>
+		<script type="text/javascript">;
+			document.write("Yes");
+		</script><br>
+
+		<text>Version 1.1	</text>
+		<script language="javascript1.1">
+			document.write("Ok");
+		</script><br>
+
+		<text>Version 1.2	</text>
+		<script language="javascript1.2">
+			document.write("Ok");
+		</script><br>
+
+		<text>Version 1.3	</text>
+		<script language="javascript1.3">
+			document.write("Ok");
+		</script><br>
+
+		<text>Version 1.4	</text>
+		<script language="javascript1.4">
+			document.write("Ok");
+		</script><br>
+
+		<text>Version 1.5	</text>
+		<script language="javascript1.5">
+			document.write("Ok");
+		</script><br>
+
+		<text>Version 1.6	</text>
+		<script language="javascript1.6">
+			document.write("Ok");
+		</script><br>
+
+		<text>Version 1.7	</text>
+		<script language="javascript1.7">
+			document.write("Ok");
+		</script><br>
+
+		<text>Version 1.8	</text>
+		<script language="javascript1.8">
+			document.write("Ok");
+		</script><br>
+
+		<text>Version 1.5v	</text>
+		<script type="text/javascript; version=1.5">;
+			document.write("Ok");
+		</script><br>
+
+		<text>Version 1.6v	</text>
+		<script type="text/javascript; version=1.6">;
+			document.write("Ok");
+		</script><br>
+
+		<text>Version 1.7v	</text>
+		<script type="text/javascript; version=1.7">;
+			document.write("Ok");
+		</script><br>
+
+		<text>Version 1.8v	</text>
+		<script type="text/javascript; version=1.8">;
+			document.write("Ok");
+		</script><br><br>
+
+		<b>Testing Browser</b><br>
+		<script type="text/javascript">
+		 if(parseInt(navigator.appVersion) >= 4)
+		  {
+			if(navigator.appName == "Netscape")
+			 document.write("You are using a Netscape based browser like Mozilla Firefox, Google Chrome or Apple Safari.");
+			else if(navigator.appName.indexOf("Internet Explorer") != -1)
+			 document.write("You are using the Internet Explorer.");
+			else if(navigator.appName == "Opera")
+			 document.write("You are using the Opera-Browser.");
+			else
+			 document.write("You are using another browser.");
+		  }
+		  else {
+			document.write("You are using an older browser.");
+		  }
+		</script><br><br>
+
+		<b>System Time</b><br>
+		<script type="text/javascript">
+			var time = new Date();
+			var Day = time.getDate();
+			var Month = time.getMonth();
+			var Year = time.getFullYear();
+			
+			MonthName = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+			DayName = new Array("error", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11st", "12nd", "13rd", "14th", "15th", "16th", "17th", "18th", "19th", "20th", "21st", "22nd", "23rd", "24th", "25th", "26th", "27th", "28th", "29th", "30th", "31st");
+			
+			document.write("Today is the " + DayName[Day] + " of " + MonthName[Month] + ", " + Year + ".");
+		</script><br><br>
+		Back to <a href="./index.html">Mainpage</a>
+	</div>
+	<footer>
+		<script src="./js/topScript.js"></script>
+		<a href="./sources.html"><h1 class="sources">Sources</h1></a>
+		<button onclick="topFunction()" id="TopButton" title="Go to top"></button>
+	</footer>
+</body>
+</html>

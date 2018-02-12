@@ -1,0 +1,124 @@
+*{
+	padding:0;
+	margin:0;
+}
+html,body{
+	height:100%;
+	width:100%;
+	font:14px verdana, sans-serif;
+}
+h1{
+	color:#fff;
+	display:inline-block;
+	font-weight:500;
+	font-size:14px;
+	letter-spacing:3px;
+	line-height:18px;
+	padding:18px 9px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+div.header{
+	background-color:#00979d;
+	font-size:13px;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:3;
+	height:54px;
+	overflow:hidden;
+}
+a.logo{
+	float:left;
+	background-position:20px 11px;
+	height:32px;
+	padding:11px 30px;
+	width:43px;
+	background-image:url(../images/logo.png);
+	background-repeat:no-repeat;
+	background-size:58px 32px;
+	box-sizing:content-box;
+	display:block;
+	left:0;
+	position:relative;
+}
+button#CloseButton{
+	float:right;
+	height:48px;
+	width:48px;
+	margin:3px;
+	outline:none;
+	border:0 none;
+	background-color:rgba(0, 0, 0, 0);
+	background-image:url(../images/close.png);
+	background-repeat:no-repeat;
+	background-size:48px 48px;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+div.base{
+	max-width:780px;
+	padding: 74px 10px;
+	margin:0 auto;
+}
+a{
+	color:#e67e22;
+	font-style:italic;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+h2{
+	color:#e67e22;
+	font-size:18px;
+	font-weight:400;
+	letter-spacing:1px;
+	line-height:25px;
+	margin-bottom:3px;
+	margin-top:32px;
+}
+p{
+	color:#374146;
+	letter-spacing:.5px;
+	line-height:22px;
+}
+pre{
+	border: 0;
+	border-radius: 0;
+	box-sizing: border-box;
+	overflow-x: auto;
+	width: 100%;
+	background-color: #f7f9f9;
+	display: block;
+	font-family: monospace;
+	margin: 1em 0px;
+	color: #434f54;
+}
+footer{
+	position:fixed;
+	height:64px;
+	width:100%;
+	bottom:0px;
+	background-color:#00979d;
+	color:#fff;
+	z-index:3;
+}
+.sources{
+	font-style:normal;
+	margin:5px;
+}
+button#TopButton{
+	float:right;
+	height:48px;
+	width:48px;
+	margin:8px;
+	outline:none;
+	border:0 none;
+	background-color:#00979d;
+	background-image:url(../images/to_top_green.png);
+	background-repeat:no-repeat;
+	background-size:48px 48px;
+}
