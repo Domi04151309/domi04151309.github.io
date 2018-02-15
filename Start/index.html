@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Start</title>
+	<meta charset="utf-8">  
+	<style>
+		*{margin:0;padding:0;}
+		html{width:100%;height:100%;font:14px verdana, sans-serif;color:#ffffff;background-image:url(./bg.jpg);background-size:cover;background-repeat:no-repeat;}
+		body{margin:0;padding:0;width:100%;height:100%;}
+		div.center{position:absolute;top:50%;left:50%;margin-right: -50%;transform:translate(-50%, -50%);text-align:center;}
+		h1{font-size:8vw;}
+		p{font-size:4vw;}
+	</style>
+	<link rel="icon" href="./favicon.ico">
+	<meta name="theme-color" content="#000000">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>	
+		function startTime(){
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			m = checkTime(m);
+			document.getElementById('time').innerHTML =
+			h + ":" + m;
+			checkMessage(h);
+			var t = setTimeout(startTime, 1000);
+		}
+		function checkTime(i){
+			if (i < 10) {i = "0" + i};
+			return i;
+		}
+		function checkMessage(h){
+			if(h >= 18 && h < 22){
+				document.getElementById('message').innerHTML = "Good Evening"
+			}else if(h >= 21 && h < 25){
+				document.getElementById('message').innerHTML = "Good Night"
+			}else if(h >= 0 && h < 13){
+				document.getElementById('message').innerHTML = "Good Morning"
+			}else if(h >= 12 && h < 18){
+				document.getElementById('message').innerHTML = "Good Afternoon"
+			}else{
+				document.getElementById('message').innerHTML = "Hello"
+			}
+		}
+	</script>
+</head>
+<body onload="startTime()">
+	<div class="center">
+		<h1 id="time">Time</h1><p id="message">Message</p>
+	</div>
+</body>
+</html>
