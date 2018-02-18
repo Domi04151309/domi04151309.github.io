@@ -29,7 +29,7 @@
 		</p>
 		<h2>About the library</h2>
 		<p>
-			This library is made for programmers who want a more advanced tone command. It was developed by Dominik Reichl in 2018 and designed for the Arduino Uno.<br>
+			This library is made for programmers who want a more advanced tone function. It was developed by Dominik Reichl in 2018 and designed for the Arduino Uno.<br>
 			This library is free software. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.<br><br>
 			<i>You can download the library <a href="https://github.com/Domi04151309/Arduino-Notes">here</a></i>
 		</p>
@@ -42,7 +42,7 @@
 			5. Click on Sketch &gt Include Library &gt Notes<br>
 			Done!
 		</p>
-		<h2>Commands</h2>
+		<h2>Functions</h2>
 			<pre>Notes n(param1, param2)</pre>
 		<p>
 			param1 = time beat-LED blinks<br>
@@ -66,6 +66,13 @@
 			param6 = pin of the g-LED<br>
 			param7 = pin of the a-LED<br>
 			param8 = pin of the b-LED<br>
+		</p>
+		<br><br>
+		<pre>n.toneLEDState()</pre>
+		<pre>n.toneLEDState(param1)</pre>
+		<p>
+			param1 = ON or OFF for the tone LEDs (default is on)<br>
+			At sketch start this is set to off<br>
 		</p>
 		<br><br>
 		<pre>n.blinkLED(param1)</pre>
