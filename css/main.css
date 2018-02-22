@@ -3,6 +3,7 @@
 	margin:0;
 }
 html,body{
+	color:#374146;
 	height:100%;
 	width:100%;
 	font:14px verdana, sans-serif;
@@ -60,15 +61,6 @@ img{
 	max-width:100%;
 	height:auto;
 }
-div.home{
-	display:none;
-}
-img.home{
-	display:none;
-}
-h1.home{
-	display:none;
-}
 div.base{
 	max-width:780px;
 	padding: 74px 10px;
@@ -92,7 +84,6 @@ h2{
 	margin-top:32px;
 }
 p{
-	color:#374146;
 	letter-spacing:.5px;
 	line-height:22px;
 }
@@ -127,25 +118,4 @@ button#TopButton{
 	background-image:url(../images/to_top.png);
 	background-repeat:no-repeat;
 	background-size:48px 48px;
-}
-@media only screen and (min-width: 600px) {
-	div.home{
-		display:block;
-		height:512px;
-		width:100%;
-		padding-top:54px;
-		text-align:center;
-		background-image:url(../images/home_bg.png);
-		background-repeat:no-repeat;
-		background-size:cover;
-	}
-	img.home{
-		display:inline-block;
-		height:384px;
-	}
-	h1.home{
-		display:inline-block;
-		font-weight:bold;
-		font-size:48px;
-	}
 }
