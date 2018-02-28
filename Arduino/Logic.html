@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Arduino - Logic Gates Library</title>
+	<meta charset="utf-8">  
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<link rel="stylesheet" type="text/css" href="../css/main_green.css" />
+	<link rel="icon" href="../images/favicon_green.ico">
+	<link rel="apple-touch-icon" href="https://domi04151309.github.io/apple-touch-icon.PNG"/>
+	<meta name="theme-color" content="#00979d">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="header">
+		<a href="../index.html" class="logo"></a>
+		<h1>Arduino - Logic Gates Library</h1>
+		<button onclick="closeFunction()" id="CloseButton" title="Back"></button>
+		<script src="../js/googleClose.js"></script>
+	</div>
+	<div class="base">
+		<a href="https://store.arduino.cc/arduino-uno-rev3"><img src="../images/arduino-UNO.png" alt="Arduino Board"></a>
+		<h2>What is Arduino?</h2>
+		<p>
+			Arduino is an open-source electronics platform based on easy-to-use hardware and software.
+			Arduino boards are able to read inputs and turn it into an output.
+			You can tell your board what to do by sending a set of instructions to the microcontroller on the board.<br><br>
+			<i>To the <a href="https://www.arduino.cc/">Arduino Homepage</a></i>
+		</p>
+		<h2>About the Library</h2>
+		<p>
+			This library adds logic gate functions to your Arduino. It was developed by Dominik Reichl in 2018 and designed for the Arduino Uno.<br>
+			This library is free software. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.<br><br>
+			<i>You can download the library <a href="https://github.com/Domi04151309/Arduino-Logic-Gates">here</a></i>
+		</p>
+		<h2>How to Install</h2>
+		<p>
+			1. Download the repository from GitHub<br>
+			2. Unzip it<br>
+			3. Copy the "LogicGates" folder into your library folder<br>
+			4. Open Arduino IDE<br>
+			5. Click on Sketch &gt Include Library &gt Logic Gates<br>
+			Done!
+		</p>
+		<h2>Functions</h2>
+			<pre>NotGate(param1)</pre>
+			<p>
+				param1 = input value<br>
+			</p>
+			<br><br>
+			<pre>AndGate(param1, param2)</pre>
+			<p>
+				param1 = input value<br>
+				param2 = input value<br>
+			</p>
+			<br><br>
+			<pre>NandGate(param1, param2)</pre>
+			<p>
+				param1 = input value<br>
+				param2 = input value<br>
+			</p>
+			<br><br>
+			<pre>OrGate(param1, param2)</pre>
+			<p>
+				param1 = input value<br>
+				param2 = input value<br>
+			</p>
+			<br><br>
+			<pre>NorGate(param1, param2)</pre>
+			<p>
+				param1 = input value<br>
+				param2 = input value<br>
+			</p>
+			<br><br>
+			<pre>XorGate(param1, param2)</pre>
+			<p>
+				param1 = input value<br>
+				param2 = input value<br>
+			</p>
+			<br><br>
+			<pre>XnorGate(param1, param2)</pre>
+			<p>
+				param1 = input value<br>
+				param2 = input value<br>
+			</p>
+		<h2>Example</h2>
+		<pre>
+bool a;
+bool b;
+bool c;
+bool d;
+bool e;
+bool f;
+bool g;
+
+#include <LogicGates.h>
+
+void setup() {
+  Serial.begin(9600);
+  a=NotGate(true);
+  Serial.println(a);
+  b=AndGate(true,true);
+  Serial.println(b);
+  c=NandGate(true,true);
+  Serial.println(c);
+  d=OrGate(true,true);
+  Serial.println(d);
+  e=NorGate(true,true);
+  Serial.println(e);
+  f=XorGate(true,true);
+  Serial.println(f);
+  g=XnorGate(true,true);
+  Serial.println(g);
+}
+
+void loop() {
+}
+		</pre>
+	</div>
+	<footer>
+		<script src="../js/topScript.js"></script>
+		<a href="../sources.html"><h1 class="sources">Sources</h1></a>
+		<button onclick="topFunction()" id="TopButton" title="Go to top"></button>
+	</footer>
+</body>
+</html>
