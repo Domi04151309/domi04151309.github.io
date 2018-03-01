@@ -15,6 +15,10 @@ div.altBase{
 	padding: 20px 10px;
 	margin:0 auto;
 }
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 @media only screen and (min-width: 600px) {
 	div.home{
 		display:block;
@@ -22,6 +26,7 @@ div.altBase{
 		width:100%;
 		padding-top:54px;
 		text-align:center;
+		background-color:#063A6C;
 		background-image:url(../images/home_bg.jpg);
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -29,11 +34,13 @@ div.altBase{
 	img.home{
 		display:inline-block;
 		height:384px;
+		animation: fadein 3s;
 	}
 	h1.home{
 		display:inline-block;
 		font-weight:bold;
 		font-size:48px;
+		animation: fadein 3s;
 	}
 	.dark{
 		background-color:#000;

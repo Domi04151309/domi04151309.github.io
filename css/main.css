@@ -20,6 +20,7 @@ h1{
 	text-transform:uppercase;
 }
 div.header{
+	background-color:#063A6C;
 	background-image:url(../images/header_bg.png);
 	background-repeat:no-repeat;
 	background-size:cover;
