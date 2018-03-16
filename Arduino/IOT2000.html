@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Arduino - IOT2000 Library</title>
+	<meta charset="utf-8">  
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<link rel="stylesheet" type="text/css" href="../css/main_green.css" />
+	<link rel="icon" href="../images/favicon_green.ico">
+	<link rel="apple-touch-icon" href="https://domi04151309.github.io/apple-touch-icon.PNG"/>
+	<meta name="theme-color" content="#00979d">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="header">
+		<a href="../index.html" class="logo"></a>
+		<h1>Arduino - IOT2000 Library</h1>
+		<button onclick="closeFunction()" id="CloseButton" title="Back"></button>
+		<script src="../js/googleClose.js"></script>
+	</div>
+	<div class="base">
+		<img src="../images/IOT2000.png" style="width:35%" alt="IOT2000 Board">
+		<h2>About the Library</h2>
+		<p>
+			This library adds more functionality to your IOT2000 with the Arduino IDE. It was developed by Dominik Reichl in 2018 and designed for the Siemens Simatic IOT2000.<br>
+			This library is free software. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.<br><br>
+			<i>You can download the library <a href="https://github.com/Domi04151309/Siemens-Simatic-IOT2000-Arduino-Library">here</a></i>
+		</p>
+		<h2>How to Install</h2>
+		<p>
+			1. Download the repository from GitHub<br>
+			2. Unzip it<br>
+			3. Copy the "IOT2000" folder into your library folder<br>
+			4. Open Arduino IDE<br>
+			5. Click on Sketch &gt Include Library &gt Siemens Simatic IOT2000<br>
+			Done!
+		</p>
+		<h2>Functions</h2>
+			<pre>userLEDSketchRunning()</pre>
+			<p>
+				Turns on the USER LED<br>
+			</p>
+			<br><br>
+			<pre>activateUserButton()</pre>
+			<p>
+				Makes the USER button usable<br>
+			</p>
+			<br><br>
+			<pre>readUserButton()</pre>
+			<p>
+				Reads the state of the USER button<br>
+			</p>
+			<br><br>
+			<pre>EthernetClientIOT ECIOT</pre>
+			<p>
+				EthernetClient extension<br>
+			</p>
+			<br><br>
+			<pre>eciot.standardHttpResponseHeader(param1)</pre>
+			<p>
+				param1 = EthernetClient client<br>
+				Sends a standard HTTP response header<br>
+			</p>
+			<br><br>
+			<pre>eciot.loadHTML(param1, param2)</pre>
+			<p>
+				param1 = input file<br>
+				param2 = EthernetClient client<br>
+				Extension to load an HTML file for the client<br>
+			</p>
+			<br><br>
+			<p>
+				You can also use the functions of the Ethernet(Galileo) library when you only include this library!
+			</p>
+		<h2>Examples</h2>
+		<p>
+			You can find examples in the library and also use the examples of the Ethernet(Galileo) library.
+		</p>
+	</div>
+	<footer>
+		<script src="../js/topScript.js"></script>
+		<a href="../sources.html"><h1 class="sources">Sources</h1></a>
+		<button onclick="topFunction()" id="TopButton" title="Go to top"></button>
+	</footer>
+</body>
+</html>
