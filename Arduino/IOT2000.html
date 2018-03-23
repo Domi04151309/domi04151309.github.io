@@ -39,6 +39,7 @@
 			<pre>userLEDSketchRunning()</pre>
 			<p>
 				Turns on the USER LED<br>
+				(To see if the sketch is running)<br>
 			</p>
 			<br><br>
 			<pre>activateUserButton()</pre>
@@ -66,12 +67,59 @@
 			<p>
 				param1 = input file<br>
 				param2 = EthernetClient client<br>
-				Extension to load an HTML file for the client<br>
+				Extension to load an HTML file for the client with some extra features<br>
+			</p>
+			<br><br>
+			<pre>getRequest gr</pre>
+			<p>
+				Extension for GET requests<br>
+			</p>
+			<br><br>
+			<pre>gr.getString(param1)</pre>
+			<p>
+				param1 = Input character<br>
+				Gets the input string<br>
+			</p>
+			<br><br>
+			<pre>gr.checkString(param1)</pre>
+			<p>
+				param1 = Search string<br>
+				Searches for the string in the input string<br>
+			</p>
+			<br><br>
+			<pre>gr.resetString()</pre>
+			<p>
+				Clears the input string<br>
 			</p>
 			<br><br>
 			<p>
 				You can also use the functions of the Ethernet(Galileo) library when you only include this library!
 			</p>
+		<h2>Particularities</h2>
+		<p>
+			You can use the definitions on the I/O-Shield and the definition USER_LED in the Arduino IDE to control the parts.<br>
+			When you load an HTML document with the loadHTML function you can write the following in your document to get the values:<br><br>
+			&lt;!--digitalRead(0)--&gt;<br>
+			&lt;!--digitalRead(1)--&gt;<br>
+			&lt;!--digitalRead(2)--&gt;<br>
+			&lt;!--digitalRead(3)--&gt;<br>
+			&lt;!--digitalRead(4)--&gt;<br>
+			&lt;!--digitalRead(5)--&gt;<br>
+			&lt;!--digitalRead(6)--&gt;<br>
+			&lt;!--digitalRead(7)--&gt;<br>
+			&lt;!--digitalRead(8)--&gt;<br>
+			&lt;!--digitalRead(9)--&gt;<br>
+			&lt;!--digitalRead(10)--&gt;<br>
+			&lt;!--digitalRead(11)--&gt;<br>
+			&lt;!--digitalRead(12)--&gt;<br>
+			&lt;!--digitalRead(13)--&gt;<br>
+			&lt;!--analogRead(A0)--&gt;<br>
+			&lt;!--analogRead(A1)--&gt;<br>
+			&lt;!--analogRead(A2)--&gt;<br>
+			&lt;!--analogRead(A3)--&gt;<br>
+			&lt;!--analogRead(A4)--&gt;<br>
+			&lt;!--analogRead(A5)--&gt;<br><br>
+		</p>
 		<h2>Examples</h2>
 		<p>
 			You can find examples in the library and also use the examples of the Ethernet(Galileo) library.
