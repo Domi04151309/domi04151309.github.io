@@ -1,0 +1,21 @@
+.socialDiv{
+	text-align:center;
+}
+.social{
+	box-sizing:content-box;
+	display:inline-block;
+	height:32px;
+	width:32px;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.twitter{background-image:url(./1_twitter.png);}
+.snapchat{background-image:url(./2_snapchat.png);}
+.instagram{background-image:url(./3_instagram.png);}
+.github{background-image:url(./4_github.png);}
+.youtube{background-image:url(./5_youtube.png);}
+.twitter:hover{background-image:url(./1_twitter_hover.png);}
+.snapchat:hover{background-image:url(./2_snapchat_hover.png);}
+.instagram:hover{background-image:url(./3_instagram_hover.png);}
+.github:hover{background-image:url(./4_github_hover.png);}
+.youtube:hover{background-image:url(./5_youtube_hover.png);}
