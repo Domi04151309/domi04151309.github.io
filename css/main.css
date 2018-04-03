@@ -58,9 +58,21 @@ button#CloseButton{
 	background-repeat:no-repeat;
 	background-size:48px 48px;
 }
+p,h2{
+	animation: transformation 1s;
+}
+@keyframes transformation {
+  from {opacity: 0;transform: translateY(+10px);}
+  to   {opacity: 1;}
+}
 img{
 	max-width:100%;
 	height:auto;
+	animation: transformationTwo 1s;
+}
+@keyframes transformationTwo {
+  from {transform: translateY(+10px);}
+  to   {opacity: 1;}
 }
 div.base{
 	max-width:780px;
