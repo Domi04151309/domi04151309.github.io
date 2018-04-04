@@ -1,3 +1,24 @@
+::-webkit-scrollbar{
+  width:0.9vw;
+}
+::-webkit-scrollbar-button{
+	height:0.9vw;
+  background:#C1C1C1; 
+	border:0.1vw solid #F1F1F1;
+}
+::-webkit-scrollbar-button:hover{
+  background:#1369BF; 
+}
+::-webkit-scrollbar-track{
+  background:#F1F1F1; 
+}
+::-webkit-scrollbar-thumb{
+  background:#C1C1C1; 
+	border:0.1vw solid #F1F1F1;
+}
+::-webkit-scrollbar-thumb:hover{
+  background:#1369BF; 
+}
 *{
 	padding:0;
 	margin:0;
