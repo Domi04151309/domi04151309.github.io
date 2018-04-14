@@ -1,18 +1,12 @@
-div.home{
-	display:none;
-}
-img.home{
-	display:none;
-}
-h1.home{
+div.home,img.home,h1.home{
 	display:none;
 }
 div.altBaseFrame{
-	padding: 54px 0;
+  padding: 74px 0 84px;
 }
 div.altBase{
 	max-width:780px;
-	padding: 20px 10px;
+	padding: 0px 10px;
 	margin:0 auto;
 }
 @keyframes fadein {
@@ -42,6 +36,12 @@ div.altBase{
 		font-size:48px;
 		animation: fadein 3s;
 	}
+  div.altBaseFrame{
+    padding: 54px 0 64px;
+  }
+  div.altBase{
+    padding: 20px 10px; 
+  }
 	.dark{
 		background-color:#000;
 		background-image:url(../images/darkBg.jpg);
