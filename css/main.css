@@ -79,7 +79,7 @@ button#CloseButton{
 	background-repeat:no-repeat;
 	background-size:48px 48px;
 }
-p,h2{
+p,h2,img,.juicer{
 	animation: transformation 1s;
 }
 @keyframes transformation {
@@ -89,11 +89,6 @@ p,h2{
 img{
 	max-width:100%;
 	height:auto;
-	animation: transformationTwo 1s;
-}
-@keyframes transformationTwo {
-  from {transform: translateY(+10px);}
-  to   {opacity: 1;}
 }
 div.base{
 	max-width:780px;

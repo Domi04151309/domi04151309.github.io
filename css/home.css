@@ -43,8 +43,16 @@ div.altBase{
     padding: 20px 10px; 
   }
 	.dark{
-		background-color:#000;
+		background-color:#252525;
 		background-image:url(../images/darkBg.jpg);
 		color:#fff;
 	}
+  .juicer{
+    display:block;
+    border:0;
+    height:375px;
+    width:100%;
+    background:#3F729B;
+    overflow:hidden;
+  }
 }
