@@ -9,6 +9,14 @@ div.altBase{
 	padding: 0px 10px;
 	margin:0 auto;
 }
+.juicer{
+  display:block;
+  border:0;
+  height:375px;
+  width:100%;
+  background:#3F729B;
+  overflow:hidden;
+}
 @keyframes fadein {
   from {opacity: 0;transform: translateY(+20px);}
   to   {opacity: 1;}
@@ -47,12 +55,4 @@ div.altBase{
 		background-image:url(../images/darkBg.jpg);
 		color:#fff;
 	}
-  .juicer{
-    display:block;
-    border:0;
-    height:375px;
-    width:100%;
-    background:#3F729B;
-    overflow:hidden;
-  }
 }
