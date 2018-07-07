@@ -41,6 +41,9 @@ h1{
 }
 div.header{
 	background-color:#00979d;
+	background-image:url(../images/header_bg_green.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
 	font-size:13px;
 	position:fixed;
 	top:0;
