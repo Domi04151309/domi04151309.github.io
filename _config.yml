@@ -1,7 +1,5 @@
 repository: Domi04151309/domi04151309.github.io
 
-highlighter: none
-
 gems:
   - jekyll-github-metadata
   - jekyll-optional-front-matter
