@@ -58,17 +58,19 @@ CLS
 echo ################################################################
 echo PC speed up tool
 echo ################################################################
-echo 1 Clear temporary files
-echo 2 Defragment all local volumes on the disk
-echo 3 Registry improvements
-echo 4 Exit
-CHOICE /N /C:1234 /M "PICK A NUMBER (1, 2, 3, or 4)"
-IF ERRORLEVEL ==4 GOTO EXIT
-IF ERRORLEVEL ==3 GOTO THREE
-IF ERRORLEVEL ==2 GOTO TWO
-IF ERRORLEVEL ==1 GOTO ONE
+echo 1 Clear temporary files now
+echo 2 Clear temporary files on every startup
+echo 3 Defragment all local volumes on the disk
+echo 4 Registry improvements
+echo 5 Exit
+CHOICE /N /C:12345 /M "PICK A NUMBER (1, 2, 3, 4 or 5)"
+IF ERRORLEVEL ==5 GOTO EXIT
+IF ERRORLEVEL ==4 GOTO REG
+IF ERRORLEVEL ==3 GOTO DEFRAG
+IF ERRORLEVEL ==2 GOTO TMPBOOT
+IF ERRORLEVEL ==1 GOTO CLRTMP
 
-:ONE
+:CLRTMP
 del /s /f /q c:\windows\temp\*.*
 rd /s /q c:\windows\temp
 md c:\windows\temp
@@ -88,12 +90,36 @@ deltree /y c:\windows\spool\printers
 del c:\WIN386.SWP
 GOTO DONE
 
-:TWO
+:TMPBOOT
+cls
+cd %appdata%\Microsoft\Windows\Start Menu\Programs\Startup
+(
+  echo del /s /f /q c:\windows\temp\*.*
+  echo rd /s /q c:\windows\temp
+  echo md c:\windows\temp
+  echo del /s /f /q C:\WINDOWS\Prefetch
+  echo del /s /f /q %temp%\*.*
+  echo rd /s /q %temp%
+  echo md %temp%
+  echo deltree /y c:\windows\tempor~1
+  echo deltree /y c:\windows\temp
+  echo deltree /y c:\windows\tmp
+  echo deltree /y c:\windows\ff*.tmp
+  echo deltree /y c:\windows\prefetch
+  echo deltree /y c:\windows\history
+  echo deltree /y c:\windows\cookies
+  echo deltree /y c:\windows\recent
+  echo deltree /y c:\windows\spool\printers
+  echo del c:\WIN386.SWP
+) > clrtmp.bat
+GOTO DONE
+
+:DEFRAG
 cls
 Defrag /C
 GOTO DONE
 
-:THREE
+:REG
 cls
 echo ################################################################
 echo PC speed up tool
@@ -101,10 +127,10 @@ echo ################################################################
 echo 1 Apply
 echo 2 Restore Default
 CHOICE /N /C:12 /M "PICK A NUMBER (1 or 2)"
-IF ERRORLEVEL ==2 GOTO THREE_RESTORE
-IF ERRORLEVEL ==1 GOTO THREE_APPLY
+IF ERRORLEVEL ==2 GOTO REG_RESTORE
+IF ERRORLEVEL ==1 GOTO REG_APPLY
 
-:THREE_APPLY
+:REG_APPLY
 cls
 ::[HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects]"VisualFXSetting"=dword:00000003"
 ::[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\ControlAnimations]"DefaultApplied"=dword:00000000"
@@ -118,7 +144,7 @@ echo Doesn't work yet
 pause
 GOTO DONE
 
-:THREE_RESTORE
+:REG_RESTORE
 cls
 ::[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\ControlAnimations]"DefaultApplied"=dword:00000001"
 ::[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\CursorShadow]"DefaultApplied"=dword:00000001"
