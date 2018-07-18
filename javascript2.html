@@ -1,0 +1,153 @@
+---
+title: Javascript Testsite
+---
+    <style>
+      td{padding:0;border:none;}
+    </style>
+    <h2>Testsite</h2>
+    <p>
+      <noscript style="color:red;">JavaScript is blocked or not supported by your browser!</noscript><br>
+      <b>Testing JavaScript Version</b><br>
+
+      <table>
+        <tr>
+          <td>JavaScript activated?</td><td id="js1">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.1:</td><td id="js2">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.2:</td><td id="js3">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.3:</td><td id="js4">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.4:</td><td id="js5">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.5:</td><td id="js6">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.6:</td><td id="js7">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.7:</td><td id="js8">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.8:</td><td id="js9">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.5v:</td><td id="js10">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.6v:</td><td id="js11">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.7v:</td><td id="js12">&#10008;</td>
+        </tr><tr>
+          <td>Version 1.8v:</td><td id="js13">&#10008;</td>
+        </tr>
+      </table>
+      
+      <script type="text/javascript">document.getElementById('js1').innerHTML="&#10004;";</script>
+      <script language="javascript1.1">document.getElementById('js2').innerHTML="&#10004;";</script>
+      <script language="javascript1.2">document.getElementById('js3').innerHTML="&#10004;";</script>
+      <script language="javascript1.3">document.getElementById('js4').innerHTML="&#10004;";</script>
+      <script language="javascript1.4">document.getElementById('js5').innerHTML="&#10004;";</script>
+      <script language="javascript1.5">document.getElementById('js6').innerHTML="&#10004;";</script>
+      <script language="javascript1.6">document.getElementById('js7').innerHTML="&#10004;";</script>
+      <script language="javascript1.7">document.getElementById('js8').innerHTML="&#10004;";</script>
+      <script language="javascript1.8">document.getElementById('js9').innerHTML="&#10004;";</script>
+      <script type="text/javascript; version=1.5">document.getElementById('js10').innerHTML="&#10004;";</script>
+      <script type="text/javascript; version=1.6">document.getElementById('js11').innerHTML="&#10004;";</script>
+      <script type="text/javascript; version=1.7">document.getElementById('js12').innerHTML="&#10004;";</script>
+      <script type="text/javascript; version=1.8">document.getElementById('js13').innerHTML="&#10004;";</script><br><br>
+
+      <b>Testing Browser</b><br>
+      <text id="js14">Information is currently unavailable!</text>
+      <script type="text/javascript">
+        var browser="an unknown browser";
+        if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ){
+          browser="Opera";
+        }else if(navigator.userAgent.indexOf("Edge") != -1 ){
+          browser="Microsoft Edge";
+        }else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )){
+          browser="Microsoft Internet Explorer";
+        }else if(navigator.userAgent.indexOf("Chrome") != -1 ){
+          browser="Google Chrome";
+        }else if(navigator.userAgent.indexOf("Safari") != -1){
+          browser="Apple Safari";
+        }else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+          browser="Mozilla Firefox";
+        }
+        document.getElementById('js14').innerHTML="You are using "+browser+"!";
+      </script><br><br>
+
+      <b>Testing Operating System</b><br>
+      <text id="js15">Information is currently unavailable!</text>
+      <script type="text/javascript">
+        var os="an unknown OS";
+        var clientStrings=[
+            {s:'Windows 10',r:/(Windows 10.0|Windows NT 10.0)/},
+            {s:'Windows 8.1',r:/(Windows 8.1|Windows NT 6.3)/},
+            {s:'Windows 8',r:/(Windows 8|Windows NT 6.2)/},
+            {s:'Windows 7',r:/(Windows 7|Windows NT 6.1)/},
+            {s:'Windows Vista',r:/Windows NT 6.0/},
+            {s:'Windows Server 2003',r:/Windows NT 5.2/},
+            {s:'Windows XP',r:/(Windows NT 5.1|Windows XP)/},
+            {s:'Windows 2000',r:/(Windows NT 5.0|Windows 2000)/},
+            {s:'Windows ME',r:/(Win 9x 4.90|Windows ME)/},
+            {s:'Windows 98',r:/(Windows 98|Win98)/},
+            {s:'Windows 95',r:/(Windows 95|Win95|Windows_95)/},
+            {s:'Windows NT 4.0',r:/(Windows NT 4.0|WinNT4.0|WinNT|Windows NT)/},
+            {s:'Windows CE',r:/Windows CE/},
+            {s:'Windows 3.11',r:/Win16/},
+            {s:'Android',r:/Android/},
+            {s:'Open BSD',r:/OpenBSD/},
+            {s:'Sun OS',r:/SunOS/},
+            {s:'Linux',r:/(Linux|X11)/},
+            {s:'iOS',r:/(iPhone|iPad|iPod)/},
+            {s:'Mac OS X',r:/Mac OS X/},
+            {s:'Mac OS',r:/(MacPPC|MacIntel|Mac_PowerPC|Macintosh)/},
+            {s:'QNX',r:/QNX/},
+            {s:'UNIX',r:/UNIX/},
+            {s:'BeOS',r:/BeOS/},
+            {s:'OS/2',r:/OS\/2/},
+            {s:'Search Bot',r:/(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/}
+        ];
+        for (var id in clientStrings) {
+            if (clientStrings[id].r.test(navigator.userAgent)) {
+                os=clientStrings[id].s;
+                break;
+            }
+        }
+        var osVersion = "";
+        if (/Windows/.test(os)) {
+            osVersion=/Windows (.*)/.exec(os)[1];
+            os='Windows';
+        }
+        switch (os) {
+            case 'Mac OS X':
+                osVersion=/Mac OS X (10[\.\_\d]+)/.exec(navigator.userAgent)[1];
+                break;
+            case 'Android':
+                osVersion=/Android ([\.\_\d]+)/.exec(navigator.userAgent)[1];
+                break;
+            case 'iOS':
+                osVersion=/OS (\d+)_(\d+)_?(\d+)?/.exec(navigator.appVersion);
+                osVersion=osVersion[1] + '.' + osVersion[2] + '.' + (osVersion[3] | 0);
+                break;
+        }
+        document.getElementById('js15').innerHTML="You are using "+os+" "+osVersion+"!";
+      </script><br><br>
+      
+      <b>System Time</b><br>
+      <text id="js16">Information is currently unavailable!</text>
+      <script type="text/javascript">
+        function startTime(){
+          var time=new Date();
+          var h=time.getHours();
+          var m=time.getMinutes();
+          var s=time.getSeconds();
+          var Day=time.getDate();
+          var Month=time.getMonth();
+          var Year=time.getFullYear();
+          MonthName=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+          DayName=new Array("error","1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th","11st","12nd","13rd","14th","15th","16th","17th","18th","19th","20th","21st","22nd","23rd","24th","25th","26th","27th","28th","29th","30th","31st");
+          if(m<10){m="0"+m};if(s<10){s="0"+s};
+          document.getElementById('js16').innerHTML="Today is the "+DayName[Day]+" of "+MonthName[Month]+", "+Year+".<br>It is "+h+":"+m+":"+s+".";
+          setTimeout(startTime,1000);
+        }
+      </script><br><br>
+      Back to <a href="./">Mainpage</a>
+    </p>
