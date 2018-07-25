@@ -40,7 +40,7 @@ h1{
 	text-decoration:none;
 	text-transform:uppercase;
 }
-div.header{
+header{
 	background-color:#041B33;
 	background-image:url(../images/header_bg.jpg);
 	background-repeat:no-repeat;

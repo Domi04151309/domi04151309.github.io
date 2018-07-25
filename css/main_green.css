@@ -39,7 +39,7 @@ h1{
 	text-decoration:none;
 	text-transform:uppercase;
 }
-div.header{
+header{
 	background-color:#0C575A;
 	background-image:url(../images/header_bg_green.jpg);
 	background-repeat:no-repeat;
