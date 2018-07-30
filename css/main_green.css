@@ -137,6 +137,6 @@ button#TopButton{
 	outline:none;
 	border:0 none;
   cursor:pointer;
-	background:#1369BF url(../images/to_top.svg) no-repeat;
+	background:#00979d url(../images/to_top.svg) no-repeat;
 	background-size:48px 48px;
 }
