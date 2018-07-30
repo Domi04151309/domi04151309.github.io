@@ -66,18 +66,6 @@ a.logo{
 	left:0;
 	position:relative;
 }
-button#CloseButton{
-	float:right;
-	height:48px;
-	width:48px;
-	margin:3px;
-	outline:none;
-	border:0 none;
-	background-color:rgba(0, 0, 0, 0);
-	background-image:url(../images/close.png);
-	background-repeat:no-repeat;
-	background-size:48px 48px;
-}
 article{
 	animation:transformation 1s;
 }
@@ -148,8 +136,7 @@ button#TopButton{
 	margin:8px;
 	outline:none;
 	border:0 none;
-	background-color:#00979d;
-	background-image:url(../images/to_top_green.png);
-	background-repeat:no-repeat;
+  cursor:pointer;
+	background:#1369BF url(../images/to_top.svg) no-repeat;
 	background-size:48px 48px;
 }
