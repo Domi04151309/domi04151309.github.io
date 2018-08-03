@@ -28,31 +28,28 @@ div.altBase{
 		width:100%;
 		padding-top:54px;
 		text-align:center;
-		background-color:#04325A;
-		background-image:url(../images/home_bg.jpg);
-		background-repeat:no-repeat;
+		background:#04325A url(../images/home_bg.jpg) no-repeat;
 		background-size:cover;
 	}
 	img.home{
 		display:inline-block;
 		height:384px;
-		animation: fadein 3s;
+		animation:fadein 3s;
 	}
 	h1.home{
 		display:inline-block;
 		font-weight:bold;
 		font-size:48px;
-		animation: fadein 3s;
+		animation:fadein 3s;
 	}
   div.altBaseFrame{
-    padding: 54px 0 64px;
+    padding:54px 0 64px;
   }
   div.altBase{
-    padding: 20px 10px; 
+    padding:20px 10px; 
   }
 	.dark{
-		background-color:#252525;
-		background-image:url(../images/darkBg.jpg);
+    background:#252525 url(../images/darkBg.jpg);
 		color:#fff;
 	}
 }

@@ -1,0 +1,35 @@
+body{
+  background:#04325A url(../images/home_bg.jpg) no-repeat;
+  background-size:cover;
+}
+article {
+  margin:0;
+  padding:0;
+  max-width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.socialDiv{
+  text-align:center;
+}
+.social{
+  box-sizing:content-box;
+  display:inline-block;
+  height:128px;
+  width:128px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  transition:background 0.2s linear;
+}
+.twitter{background-image:url(./1_twitter_white.png);}
+.snapchat{background-image:url(./2_snapchat_white.png);}
+.instagram{background-image:url(./3_instagram_white.png);}
+.github{background-image:url(./4_github_white.png);}
+.youtube{background-image:url(./5_youtube_white.png);}
+.twitter:hover{background-image:url(./1_twitter_hover.png);}
+.snapchat:hover{background-image:url(./2_snapchat_hover.png);}
+.instagram:hover{background-image:url(./3_instagram_hover.png);}
+.github:hover{background-image:url(./4_github_hover.png);}
+.youtube:hover{background-image:url(./5_youtube_hover.png);}
