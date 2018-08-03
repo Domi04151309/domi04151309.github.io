@@ -4,7 +4,7 @@ title: Index of All Files
     <img src="{{ site.baseurl }}/images/error.png">
     <h2>{{page.title}}</h2>
     <h3>Pages</h3>
-    {% for file in site.pages %}<a href="{{ site.baseurl }}{{ file.path }}">{{ file.title }}</a><br>
+    {% for file in site.pages %}<a href="{{ site.baseurl }}{{ file.path }}">{{ file.title }}</a> <i style="color:#808080;">{{ site.baseurl }}{{ file.path }}</i><br>
     {% endfor %}<h3>Other Files</h3>
     {% for file in site.static_files %}<a href="{{ site.baseurl }}{{ file.path }}">{{ site.baseurl }}{{ file.path }}</a><br>
     {% endfor %}
