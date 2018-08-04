@@ -16,8 +16,11 @@ $(document).ready(function() {
     $('html,body').animate({scrollTop: $(aid).offset().top-86},500);
     window.history.pushState(null, null, aid);
   });
+  setTimeout(loadHash,1000);
+});
+function loadHash() {
   if (location.hash) {
     var aid = location.hash;
     $('html,body').animate({scrollTop: $(aid).offset().top-86},500);
   }
-});
+}
