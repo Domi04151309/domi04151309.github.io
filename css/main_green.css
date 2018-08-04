@@ -79,7 +79,7 @@ img{
 }
 article{
 	max-width:780px;
-	padding:74px 10px;
+	padding:74px 20px;
 	margin:0 auto;
 }
 a{
@@ -89,6 +89,12 @@ a{
 }
 a:hover{
 	text-decoration:underline;
+}
+a.hash{
+  float:left;
+  padding-right:4px;
+  margin-left:-20px;
+  color:#808080;
 }
 h2{
 	color:#e67e22;
