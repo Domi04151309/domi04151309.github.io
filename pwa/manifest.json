@@ -29,7 +29,7 @@
       "sizes": "192x192"
     },
     {
-      "src": "/pwa/logo.svg",
+      "src": "/pwa/logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
