@@ -2,11 +2,13 @@ importScripts('/pwa/cache-polyfill.js');
 
 self.addEventListener('install', function(e) {
   e.waitUntil(
-    caches.open('hospiz-malsch').then(function(cache) {
+    caches.open('domi').then(function(cache) {
       return cache.addAll([
         '/',
         '/css/home.css',
         '/css/main.css',
+        '/images/header_bg.jpg',
+        '/images/logo.png',
         '/images/logo_big.png'
       ]);
     })
