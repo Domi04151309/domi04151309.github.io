@@ -9,6 +9,7 @@ self.addEventListener('install', function(e) {
         '/css/main.css',
         '/images/header_bg.jpg',
         '/images/logo.png',
+        '/images/home_bg.jpg',
         '/images/logo_big.png'
       ]);
     })
