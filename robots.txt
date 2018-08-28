@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://domi04151309.github.io/sitemap.xml

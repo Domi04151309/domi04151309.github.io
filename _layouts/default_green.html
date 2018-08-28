@@ -11,22 +11,30 @@
 	<meta name="msapplication-config" content="{{site.baseurl}}/ieconfig.xml" />
 	<meta name="theme-color" content="#0C575A">
 	<meta property="og:image" content="{{site.baseurl}}/preview.jpg">
+  <link rel="manifest" href="{{site.baseurl}}/pwa/manifest.json">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="{{site.baseurl}}/js/postprocess.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
+  <script src="{{site.baseurl}}/js/postprocess.js" defer></script>
 	<header>
-		<a href="{{site.baseurl}}/" class="logo"></a>
+		<a href="{{site.baseurl}}/" class="logo">Home</a>
 		<h1>Domi04151309</h1>
 	</header>
   <article>
 {{ content }}
 	</article>
 	<footer>
-		<script src="{{site.baseurl}}/js/topScript.js"></script>
+		<script src="{{site.baseurl}}/js/topScript.js" async></script>
 		<a href="{{site.baseurl}}/sources"><h1 class="sources">Sources</h1></a>
 		<button onclick="topFunction()" id="TopButton" title="Go to top"></button>
 	</footer>
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('{{site.baseurl}}/pwa/sw.js')
+               .then(function() { console.log("Service Worker Registered"); });
+    }
+  </script>
 </body>
 </html>

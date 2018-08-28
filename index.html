@@ -15,6 +15,7 @@
 	<meta name="msapplication-config" content="/ieconfig.xml" />
 	<meta name="theme-color" content="#000000">
 	<meta property="og:image" content="https://domi04151309.github.io/preview.jpg">
+  <link rel="manifest" href="/pwa/manifest.json">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="application/ld+json">
   {
@@ -31,24 +32,24 @@
   </script>
 </head>
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./js/postprocess.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
+  <script src="./js/postprocess.js" defer></script>
 	<header>
-		<a href="./" class="logo"></a>
+		<a href="./" class="logo">Home</a>
 		<h1>Domi04151309</h1>
 	</header>
 	<div class="altBaseFrame">
 		<div class="home">
-			<img class="home" src="./images/logo_big.png"><br>
+			<img class="home" src="./images/logo_big.png" alt="Logo"><br>
 			<h1 class="home">Domi04151309</h1>
 		</div>
 		<div class="altBase">
 			<div class="socialDiv">
-				<a href="https://twitter.com/Domi04151309" class="social twitter"></a>
-				<a href="https://www.snapchat.com/add/domi04151309" class="social snapchat"></a>
-				<a href="https://www.instagram.com/domi04151309/" class="social instagram"></a>
-				<a href="https://github.com/Domi04151309" class="social github"></a>
-				<a href="https://www.youtube.com/channel/UCGnCS1DQZHXksuI9YEIIbgA" class="social youtube"></a>
+				<a href="https://twitter.com/Domi04151309" class="social twitter">Twitter</a>
+				<a href="https://www.snapchat.com/add/domi04151309" class="social snapchat">Snapchat</a>
+				<a href="https://www.instagram.com/domi04151309/" class="social instagram">Instagram</a>
+				<a href="https://github.com/Domi04151309" class="social github">GitHub</a>
+				<a href="https://www.youtube.com/channel/UCGnCS1DQZHXksuI9YEIIbgA" class="social youtube">YouTube</a>
 			</div>
 			<h2>About Me</h2>
 			<p>
@@ -63,7 +64,7 @@
 				Here you can see some pictures which I took with my cellphone.<br>
 				I have an OnePlus 3 which has a quite nice camera.<br>
 			</p>
-			<iframe src="./juicer" class="juicer"></iframe>
+			<iframe title="Instagram Feed" src="./juicer" class="juicer"></iframe>
 			<h2>Programming Languages</h2>
 			<p>
 				I am good at <a href="https://en.wikipedia.org/wiki/Hypertext_Markup_Language">HTML</a> and <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>
@@ -114,9 +115,16 @@
 		</div>
 	</div>
 	<footer>
-		<script src="./js/topScript.js"></script>
+		<script src="./js/topScript.js" async></script>
 		<a href="./sources"><h1 class="sources">Sources</h1></a>
 		<button onclick="topFunction()" id="TopButton" title="Go to top"></button>
 	</footer>
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('/pwa/sw.js')
+               .then(function() { console.log("Service Worker Registered"); });
+    }
+  </script>
 </body>
 </html>

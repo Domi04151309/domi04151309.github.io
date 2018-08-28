@@ -1,0 +1,43 @@
+{
+  "short_name": "Domi04151309",
+  "name": "Domi04151309",
+  "description": "On this page you can find most of my projects. Also a lot of it is open-source and published under the terms of the GNU GPL 3. Improvement suggestions are always welcome.",
+  "icons": [
+    {
+      "src": "/pwa/mipmap-mdpi/ic_launcher.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/pwa/mipmap-hdpi/ic_launcher.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/pwa/mipmap-xhdpi/ic_launcher.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/pwa/mipmap-xxhdpi/ic_launcher.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/pwa/mipmap-xxxhdpi/ic_launcher.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/pwa/logo.svg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "theme_color": "#000"
+}

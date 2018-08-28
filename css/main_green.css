@@ -61,6 +61,7 @@ a.logo{
 	background-image:url(../images/logo.png);
 	background-repeat:no-repeat;
 	background-size:58px 32px;
+  font-size:0;
 	box-sizing:content-box;
 	display:block;
 	left:0;
