@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("h2").each(function(i) {
+  $("h2, h3").each(function(i) {
     var heading = $(this);
     var headingtext = heading.text().toLowerCase().trim().replace(/[\.,-\/#!?$%\^&\*;:{}=\-_`~()]/g,"").replace(/[ ]/g,"-");
     heading.attr("id",headingtext );

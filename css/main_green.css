@@ -94,6 +94,7 @@ a:hover{
 a.hash{
   float:left;
   margin-left:-18px;
+  font-weight:400;
   color:#808080;
 }
 h2{
@@ -104,6 +105,13 @@ h2{
 	line-height:25px;
 	margin-bottom:3px;
 	margin-top:32px;
+}
+h3{
+	font-size:14px;
+	font-weight:bold;
+	letter-spacing:.5px;
+	line-height:22px;
+	margin:0;
 }
 p{
 	color:#374146;
