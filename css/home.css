@@ -12,9 +12,9 @@ div.altBase{
 .juicer{
   display:block;
   border:0;
-  height:375px;
+  height:390px;
   width:100%;
-  background:#3F729B;
+  background:#1369BF;
   overflow:hidden;
 }
 @keyframes fadein {
