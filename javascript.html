@@ -4,7 +4,7 @@ title: Javascript Testsite
     <style>td{padding:0;}</style>
     <h2>Testsite</h2>
     <p>
-      <noscript style="color:red;">JavaScript is blocked or not supported by your browser!</noscript><br>
+      <noscript style="color:red;">JavaScript is blocked or not supported by your browser!<br></noscript>
       <b>Testing JavaScript Version</b><br>
 
       <table>
@@ -148,5 +148,57 @@ title: Javascript Testsite
           setTimeout(startTime,1000);
         }
       </script><br><br>
-      Back to <a href="./">Mainpage</a>
+      
+      <b>IP Address</b><br>
+      <table>
+        <tr>
+          <td>Your IP:</td><td id="js17_0">&#10008;</td>
+        </tr><tr>
+          <td>Advance Shipping Notice:</td><td id="js17_1">&#10008;</td>
+        </tr><tr>
+          <td>Netmask:</td><td id="js17_2">&#10008;</td>
+        </tr><tr>
+          <td>Hostname:</td><td id="js17_3">&#10008;</td>
+        </tr><tr>
+          <td>City:</td><td id="js17_4">&#10008;</td>
+        </tr><tr>
+          <td>Post code:</td><td id="js17_5">&#10008;</td>
+        </tr><tr>
+          <td>Country:</td><td id="js17_6">&#10008;</td>
+        </tr><tr>
+          <td>Country code:</td><td id="js17_7">&#10008;</td>
+        </tr><tr>
+          <td>Latitude:</td><td id="js17_8">&#10008;</td>
+        </tr><tr>
+          <td>Longitude:</td><td id="js17_9">&#10008;</td>
+        </tr>
+      </table>
+      <span id="loc"></span>
+      <script type="text/javascript">
+        function reqListener () {
+          console.log(this.responseText);
+          var obj = JSON.parse(this.responseText);
+          document.getElementById("js17_0").innerHTML = obj.ip.ip;
+          document.getElementById("js17_1").innerHTML = obj.ip.asn;
+          document.getElementById("js17_2").innerHTML = obj.ip.netmask;
+          document.getElementById("js17_3").innerHTML = obj.ip.hostname;
+          document.getElementById("js17_4").innerHTML = obj.ip.city;
+          document.getElementById("js17_5").innerHTML = obj.ip.post_code;
+          document.getElementById("js17_6").innerHTML = obj.ip.country;
+          document.getElementById("js17_7").innerHTML = obj.ip.country_code;
+          document.getElementById("js17_8").innerHTML = obj.ip.latitude;
+          document.getElementById("js17_9").innerHTML = obj.ip.longitude;
+          var e = document.createElement('a');
+          e.setAttribute('href', 'https://www.google.de/maps/place/' + obj.ip.latitude + "," + obj.ip.longitude);
+          var node = document.createTextNode('Show location on map');
+          e.appendChild(node);
+          var element = document.getElementById('loc');
+          element.appendChild(e);
+        }
+
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", reqListener);
+        oReq.open("GET", "https://ip.nf/me.json");
+        oReq.send();
+      </script><br><br>
     </p>
