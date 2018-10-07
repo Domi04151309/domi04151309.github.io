@@ -68,6 +68,11 @@ a.logo{
 	left:0;
 	position:relative;
 }
+a.logo:hover{
+	background-image:url(../images/logo_hover.png);
+	background-repeat:no-repeat;
+	background-size:58px 32px;
+}
 article,div.altBase{
 	animation:transformation 1s;
 }

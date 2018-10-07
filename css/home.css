@@ -1,4 +1,4 @@
-div.home,img.home,h1.home{
+.home{
 	display:none;
 }
 div.altBaseFrame{
@@ -30,17 +30,31 @@ div.altBase{
 		text-align:center;
 		background:#04325A url(../images/home_bg.jpg) no-repeat;
 		background-size:cover;
+    overflow:hidden;
 	}
-	img.home{
-		display:inline-block;
+  span.home{
+    display:inline-block;
+		background:url(../images/logo_big.png) no-repeat;
+		background-size:cover;
 		height:384px;
+    width:384px;
+    font-size:0;
 		animation:fadein 3s;
-	}
+  }
+  span.home:hover{
+		background:url(../images/logo_big_hover.png) no-repeat;
+		background-size:cover;
+  }
 	h1.home{
 		display:inline-block;
 		font-weight:bold;
-		font-size:48px;
+		font-size:0;
+    height:48px;
+    width:373px;
+    padding:0;
 		animation:fadein 3s;
+		background:url(../images/text.png) no-repeat;
+		background-size:100% 100%;
 	}
   div.altBaseFrame{
     padding:54px 0 64px;
