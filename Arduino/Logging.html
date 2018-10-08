@@ -1,79 +1,92 @@
 ---
 title: Arduino Logging Library
 ---
-		<a href="https://store.arduino.cc/arduino-uno-rev3"><img src="../images/arduino-UNO.png" alt="Arduino Board"></a>
-		<h2>What is Arduino?</h2>
-		<p>
-			Arduino is an open-source electronics platform based on easy-to-use hardware and software.
-			Arduino boards are able to read inputs and turn it into an output.
-			You can tell your board what to do by sending a set of instructions to the microcontroller on the board.<br><br>
-			<i>To the <a href="https://www.arduino.cc/">Arduino Homepage</a></i>
-		</p>
-		<h2>About the Library</h2>
-		<p>
-			This library allows you to log actions in the serial monitor. It was developed by Dominik Reichl in 2018 and designed for Arduino boards.<br>
-			This library is free software. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.<br><br>
-			<i>You can download the library <a href="https://github.com/Domi04151309/Arduino-Logging-Library">here</a></i>
-		</p>
-		<h2>How to Install</h2>
-		<p>
-			1. Download the repository from GitHub<br>
-			2. Unzip it<br>
-			3. Copy the "Arduino-Loggong-Library-master" folder into your library folder<br>
-			4. Open the Arduino IDE<br>
-			5. Click on Sketch &gt Include Library &gt Logging<br>
-			Done!
-		</p>
-		<h2>Functions</h2>
-			<pre>Log Log</pre>
-			<p>
-				Class constructor<br>
-			</p>
-			<br><br>
-			<pre>Log.d(String tag, String msg)</pre>
-			<p>
-				tag = Used to identify the source of a log message. It usually identifies the class or activity where the log call occurs.<br>
-				msg = The message you would like logged.<br>
-			</p>
-			<br><br>
-			<pre>Log.e(String tag, String msg)</pre>
-			<p>
-				tag = Used to identify the source of a log message. It usually identifies the class or activity where the log call occurs.<br>
-				msg = The message you would like logged.<br>
-			</p>
-			<br><br>
-			<pre>Log.i(String tag, String msg)</pre>
-			<p>
-				tag = Used to identify the source of a log message. It usually identifies the class or activity where the log call occurs.<br>
-				msg = The message you would like logged.<br>
-			</p>
-			<br><br>
-			<pre>Log.v(String tag, String msg)</pre>
-			<p>
-				tag = Used to identify the source of a log message. It usually identifies the class or activity where the log call occurs.<br>
-				msg = The message you would like logged.<br>
-			</p>
-			<br><br>
-			<pre>Log.w(String tag, String msg)</pre>
-			<p>
-				tag = Used to identify the source of a log message. It usually identifies the class or activity where the log call occurs.<br>
-				msg = The message you would like logged.<br>
-			</p>
-			<br><br>
-			<pre>Log.wtf(String tag, String msg)</pre>
-			<p>
-				tag = Used to identify the source of a log message. It usually identifies the class or activity where the log call occurs.<br>
-				msg = The message you would like logged.<br>
-			</p>
-			<br><br>
-			<pre>Log.println(String priority, String tag, String msg)</pre>
-			<p>
+    <a href="https://store.arduino.cc/arduino-uno-rev3"><img src="../images/arduino-UNO.png" alt="Arduino Board"></a>
+    <h2>What is Arduino?</h2>
+    <p>
+      Arduino is an open-source electronics platform based on easy-to-use hardware and software.
+      Arduino boards are able to read inputs and turn it into an output.
+      You can tell your board what to do by sending a set of instructions to the microcontroller on the board.<br><br>
+      <i>To the <a href="https://www.arduino.cc/">Arduino Homepage</a></i>
+    </p>
+    <h2>About the Library</h2>
+    <p>
+      This library allows you to log actions in the serial monitor. It was developed by Dominik Reichl in 2018 and designed for Arduino boards.<br>
+      This library is free software. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.<br><br>
+      <i>You can download the library <a href="https://github.com/Domi04151309/Arduino-Logging-Library">here</a></i>
+    </p>
+    <h2>How to Install</h2>
+    <p>
+      1. Download the repository from GitHub<br>
+      2. Unzip it<br>
+      3. Copy the "Arduino-Loggong-Library-master" folder into your library folder<br>
+      4. Open the Arduino IDE<br>
+      5. Click on Sketch &gt Include Library &gt Logging<br>
+      Done!
+    </p>
+    <h2>Functions</h2>
+      <pre>Log Log</pre>
+      <p>
+        Class constructor<br>
+      </p>
+      <pre>LOG_DEBUG</pre>
+      <p>
+        Priority constant for the println method; use Log.d.<br>
+      </p>
+      <pre>LOG_ERROR</pre>
+      <p>
+        Priority constant for the println method; use Log.e.<br>
+      </p>
+      <pre>LOG_INFO</pre>
+      <p>
+        Priority constant for the println method; use Log.i.<br>
+      </p>
+      <pre>LOG_VERBOSE</pre>
+      <p>
+        Priority constant for the println method; use Log.v.<br>
+      </p>
+      <pre>LOG_WARN</pre>
+      <p>
+        Priority constant for the println method; use Log.w.<br>
+      </p>
+      <pre>Log.d(String tag, String msg)</pre>
+      <p>
+        tag = Used to identify the source of a log message.<br>
+        msg = The message you would like logged.<br>
+      </p>
+      <pre>Log.e(String tag, String msg)</pre>
+      <p>
+        tag = Used to identify the source of a log message.<br>
+        msg = The message you would like logged.<br>
+      </p>
+      <pre>Log.i(String tag, String msg)</pre>
+      <p>
+        tag = Used to identify the source of a log message.<br>
+        msg = The message you would like logged.<br>
+      </p>
+      <pre>Log.v(String tag, String msg)</pre>
+      <p>
+        tag = Used to identify the source of a log message.<br>
+        msg = The message you would like logged.<br>
+      </p>
+      <pre>Log.w(String tag, String msg)</pre>
+      <p>
+        tag = Used to identify the source of a log message.<br>
+        msg = The message you would like logged.<br>
+      </p>
+      <pre>Log.wtf(String tag, String msg)</pre>
+      <p>
+        tag = Used to identify the source of a log message.<br>
+        msg = The message you would like logged.<br>
+      </p>
+      <pre>Log.println(String priority, String tag, String msg)</pre>
+      <p>
         priority = The priority/type of this log message.<br>
-				tag = Used to identify the source of a log message. It usually identifies the class or activity where the log call occurs.<br>
-				msg = The message you would like logged.<br>
-			</p>
-		<h2>Example</h2>
-		<pre>
+        tag = Used to identify the source of a log message.<br>
+        msg = The message you would like logged.<br>
+      </p>
+    <h2>Example</h2>
+    <pre>
 #include &lt;Logging.h&gt;
 
 Log Log;
@@ -100,4 +113,4 @@ void loop() {
   Serial.println();
   delay(5000);
 }
-		</pre>
+    </pre>
