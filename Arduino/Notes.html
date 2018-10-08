@@ -25,45 +25,41 @@ title: Arduino Notes Library
 			Done!
 		</p>
 		<h2>Functions</h2>
-			<pre>Notes n(param1, param2)</pre>
+			<pre>Notes n(unsigned int x, unsigned int y)</pre>
 		<p>
-			param1 = time beat-LED blinks<br>
-			param2 = space between notes<br>
+			x = time beat-LED blinks<br>
+			y = space between notes<br>
 		</p>
-		<br><br>
-		<pre>n.speakerSetup(param1)</pre>
-		<pre>n.speakerSetup(param1, param2)</pre>
+		<pre>n.speakerSetup(uint8_t speaker)</pre>
+		<pre>n.speakerSetup(uint8_t speaker, unsigned int speaker2)</pre>
 		<p>
-			param1 = pin of the speaker<br>
-			param2 = beats per minute (default is 120)<br>
+			speaker = pin of the speaker<br>
+			speaker2 = beats per minute (default is 120)<br>
 		</p>
-		<br><br>
-		<pre>n.toneLEDSetup(param1, param2, param3, param4, param5, param6, param7, param8)</pre>
+		<pre>n.toneLEDSetup(uint8_t pin0, uint8_t pin1, uint8_t pin2, uint8_t pin3, uint8_t pin4, uint8_t pin5, uint8_t pin6, uint8_t pin7)</pre>
 		<p>
-			param1 = pin of the beat-LED<br>
-			param2 = pin of the c-LED<br>
-			param3 = pin of the d-LED<br>
-			param4 = pin of the e-LED<br>
-			param5 = pin of the f-LED<br>
-			param6 = pin of the g-LED<br>
-			param7 = pin of the a-LED<br>
-			param8 = pin of the b-LED<br>
+			pin0 = pin of the beat-LED<br>
+			pin1 = pin of the c-LED<br>
+			pin2 = pin of the d-LED<br>
+			pin3 = pin of the e-LED<br>
+			pin4 = pin of the f-LED<br>
+			pin5 = pin of the g-LED<br>
+			pin6 = pin of the a-LED<br>
+			pin7 = pin of the b-LED<br>
 		</p>
-		<br><br>
 		<pre>n.toneLEDState()</pre>
-		<pre>n.toneLEDState(param1)</pre>
+		<pre>n.toneLEDState(bool state)</pre>
 		<p>
-			param1 = ON or OFF for the tone LEDs (default is on)<br>
+			state = ON or OFF for the tone LEDs (default is on)<br>
 			At sketch start this is set to off<br>
 		</p>
-		<br><br>
-		<pre>n.blinkLED(param1)</pre>
+		<pre>n.blinkLED(uint8_t param1LED)</pre>
 		<p>
-			param1 = pin of the LED you want to blink<br>
+			param1LED = pin of the LED you want to blink<br>
 		</p>
-		<br><br>
-		<pre>n.note(param1, param2)</pre>
-		<pre>n.note(param1, param2, param3, param4)</pre>
+		<pre>n.note(float param1, uint8_t param2)</pre>
+		<pre>n.note(float param1, uint8_t param2, bool param3)</pre>
+		<pre>n.note(float param1, uint8_t param2, bool param3, bool param4)</pre>
 		<p>
 			param1 = frequency of the tone you want to play<br>
 			param2 = 1, 2, 3, 4 or 8 for the length<br>

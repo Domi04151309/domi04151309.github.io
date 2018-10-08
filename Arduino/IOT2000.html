@@ -23,57 +23,93 @@ title: Arduino IOT2000 Library
 				Turns on the USER LED<br>
 				(To see if the sketch is running)<br>
 			</p>
-			<br><br>
 			<pre>activateUserButton()</pre>
 			<p>
 				Makes the USER button usable<br>
 			</p>
-			<br><br>
 			<pre>readUserButton()</pre>
 			<p>
 				Reads the state of the USER button<br>
 			</p>
-			<br><br>
 			<pre>EthernetClientIOT ECIOT</pre>
 			<p>
 				EthernetClient extension<br>
 			</p>
-			<br><br>
-			<pre>eciot.standardHttpResponseHeader(param1)</pre>
+			<pre>eciot.standardHttpResponseHeader(EthernetClient client)</pre>
 			<p>
-				param1 = EthernetClient client<br>
 				Sends a standard HTTP response header<br>
 			</p>
-			<br><br>
-			<pre>eciot.loadHTML(param1, param2)</pre>
+			<pre>eciot.loadHTML(char* location, EthernetClient client)</pre>
 			<p>
-				param1 = input file<br>
-				param2 = EthernetClient client<br>
+				location = input file<br>
 				Extension to load an HTML file for the client with some extra features<br>
 			</p>
-			<br><br>
 			<pre>getRequest gr</pre>
 			<p>
 				Extension for GET requests<br>
 			</p>
-			<br><br>
-			<pre>gr.getString(param1)</pre>
+			<pre>gr.getString(char c)</pre>
 			<p>
-				param1 = Input character<br>
+				c = Input character<br>
 				Gets the input string<br>
 			</p>
-			<br><br>
-			<pre>gr.checkString(param1)</pre>
+			<pre>gr.checkString(char* y)</pre>
 			<p>
-				param1 = Search string<br>
+				y = Search string<br>
 				Searches for the string in the input string<br>
 			</p>
-			<br><br>
 			<pre>gr.resetString()</pre>
 			<p>
 				Clears the input string<br>
 			</p>
-			<br><br>
+      <pre>USER_LED</pre>
+			<p>
+				Constant for the user LED<br>
+			</p>
+      <pre>DI0</pre>
+			<p>
+				Constant for the I/O-Shield<br>
+			</p>
+      <pre>DI1</pre>
+			<p>
+				Constant for the I/O-Shield<br>
+			</p>
+      <pre>DI2</pre>
+			<p>
+				Constant for the I/O-Shield<br>
+			</p>
+      <pre>DI3</pre>
+			<p>
+				Constant for the I/O-Shield<br>
+			</p>
+      <pre>DI4</pre>
+			<p>
+				Constant for the I/O-Shield<br>
+			</p>
+      <pre>DQ0</pre>
+			<p>
+				Constant for the I/O-Shield<br>
+			</p>
+      <pre>DQ1</pre>
+			<p>
+				Constant for the I/O-Shield<br>
+			</p>
+      <pre>U0</pre>
+			<p>
+				Constant for the I/O-Shield<br>
+			</p>
+      <pre>I0</pre>
+			<p>
+				Constant for the I/O-Shield<br>
+			</p>
+      <pre>U1</pre>
+			<p>
+				Constant for the I/O-Shield<br>
+			</p>
+      <pre>I1</pre>
+			<p>
+				Constant for the I/O-Shield<br>
+			</p>
 			<p>
 				You can also use the functions of the Ethernet(Galileo) library when you only include this library!
 			</p>
@@ -101,7 +137,7 @@ title: Arduino IOT2000 Library
 			&lt;!--analogRead(A2)--&gt;<br>
 			&lt;!--analogRead(A3)--&gt;<br>
 			&lt;!--analogRead(A4)--&gt;<br>
-			&lt;!--analogRead(A5)--&gt;<br><br>
+			&lt;!--analogRead(A5)--&gt;<br>
       <span>
 		</p>
 		<h2>Examples</h2>
