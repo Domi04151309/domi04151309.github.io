@@ -8,6 +8,7 @@ div.altBase{
 	max-width:780px;
 	padding:0 20px;
 	margin:0 auto;
+  background:#fff;
 }
 .juicer{
   display:block;
@@ -45,24 +46,14 @@ div.altBase{
 		background:url(../images/logo_big_hover.png) no-repeat;
 		background-size:cover;
   }
-	h1.home{
-		display:inline-block;
-		font-weight:bold;
-		font-size:0;
-    height:48px;
-    width:373px;
-    padding:0;
-		animation:fadein 3s;
-		background:url(../images/text.png) no-repeat;
-		background-size:100% 100%;
-	}
   div.altBaseFrame{
     padding:54px 0 64px;
   }
   div.altBase{
     padding:20px 20px; 
+    transform:translateY(-64px);
   }
-	.dark{
+	div.dark{
     background:#252525 url(../images/darkBg.jpg);
 		color:#fff;
 	}

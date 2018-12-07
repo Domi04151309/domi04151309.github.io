@@ -28,6 +28,7 @@ html,body{
 	height:100%;
 	width:100%;
 	font:14px verdana, sans-serif;
+  background:#fff;
 }
 h1{
 	color:#fff;
@@ -73,7 +74,7 @@ a.logo:hover{
 	background-repeat:no-repeat;
 	background-size:58px 32px;
 }
-article,div.altBase{
+article>*,div.altBase>*{
 	animation:transformation 1s;
 }
 @keyframes transformation {
@@ -86,8 +87,9 @@ img{
 }
 article{
 	max-width:780px;
-	padding:74px 20px;
-	margin:0 auto;
+	padding:20px 20px;
+	margin:64px auto;
+  background:#fff;
 }
 a{
 	color:#1369BF;
@@ -123,6 +125,21 @@ p{
 	letter-spacing:.5px;
 	line-height:22px;
 }
+button{
+  margin:0 0 10px;
+  vertical-align:middle;
+  background:#1369BF;
+  cursor:pointer;
+  outline:0;
+  border:0;
+  color:#fff;
+  display:inline-block;
+  line-height:32px;
+  padding:0 16px;
+}
+button:hover{
+  background:#1260AE;
+}
 p.preview{
 	text-align:center;
 }
@@ -153,4 +170,13 @@ button#TopButton{
   cursor:pointer;
 	background:#1369BF url(../images/to_top.svg) no-repeat;
 	background-size:48px 48px;
+}
+@media only screen and (min-width: 780px) {
+  html,body{
+    background:#E9F1F9;
+  }
+  article{
+    padding:20px 20px;
+    margin:128px auto;
+  }
 }
