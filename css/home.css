@@ -52,6 +52,7 @@ div.altBase{
   div.altBase{
     padding:20px 20px; 
     transform:translateY(-64px);
+    box-shadow:0 0 16px 0 rgba(0,0,0,0.5);
   }
 	div.dark{
     background:#252525 url(../images/darkBg.jpg);

@@ -140,6 +140,13 @@ button{
 button:hover{
   background:#1260AE;
 }
+button.unavailable{
+  background:#595959;
+  cursor:not-allowed;
+}
+button.unavailable:hover{
+  background:#515151;
+}
 p.preview{
 	text-align:center;
 }
@@ -172,10 +179,8 @@ button#TopButton{
 	background-size:48px 48px;
 }
 @media only screen and (min-width: 780px) {
-  html,body{
-    background:#E9F1F9;
-  }
   article{
+    box-shadow:0 0 16px 0 rgba(0,0,0,0.5);
     padding:20px 20px;
     margin:128px auto;
   }
