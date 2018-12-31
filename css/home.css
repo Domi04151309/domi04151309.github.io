@@ -1,61 +1,105 @@
-.home{
-	display:none;
+.hero-image{
+  display:none;
 }
 div.altBaseFrame{
   padding:74px 0 84px;
 }
 div.altBase{
-	max-width:780px;
-	padding:0 20px;
-	margin:0 auto;
-  background:#fff;
+  max-width:1080px;
+  padding:0 20px;
+  margin:0 auto;
 }
 .juicer{
   display:block;
   border:0;
-  height:390px;
+  height:500px;
   width:100%;
   background:#1369BF;
   overflow:hidden;
 }
 @keyframes fadein {
-  from {opacity:0;transform:translateY(+20px);}
+  from {opacity:0;transform:translateY(-25%);}
   to   {opacity:1;}
 }
+@keyframes pop {
+  50% {transform:translateY(+20px);}
+}
 @media only screen and (min-width: 600px) {
-	div.home{
-		display:block;
-		height:512px;
-		width:100%;
-		padding-top:54px;
-		text-align:center;
-		background:#04325A url(../images/home_bg.jpg) no-repeat;
-		background-size:cover;
+  .hero-image{
+    display:block;
+    height:calc(100vh - 118px);
+    width:100%;
+    text-align:center;
+    background:#E6E6E6 url(../images/home_bg.jpg) no-repeat;
+    background-size:cover;
     overflow:hidden;
-	}
-  span.home{
-    display:inline-block;
-		background:url(../images/logo_big.png) no-repeat;
-		background-size:cover;
-		height:384px;
-    width:384px;
-    font-size:0;
-		animation:fadein 3s;
   }
-  span.home:hover{
-		background:url(../images/logo_big_hover.png) no-repeat;
-		background-size:cover;
+  .hero-content{
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    animation:fadein 3s;
+  }
+  .home{
+    display:block;
+    margin:auto;
+    margin-bottom:48px;
+  }
+  span.home{
+    background:url(../images/logo_big.png) no-repeat;
+    background-size:cover;
+    height:256px;
+    width:256px;
+    font-size:0;
+  }
+  h1.home{
+    font-weight:400;
+    font-size:48px;
+    line-height:48px;
+    padding:0;
+    color:#1369BF;
+    letter-spacing:1px;
+    text-transform:none;
+  }
+  button.home {
+    height:72px;
+    width:72px;
+    outline:0;
+    border:none;
+    cursor:pointer;
+    background:url(../images/expand_blue.svg) no-repeat;
+    background-size:72px 72px;
+  }
+  button.home:hover {
+    animation:pop .5s;
   }
   div.altBaseFrame{
     padding:54px 0 64px;
   }
   div.altBase{
     padding:20px 20px; 
-    transform:translateY(-64px);
-    box-shadow:0 0 16px 0 rgba(0,0,0,0.5);
   }
-	div.dark{
+  .dark{
     background:#252525 url(../images/darkBg.jpg);
-		color:#fff;
-	}
+    color:#fff;
+  }
+  .card{
+    padding:24px;
+    border:2px solid #e0e0e0;
+    border-radius:16px;
+    margin:12px;
+  }
+  .juicer{
+    border-radius:16px;
+  }
+  .dark .card{
+    border:2px solid #444444;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .half{
+    display:inline-block;
+    width:calc(50% - 80px);
+    vertical-align:top;
+  }
 }
