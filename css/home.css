@@ -12,9 +12,10 @@ div.altBase{
 .juicer{
   display:block;
   border:0;
-  height:500px;
+  height:400px;
   width:100%;
   background:#1369BF;
+  border-radius:4px;
   overflow:hidden;
 }
 @keyframes fadein {
@@ -24,7 +25,7 @@ div.altBase{
 @keyframes pop {
   50% {transform:translateY(+20px);}
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (min-height: 600px) {
   .hero-image{
     display:block;
     height:calc(100vh - 118px);
@@ -91,12 +92,13 @@ div.altBase{
   }
   .juicer{
     border-radius:16px;
+    height:500px;
   }
   .dark .card{
     border:2px solid #444444;
   }
 }
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1080px) and (min-height: 600px) {
   .half{
     display:inline-block;
     width:calc(50% - 80px);

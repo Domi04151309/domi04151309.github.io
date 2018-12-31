@@ -52,7 +52,7 @@ header{
   z-index:3;
   height:54px;
   overflow:hidden;
-  box-shadow:0 0 8px rgba(0,0,0,0.5);
+  box-shadow:0 0 8px rgba(0,0,0,.5);
 }
 a.logo{
   float:left;
@@ -160,7 +160,7 @@ footer{
   bottom:0px;
   background-color:#fff;
   color:#1369BF;
-  box-shadow:0 0 8px rgba(0,0,0,0.5);
+  box-shadow:0 0 8px rgba(0,0,0,.5);
   z-index:3;
 }
 footer *{
@@ -168,7 +168,7 @@ footer *{
   border-radius:16px;
 }
 footer h1:hover{
-  background:rgba(0,0,0,0.05);
+  background:rgba(0,0,0,.05);
 }
 .sources{
   font-style:normal;
@@ -186,6 +186,6 @@ button#TopButton{
   background-size:48px 48px;
 }
 #TopButton:hover{
-  background:rgba(0,0,0,0.05) url(../images/to_top_blue.svg) no-repeat;
+  background:rgba(0,0,0,.05) url(../images/to_top_blue.svg) no-repeat;
   background-size:48px 48px;
 }
