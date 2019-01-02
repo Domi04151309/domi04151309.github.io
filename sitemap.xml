@@ -6,15 +6,13 @@ layout: null
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>{{ site.url }}</loc>
-    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-    <priority>1.00</priority>
+    <loc>{{ site.url }}/</loc>
+    <priority>1.0</priority>
   </url>
   {% for page in site.pages %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
-    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-    <priority>0.80</priority>
+    <priority>0.8</priority>
   </url>
   {% endfor %}
 </urlset>

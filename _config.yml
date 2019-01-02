@@ -1,9 +1,4 @@
-url: https://domi04151309.github.io/
-
-gems:
-  - jekyll-optional-front-matter
-  - jekyll-relative-links
-  - jekyll-titles-from-headings
+url: https://domi04151309.github.io
 
 defaults:
   - scope:
