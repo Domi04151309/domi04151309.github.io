@@ -1,114 +1,20 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">+
-<url>
-  <loc>https://domi04151309.github.io/</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Tutorials/ChangeStartButton</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Tutorials/Ninite</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Tutorials/ArduinoLibrary</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Tutorials/TransparentTaskbar</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Tutorials/ResetPasswordAndAccessData</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Android/AlwaysOn</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Android/AMOLED_Custom</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Android/Powerapp</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Arduino/Logic</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Arduino/Notes</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/bg</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/robo_tx_explorer</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/javascript</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Android/Lucitheme</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Linux/MacBuntu</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Windows/Tool</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Arduino/IOT2000</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Start/index</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Timetable-Software/</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://domi04151309.github.io/Linux/WindowsTheme</loc>
-  <lastmod>2018-02-12T13:34:26+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url }}</loc>
+    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    <priority>1.00</priority>
+  </url>
+  {% for page in site.pages %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    <priority>0.80</priority>
+  </url>
+  {% endfor %}
 </urlset>

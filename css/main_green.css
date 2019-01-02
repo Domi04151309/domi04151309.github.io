@@ -2,9 +2,9 @@
   width:17px;
 }
 ::-webkit-scrollbar-button{
-	height:17px;
+  height:17px;
   background:#C1C1C1; 
-	border:2px solid #F1F1F1;
+  border:2px solid #F1F1F1;
 }
 ::-webkit-scrollbar-button:hover{
   background:#00979d; 
@@ -14,143 +14,143 @@
 }
 ::-webkit-scrollbar-thumb{
   background:#C1C1C1; 
-	border:2px solid #F1F1F1;
+  border:2px solid #F1F1F1;
 }
 ::-webkit-scrollbar-thumb:hover{
   background:#00979d; 
 }
 *{
-	padding:0;
-	margin:0;
+  padding:0;
+  margin:0;
 }
 html,body{
-	height:100%;
-	width:100%;
-	font:14px verdana, sans-serif;
+  height:100%;
+  width:100%;
+  font:14px verdana, sans-serif;
 }
 h1{
-	color:#fff;
-	display:inline-block;
-	font-weight:500;
-	font-size:14px;
-	letter-spacing:3px;
-	line-height:18px;
-	padding:18px 9px;
-	text-decoration:none;
-	text-transform:uppercase;
+  color:#fff;
+  display:inline-block;
+  font-weight:500;
+  font-size:14px;
+  letter-spacing:3px;
+  line-height:18px;
+  padding:18px 9px;
+  text-decoration:none;
+  text-transform:uppercase;
 }
 header{
-	background-color:#0C575A;
-	background-image:url(../images/header_bg_green.jpg);
-	background-repeat:no-repeat;
-	background-size:cover;
-	font-size:13px;
-	position:fixed;
-	top:0;
-	width:100%;
-	z-index:3;
-	height:54px;
-	overflow:hidden;
+  background-color:#0C575A;
+  background-image:url(../images/header_bg_green.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  font-size:13px;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:3;
+  height:54px;
+  overflow:hidden;
 }
 a.logo{
-	float:left;
-	background-position:20px 11px;
-	height:32px;
-	padding:11px 30px;
-	width:43px;
-	background-image:url(../images/logo.png);
-	background-repeat:no-repeat;
-	background-size:58px 32px;
+  float:left;
+  background-position:20px 11px;
+  height:32px;
+  padding:11px 30px;
+  width:43px;
+  background-image:url(../images/logo.png);
+  background-repeat:no-repeat;
+  background-size:58px 32px;
   font-size:0;
-	box-sizing:content-box;
-	display:block;
-	left:0;
-	position:relative;
+  box-sizing:content-box;
+  display:block;
+  left:0;
+  position:relative;
 }
 article{
-	animation:transformation 1s;
+  animation:transformation 1s;
 }
 @keyframes transformation {
   from {opacity:0;transform:translateY(+10px);}
   to   {opacity:1;}
 }
 img{
-	max-width:100%;
-	height:auto;
+  max-width:100%;
+  height:auto;
 }
 article{
-	max-width:780px;
-	padding:74px 20px;
-	margin:0 auto;
+  max-width:780px;
+  padding:74px 20px;
+  margin:0 auto;
 }
 a{
-	color:#e67e22;
-	font-style:italic;
-	text-decoration:none;
+  color:#e67e22;
+  font-style:italic;
+  text-decoration:none;
 }
 a:hover{
-	text-decoration:underline;
+  text-decoration:underline;
 }
 a.hash{
   float:left;
   margin-left:-18px;
   font-weight:400;
-  color:#808080;
+  color:#767676;
 }
 h2{
-	color:#e67e22;
-	font-size:18px;
-	font-weight:400;
-	letter-spacing:1px;
-	line-height:25px;
-	margin-bottom:3px;
-	margin-top:32px;
+  color:#e67e22;
+  font-size:18px;
+  font-weight:400;
+  letter-spacing:1px;
+  line-height:25px;
+  margin-bottom:3px;
+  margin-top:32px;
 }
 h3{
-	font-size:14px;
-	font-weight:bold;
-	letter-spacing:.5px;
-	line-height:22px;
-	margin:22px 0;
+  font-size:14px;
+  font-weight:bold;
+  letter-spacing:.5px;
+  line-height:22px;
+  margin:22px 0;
 }
 p{
-	color:#374146;
-	letter-spacing:.5px;
-	line-height:22px;
+  color:#374146;
+  letter-spacing:.5px;
+  line-height:22px;
 }
 pre{
-	border: 0;
-	border-radius: 0;
-	box-sizing: border-box;
-	overflow-x: auto;
-	width: 100%;
-	background-color: #f7f9f9;
-	display: block;
-	font-family: monospace;
-	margin: 1em 0px;
-	color: #434f54;
+  border: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  overflow-x: auto;
+  width: 100%;
+  background-color: #f7f9f9;
+  display: block;
+  font-family: monospace;
+  margin: 1em 0px;
+  color: #434f54;
 }
 footer{
-	position:fixed;
-	height:64px;
-	width:100%;
-	bottom:0px;
-	background-color:#00979d;
-	color:#fff;
-	z-index:3;
+  position:fixed;
+  height:64px;
+  width:100%;
+  bottom:0px;
+  background-color:#00979d;
+  color:#fff;
+  z-index:3;
 }
 .sources{
-	font-style:normal;
-	margin:5px;
+  font-style:normal;
+  margin:5px;
 }
 button#TopButton{
-	float:right;
-	height:48px;
-	width:48px;
-	margin:8px;
-	outline:none;
-	border:0 none;
+  float:right;
+  height:48px;
+  width:48px;
+  margin:8px;
+  outline:none;
+  border:0 none;
   cursor:pointer;
-	background:#00979d url(../images/to_top.svg) no-repeat;
-	background-size:48px 48px;
+  background:#00979d url(../images/to_top.svg) no-repeat;
+  background-size:48px 48px;
 }
