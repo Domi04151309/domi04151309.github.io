@@ -23,13 +23,13 @@ article {
   background-size:cover;
   transition:background 0.2s linear;
 }
-.twitter{background-image:url(./1_twitter_white.png);}
-.snapchat{background-image:url(./2_snapchat_white.png);}
-.instagram{background-image:url(./3_instagram_white.png);}
-.github{background-image:url(./4_github_white.png);}
-.youtube{background-image:url(./5_youtube_white.png);}
-.twitter:hover{background-image:url(./1_twitter_hover.png);}
-.snapchat:hover{background-image:url(./2_snapchat_hover.png);}
-.instagram:hover{background-image:url(./3_instagram_hover.png);}
-.github:hover{background-image:url(./4_github_hover.png);}
-.youtube:hover{background-image:url(./5_youtube_hover.png);}
+.twitter{background-image:url(./1_twitter_white.svg);}
+.snapchat{background-image:url(./2_snapchat_white.svg);}
+.instagram{background-image:url(./3_instagram_white.svg);}
+.github{background-image:url(./4_github_white.svg);}
+.youtube{background-image:url(./5_youtube_white.svg);}
+.twitter:hover{background-image:url(./1_twitter_hover.svg);}
+.snapchat:hover{background-image:url(./2_snapchat_hover.svg);}
+.instagram:hover{background-image:url(./3_instagram_hover.svg);}
+.github:hover{background-image:url(./4_github_hover.svg);}
+.youtube:hover{background-image:url(./5_youtube_hover.svg);}
