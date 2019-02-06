@@ -5,38 +5,23 @@ title: Javascript Testsite
     <h2>Testsite</h2>
     <p>
       <noscript style="color:red;">JavaScript is blocked or not supported by your browser!<br></noscript>
-      <b>Testing JavaScript Version</b><br>
-
-      <table>
-        <tr>
-          <td>JavaScript activated?</td><td id="js1">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.1:</td><td id="js2">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.2:</td><td id="js3">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.3:</td><td id="js4">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.4:</td><td id="js5">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.5:</td><td id="js6">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.6:</td><td id="js7">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.7:</td><td id="js8">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.8:</td><td id="js9">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.5v:</td><td id="js10">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.6v:</td><td id="js11">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.7v:</td><td id="js12">&#10008;</td>
-        </tr><tr>
-          <td>Version 1.8v:</td><td id="js13">&#10008;</td>
-        </tr>
-      </table>
       
+      <b>Testing JavaScript Version</b><br>
+      <table>
+        <tr><td>JavaScript activated?</td><td id="js1">&#10008;</td></tr>
+        <tr><td>Version 1.1:</td><td id="js2">&#10008;</td></tr>
+        <tr><td>Version 1.2:</td><td id="js3">&#10008;</td></tr>
+        <tr><td>Version 1.3:</td><td id="js4">&#10008;</td></tr>
+        <tr><td>Version 1.4:</td><td id="js5">&#10008;</td></tr>
+        <tr><td>Version 1.5:</td><td id="js6">&#10008;</td></tr>
+        <tr><td>Version 1.6:</td><td id="js7">&#10008;</td></tr>
+        <tr><td>Version 1.7:</td><td id="js8">&#10008;</td></tr>
+        <tr><td>Version 1.8:</td><td id="js9">&#10008;</td></tr>
+        <tr><td>Version 1.5v:</td><td id="js10">&#10008;</td></tr>
+        <tr><td>Version 1.6v:</td><td id="js11">&#10008;</td></tr>
+        <tr><td>Version 1.7v:</td><td id="js12">&#10008;</td></tr>
+        <tr><td>Version 1.8v:</td><td id="js13">&#10008;</td></tr>
+      </table>
       <script type="text/javascript">document.getElementById('js1').innerHTML="&#10004;";</script>
       <script language="javascript1.1">document.getElementById('js2').innerHTML="&#10004;";</script>
       <script language="javascript1.2">document.getElementById('js3').innerHTML="&#10004;";</script>
@@ -49,7 +34,8 @@ title: Javascript Testsite
       <script type="text/javascript; version=1.5">document.getElementById('js10').innerHTML="&#10004;";</script>
       <script type="text/javascript; version=1.6">document.getElementById('js11').innerHTML="&#10004;";</script>
       <script type="text/javascript; version=1.7">document.getElementById('js12').innerHTML="&#10004;";</script>
-      <script type="text/javascript; version=1.8">document.getElementById('js13').innerHTML="&#10004;";</script><br>
+      <script type="text/javascript; version=1.8">document.getElementById('js13').innerHTML="&#10004;";</script>
+      <br>
 
       <b>Testing Browser</b><br>
       <text id="js14">Information is currently unavailable!</text>
@@ -69,7 +55,8 @@ title: Javascript Testsite
           browser="Mozilla Firefox";
         }
         document.getElementById('js14').innerHTML="You are using "+browser+"!";
-      </script><br><br>
+      </script>
+      <br><br>
 
       <b>Testing Operating System</b><br>
       <text id="js15">Information is currently unavailable!</text>
@@ -127,7 +114,8 @@ title: Javascript Testsite
                 break;
         }
         document.getElementById('js15').innerHTML="You are using "+os+" "+osVersion+"!";
-      </script><br><br>
+      </script>
+      <br><br>
       
       <b>System Time</b><br>
       <text id="js16">Information is currently unavailable!</text>
@@ -147,31 +135,21 @@ title: Javascript Testsite
           document.getElementById('js16').innerHTML="Today is the "+DayName[Day]+" of "+MonthName[Month]+", "+Year+".<br>It is "+h+":"+m+":"+s+".";
           setTimeout(startTime,1000);
         }
-      </script><br><br>
+      </script>
+      <br><br>
       
       <b>IP Address</b><br>
       <table>
-        <tr>
-          <td>Your IP:</td><td id="js17_0">&#10008;</td>
-        </tr><tr>
-          <td>Advance Shipping Notice:</td><td id="js17_1">&#10008;</td>
-        </tr><tr>
-          <td>Netmask:</td><td id="js17_2">&#10008;</td>
-        </tr><tr>
-          <td>Hostname:</td><td id="js17_3">&#10008;</td>
-        </tr><tr>
-          <td>City:</td><td id="js17_4">&#10008;</td>
-        </tr><tr>
-          <td>Post code:</td><td id="js17_5">&#10008;</td>
-        </tr><tr>
-          <td>Country:</td><td id="js17_6">&#10008;</td>
-        </tr><tr>
-          <td>Country code:</td><td id="js17_7">&#10008;</td>
-        </tr><tr>
-          <td>Latitude:</td><td id="js17_8">&#10008;</td>
-        </tr><tr>
-          <td>Longitude:</td><td id="js17_9">&#10008;</td>
-        </tr>
+        <tr><td>Your IP:</td><td id="js17_0">&#10008;</td></tr>
+        <tr><td>Advance Shipping Notice:</td><td id="js17_1">&#10008;</td></tr>
+        <tr><td>Netmask:</td><td id="js17_2">&#10008;</td></tr>
+        <tr><td>Hostname:</td><td id="js17_3">&#10008;</td></tr>
+        <tr><td>City:</td><td id="js17_4">&#10008;</td></tr>
+        <tr><td>Post code:</td><td id="js17_5">&#10008;</td></tr>
+        <tr><td>Country:</td><td id="js17_6">&#10008;</td></tr>
+        <tr><td>Country code:</td><td id="js17_7">&#10008;</td></tr>
+        <tr><td>Latitude:</td><td id="js17_8">&#10008;</td></tr>
+        <tr><td>Longitude:</td><td id="js17_9">&#10008;</td></tr>
       </table>
       <span id="loc"></span>
       <script type="text/javascript">
@@ -200,5 +178,6 @@ title: Javascript Testsite
         oReq.addEventListener("load", reqListener);
         oReq.open("GET", "https://ip.nf/me.json");
         oReq.send();
-      </script><br><br>
+      </script>
+      <br><br>
     </p>

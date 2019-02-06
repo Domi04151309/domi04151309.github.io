@@ -1,1 +1,4 @@
-Sitemap: https://domi04151309.github.io/sitemap.xml
+---
+layout: null
+---
+Sitemap: {{ site.url }}/sitemap.xml
