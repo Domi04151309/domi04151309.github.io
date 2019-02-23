@@ -1,11 +1,11 @@
 ---
 layout: null
 ---
-var CACHE_NAME = 'domi-cache-v2';
+var CACHE_NAME = 'domi-cache-v3';
 var urlsToCache = [
-{% for page in site.pages %}{% unless page.url contains '404' %}
-  '{{ page.url }}',
+{% for page in site.pages %}{% unless page.url contains '404' %}  '{{ page.url | remove: ".html" }}',
 {% endunless %}{% endfor %}
+  '/images/error.png',
   '/css/main.css',
   '/css/home.css',
   '/social_media/main.css',
@@ -53,7 +53,7 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['domi-cache-v2'];
+  var cacheWhitelist = ['domi-cache-v3'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
