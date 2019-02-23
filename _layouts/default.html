@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Domi04151309 - {{ page.title }}</title>
-	<meta charset="utf-8">  
-	<meta name="description" content="On this page you can find most of my projects. Also a lot of it is open-source and published under the terms of the GNU GPL 3. Improvement suggestions are always welcome." />
-	<meta http-equiv="Content-Style-Type" content="text/css" />
-	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.css" />
-	<link rel="icon" href="{{site.baseurl}}/favicon.ico">
-	<link rel="apple-touch-icon" href="{{site.baseurl}}/apple-touch-icon.PNG"/>
-	<meta name="msapplication-config" content="{{site.baseurl}}/ieconfig.xml" />
-	<meta name="theme-color" content="#000000">
-	<meta property="og:image" content="{{site.baseurl}}/preview.jpg">
+  <title>Domi04151309 - {{ page.title }}</title>
+  <meta charset="utf-8">
+  <link rel="canonical" href="{{ site.url }}{{ page.url | remove: '.html' }}" />
+  <meta name="description" content="On this page you can find most of my projects. Also a lot of it is open-source and published under the terms of the GNU GPL 3. Improvement suggestions are always welcome." />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.css" />
+  <link rel="icon" href="{{site.baseurl}}/favicon.ico">
+  <link rel="apple-touch-icon" href="{{site.baseurl}}/apple-touch-icon.PNG" />
+  <meta name="msapplication-config" content="{{site.baseurl}}/ieconfig.xml" />
+  <meta name="theme-color" content="#000000">
+  <meta property="og:image" content="{{site.baseurl}}/preview.jpg">
   <link rel="manifest" href="{{site.baseurl}}/pwa/manifest.json">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="{{site.baseurl}}/js/postprocess.js" async></script>
-	<header>
-		<a href="{{site.baseurl}}/" class="logo">Home</a>
-		<h1>Domi04151309</h1>
-	</header>
+  <header>
+    <a href="{{site.baseurl}}/" class="logo">Home</a>
+    <h1>Domi04151309</h1>
+  </header>
   <article>
 {{ content }}
-	</article>
-	<footer>
-		<script src="{{site.baseurl}}/js/scrolling.js" async></script>
-		<a href="{{site.baseurl}}/sources"><h1 class="sources">Sources</h1></a>
-		<a href="{{site.baseurl}}/cookie_policy"><h1 class="sources">Cookie Policy</h1></a>
-		<button onclick="toTop()" id="TopButton" title="Go to top"></button>
-	</footer>
+  </article>
+  <footer>
+    <a href="{{site.baseurl}}/sources"><h1 class="sources">Sources</h1></a>
+    <a href="{{site.baseurl}}/cookie_policy"><h1 class="sources">Cookie Policy</h1></a>
+    <button onclick="toTop()" id="TopButton" title="Go to top"></button>
+  </footer>
+  <script src="{{site.baseurl}}/js/scrolling.js" async></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{{site.baseurl}}/js/postprocess.js" async></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {

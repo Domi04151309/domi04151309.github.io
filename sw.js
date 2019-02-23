@@ -7,6 +7,7 @@ var urlsToCache = [
 {% endunless %}{% endfor %}
   '/images/error.png',
   '/css/main.css',
+  '/css/main_green.css',
   '/css/home.css',
   '/social_media/main.css',
   '/js/postprocess.js',
@@ -46,7 +47,7 @@ self.addEventListener('fetch', function(event) {
         }
       );
     }).catch(function() {
-      return caches.match('/offline.html');
+      return caches.match('/offline');
     })
   );
 });
