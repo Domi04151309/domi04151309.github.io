@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-var CACHE_NAME = 'domi-cache-v4';
+var CACHE_NAME = 'domi-cache-{{ site.time | date: "%Y-%m-%d-%H:%M" }}';
 var urlsToCache = [
 {% for page in site.pages %}{% unless page.url contains '404' %}  '{{ page.url | remove: ".html" }}',
 {% endunless %}{% endfor %}

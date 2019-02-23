@@ -164,12 +164,8 @@
            registration.addEventListener('updatefound', () => {
             newWorker = registration.installing;
             newWorker.addEventListener('statechange', () => {
-              switch (newWorker.state) {
-                case 'installed':
-                  if (navigator.serviceWorker.controller) {
-                    newWorker.postMessage({ action: 'skipWaiting' });
-                  }
-                  break;
+              if (newWorker.state == 'installed' && navigator.serviceWorker.controller) {
+                newWorker.postMessage({ action: 'skipWaiting' });
               }
             });
           });
