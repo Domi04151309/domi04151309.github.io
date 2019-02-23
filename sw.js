@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-var CACHE_NAME = 'domi-cache-v3';
+var CACHE_NAME = 'domi-cache-v4';
 var urlsToCache = [
 {% for page in site.pages %}{% unless page.url contains '404' %}  '{{ page.url | remove: ".html" }}',
 {% endunless %}{% endfor %}
@@ -22,6 +22,12 @@ self.addEventListener('install', function(event) {
         return cache.addAll(urlsToCache);
       })
   );
+});
+
+self.addEventListener('message', function (event) {
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
 });
 
 self.addEventListener('fetch', function(event) {
@@ -54,7 +60,7 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['domi-cache-v3'];
+  var cacheWhitelist = [CACHE_NAME];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
