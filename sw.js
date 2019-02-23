@@ -1,11 +1,15 @@
-var CACHE_NAME = 'domi-cache-v1';
+---
+layout: null
+---
+var CACHE_NAME = 'domi-cache-v2';
 var urlsToCache = [
-  '/',
+{% for page in site.pages %}{% unless page.url contains '404' %}
+  '{{ page.url }}',
+{% endunless %}{% endfor %}
   '/css/main.css',
   '/css/home.css',
   '/social_media/main.css',
   '/js/postprocess.js',
-  '/juicer.html',
   '/js/scrolling.js'
 ];
 
@@ -21,35 +25,35 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('fetch', function(event) {
   event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        if (response) {
-          return response;
-        }
+    caches.match(event.request).then(function(response) {
+      if (response) {
+        return response;
+      }
 
-        return fetch(event.request).then(
-          function(response) {
-            if(!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            var responseToCache = response.clone();
-
-            caches.open(CACHE_NAME)
-              .then(function(cache) {
-                cache.put(event.request, responseToCache);
-              });
-
+      return fetch(event.request).then(
+        function(response) {
+          if(!response || response.status !== 200 || response.type !== 'basic') {
             return response;
           }
-        );
-      })
-    );
+
+          var responseToCache = response.clone();
+
+          caches.open(CACHE_NAME).then(function(cache) {
+            cache.put(event.request, responseToCache);
+          });
+            
+          return response;
+        }
+      );
+    }).catch(function() {
+      return caches.match('/offline.html');
+    })
+  );
 });
 
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['domi-cache-v1'];
+  var cacheWhitelist = ['domi-cache-v2'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
