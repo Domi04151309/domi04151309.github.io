@@ -32,8 +32,6 @@
   </script>
 </head>
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./js/postprocess.js" async></script>
   <header>
     <a href="./" class="logo">Home</a>
     <h1>Domi04151309</h1>
@@ -151,11 +149,13 @@
     </div>
   </div>
   <footer>
-    <script src="./js/scrolling.js" async></script>
     <a href="./Other/sources"><h1 class="sources">Sources</h1></a>
     <a href="./Other/cookie_policy"><h1 class="sources">Cookie Policy</h1></a>
     <button onclick="toTop()" id="TopButton" title="Go to top"></button>
   </footer>
+  <script src="./js/scrolling.js" async></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/postprocess.js" async></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
