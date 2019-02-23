@@ -9,10 +9,10 @@ layout: null
     <loc>{{ site.url }}/</loc>
     <priority>1.0</priority>
   </url>
-  {% for page in site.pages %}
+  {% for page in site.pages %}{% unless page.url contains '404' %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
     <priority>0.8</priority>
   </url>
-  {% endfor %}
+  {% endunless %}{% endfor %}
 </urlset>
