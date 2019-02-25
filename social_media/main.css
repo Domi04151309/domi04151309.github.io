@@ -19,6 +19,6 @@
 .instagram:hover{background-image:url(./3_instagram_hover.svg);}
 .github:hover{background-image:url(./4_github_hover.svg);}
 .youtube:hover{background-image:url(./5_youtube_hover.svg);}
-@media only screen and (min-width: 600px) and (min-height: 600px) {
+@media only screen and (min-width: 500px) and (min-height: 600px) {
   .socialDiv{margin-top:0px;height:64px;padding-bottom:10px;}
 }
