@@ -7,7 +7,7 @@
   border:2px solid #F1F1F1;
 }
 ::-webkit-scrollbar-button:hover{
-  background:#1369BF; 
+  background:var(--accent-color); 
 }
 ::-webkit-scrollbar-track{
   background:#F1F1F1; 
@@ -17,7 +17,7 @@
   border:2px solid #F1F1F1;
 }
 ::-webkit-scrollbar-thumb:hover{
-  background:#1369BF; 
+  background:var(--accent-color); 
 }
 *{
   padding:0;
@@ -41,8 +41,8 @@ h1{
   text-transform:uppercase;
 }
 header{
-  background-color:#041B33;
-  background-image:url(../images/header_bg.jpg);
+  background-color:var(--header-bg-color);
+  background-image:var(--header-bg-image);
   background-repeat:no-repeat;
   background-size:cover;
   font-size:13px;
@@ -91,7 +91,7 @@ article{
   margin:0 auto;
 }
 a{
-  color:#1369BF;
+  color:var(--accent-color);
   font-style:italic;
   text-decoration:none;
 }
@@ -105,7 +105,7 @@ a.hash{
   color:#767676;
 }
 h2{
-  color:#1369BF;
+  color:var(--accent-color);
   font-size:18px;
   font-weight:400;
   letter-spacing:1px;
@@ -124,10 +124,22 @@ p{
   letter-spacing:.5px;
   line-height:22px;
 }
+pre{
+  border: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  overflow-x: auto;
+  width: 100%;
+  background-color: #f7f9f9;
+  display: block;
+  font-family: monospace;
+  margin: 1em 0px;
+  color: #434f54;
+}
 button{
   margin:0 0 10px;
   vertical-align:middle;
-  background:#1369BF;
+  background:var(--accent-color);
   cursor:pointer;
   outline:0;
   border:0;
@@ -158,13 +170,13 @@ footer{
   height:64px;
   width:100%;
   bottom:0px;
-  background-color:#fff;
-  color:#1369BF;
+  background-color:var(--footer-bg-color);
+  color:var(--footer-text-color);
   box-shadow:0 0 8px rgba(0,0,0,.5);
   z-index:3;
 }
 footer *{
-  color:#1369BF;
+  color:var(--footer-text-color);
   border-radius:16px;
 }
 footer h1:hover{
@@ -182,10 +194,10 @@ button#TopButton{
   outline:0;
   border:none;
   cursor:pointer;
-  background:url(../images/to_top_blue.svg) no-repeat;
+  background:var(--footer-up-image) no-repeat;
   background-size:48px 48px;
 }
 #TopButton:hover{
-  background:rgba(0,0,0,.05) url(../images/to_top_blue.svg) no-repeat;
+  background:rgba(0,0,0,.05) var(--footer-up-image) no-repeat;
   background-size:48px 48px;
 }
