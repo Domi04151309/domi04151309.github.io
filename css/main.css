@@ -1,23 +1,19 @@
-::-webkit-scrollbar{
-  width:17px;
-}
+::-webkit-scrollbar{width:17px;}
 ::-webkit-scrollbar-button{
   height:17px;
-  background:#C1C1C1; 
+  background:#C1C1C1;
   border:2px solid #F1F1F1;
 }
-::-webkit-scrollbar-button:hover{
-  background:var(--accent-color); 
-}
-::-webkit-scrollbar-track{
-  background:#F1F1F1; 
-}
+::-webkit-scrollbar-button:hover{background:var(--accent-color);}
+::-webkit-scrollbar-track{background:#F1F1F1;}
 ::-webkit-scrollbar-thumb{
-  background:#C1C1C1; 
+  background:#C1C1C1;
   border:2px solid #F1F1F1;
 }
-::-webkit-scrollbar-thumb:hover{
-  background:var(--accent-color); 
+::-webkit-scrollbar-thumb:hover{background:var(--accent-color);}
+@keyframes transformation{
+  0%{opacity:0;transform:translateY(+10px);}
+  100%{opacity:1;}
 }
 *{
   padding:0;
@@ -28,6 +24,20 @@ html,body{
   height:100%;
   width:100%;
   font:14px verdana, sans-serif;
+}
+header,footer{
+  position:fixed;
+  width:100%;
+  overflow:hidden;
+  box-shadow:0 0 8px rgba(0,0,0,.5);
+  z-index:3;
+}
+header{
+  top:0;
+  height:54px;
+  background:var(--header-bg-color) var(--header-bg-image) no-repeat;
+  background-size:cover;
+  font-size:13px;
 }
 h1{
   color:#fff;
@@ -40,28 +50,12 @@ h1{
   text-decoration:none;
   text-transform:uppercase;
 }
-header{
-  background-color:var(--header-bg-color);
-  background-image:var(--header-bg-image);
-  background-repeat:no-repeat;
-  background-size:cover;
-  font-size:13px;
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:3;
-  height:54px;
-  overflow:hidden;
-  box-shadow:0 0 8px rgba(0,0,0,.5);
-}
-a.logo{
+.logo{
   float:left;
-  background-position:20px 11px;
   height:32px;
   padding:11px 30px;
   width:43px;
-  background-image:url(../images/logo.png);
-  background-repeat:no-repeat;
+  background:rgba(0,0,0,0) url(../images/logo.png) no-repeat 20px 11px;
   background-size:58px 32px;
   font-size:0;
   box-sizing:content-box;
@@ -69,18 +63,11 @@ a.logo{
   left:0;
   position:relative;
 }
-a.logo:hover{
-  background-image:url(../images/logo_hover.png);
-  background-repeat:no-repeat;
+.logo:hover{
+  background:rgba(0,0,0,0) url(../images/logo_hover.png) no-repeat 20px 11px;
   background-size:58px 32px;
 }
-article,div.altBase{
-  animation:transformation 1s;
-}
-@keyframes transformation {
-  from {opacity:0;transform:translateY(+10px);}
-  to   {opacity:1;}
-}
+article,.altBase{animation:transformation 1s;}
 img{
   max-width:100%;
   height:auto;
@@ -95,10 +82,8 @@ a{
   font-style:italic;
   text-decoration:none;
 }
-a:hover{
-  text-decoration:underline;
-}
-a.hash{
+a:hover{text-decoration:underline;}
+.hash{
   float:left;
   margin-left:-18px;
   font-weight:400;
@@ -125,16 +110,11 @@ p{
   line-height:22px;
 }
 pre{
-  border: 0;
-  border-radius: 0;
-  box-sizing: border-box;
-  overflow-x: auto;
-  width: 100%;
-  background-color: #f7f9f9;
-  display: block;
-  font-family: monospace;
-  margin: 1em 0px;
-  color: #434f54;
+  overflow-x:auto;
+  width:100%;
+  background-color:#f7f9f9;
+  margin:1em 0;
+  color:#434f54;
 }
 button{
   margin:0 0 10px;
@@ -148,56 +128,42 @@ button{
   line-height:32px;
   padding:0 16px;
 }
-button:hover{
-  background:#1260AE;
-}
-button.unavailable{
+button:hover{background:#1260AE;}
+.unavailable{
   background:#595959;
   cursor:not-allowed;
 }
-button.unavailable:hover{
-  background:#515151;
-}
-p.preview{
-  text-align:center;
-}
+.unavailable:hover{background:#515151;}
+p.preview{text-align:center;}
 img.preview{
   display:inline-block;
   max-width:190px;
 }
 footer{
-  position:fixed;
+  bottom:0;
   height:64px;
-  width:100%;
-  bottom:0px;
   background-color:var(--footer-bg-color);
   color:var(--footer-text-color);
-  box-shadow:0 0 8px rgba(0,0,0,.5);
-  z-index:3;
 }
 footer *{
   color:var(--footer-text-color);
   border-radius:16px;
 }
-footer h1:hover{
-  background:rgba(0,0,0,.05);
-}
-.sources{
+footer h1{
   font-style:normal;
   margin:5px;
 }
-button#TopButton{
+footer h1:hover{background:rgba(0,0,0,.05);}
+#topBtn{
   float:right;
   height:48px;
   width:48px;
   margin:8px;
-  outline:0;
-  border:none;
-  cursor:pointer;
   background:var(--footer-up-image) no-repeat;
   background-size:48px 48px;
 }
-#TopButton:hover{
+#topBtn:hover{
   background:rgba(0,0,0,.05) var(--footer-up-image) no-repeat;
   background-size:48px 48px;
 }
+@media print{header,footer{display:none;}}

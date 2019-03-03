@@ -1,6 +1,9 @@
-.home:not(h1){
-  display:none;
+@keyframes fadein{
+  0%{opacity:0;transform:translateY(-25%);}
+  100%{opacity:1;}
 }
+@keyframes pop{50%{transform:translateY(+20px);}}
+.home:not(h1){display:none;}
 .hero-image{
   display:block;
   height:96px;
@@ -25,10 +28,8 @@ h1.home{
   letter-spacing:1px;
   text-transform:none;
 }
-div.altBaseFrame{
-  padding:54px 0 84px;
-}
-div.altBase{
+.altBaseFrame{padding:54px 0 84px;}
+.altBase{
   max-width:1080px;
   padding:0 20px;
   margin:0 auto;
@@ -42,14 +43,7 @@ div.altBase{
   border-radius:4px;
   overflow:hidden;
 }
-@keyframes fadein {
-  from {opacity:0;transform:translateY(-25%);}
-  to   {opacity:1;}
-}
-@keyframes pop {
-  50% {transform:translateY(+20px);}
-}
-@media only screen and (min-width: 500px) and (min-height: 600px) {
+@media only screen and (min-width:500px) and (min-height:600px){
   .hero-image{
     height:calc(100vh - 118px);
     background:#E6E6E6 url(../images/home_bg.jpg) no-repeat;
@@ -67,10 +61,8 @@ div.altBase{
     width:256px;
     font-size:0;
   }
-  h1.home{
-    font-size:48px;
-  }
-  button.home {
+  h1.home{font-size:48px;}
+  button.home{
     height:72px;
     width:72px;
     outline:0;
@@ -79,16 +71,10 @@ div.altBase{
     background:url(../images/expand_blue.svg) no-repeat;
     background-size:72px 72px;
   }
-  button.home:hover {
-    animation:pop .5s;
-  }
-  div.altBaseFrame{
-    padding:54px 0 64px;
-  }
-  div.altBase{
-    padding:20px 20px; 
-  }
-  h2 {
+  button.home:hover{animation:pop .5s;}
+  .altBaseFrame{padding:54px 0 64px;}
+  .altBase{padding:20px 20px;}
+  h2{
     margin-top:6px;
     margin-bottom:12px;
   }
@@ -106,11 +92,9 @@ div.altBase{
     border-radius:16px;
     height:500px;
   }
-  .dark .card{
-    border:2px solid #444444;
-  }
+  .dark .card{border:2px solid #444;}
 }
-@media only screen and (min-width: 1000px) and (min-height: 600px) {
+@media only screen and (min-width:1000px) and (min-height:600px){
   .half{
     display:inline-block;
     width:calc(50% - 80px);

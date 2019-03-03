@@ -1,16 +1,16 @@
-$(document).ready(function() {
-  $("h2, h3").each(function(i) {
+$(document).ready(function(){
+  $("h2, h3").each(function(i){
     var heading = $(this);
     var headingtext = heading.text().toLowerCase().trim().replace(/[\.,-\/#!?$%\^&\*;:{}=\-_`~()]/g,"").replace(/[ ]/g,"-");
-    heading.attr("id",headingtext );
+    heading.attr("id",headingtext);
     heading.prepend( "<a href='#" + headingtext + "' class='hash'>&#35;</a>" );
   });
-  $("img").each(function(i) {
+  $("img").each(function(i){
     var image = $(this);
     var imageSrc = $(this).attr('src');
     image.wrap( "<a href='" + imageSrc + "'></a>" );
   });
-  $(".hash").click(function(e) {
+  $(".hash").click(function(e){
     e.preventDefault();
     var aid = $(this).attr("href");
     $('html,body').animate({scrollTop: $(aid).offset().top-86},500);
@@ -18,8 +18,8 @@ $(document).ready(function() {
   });
   setTimeout(loadHash,1000);
 });
-function loadHash() {
-  if (location.hash) {
+function loadHash(){
+  if(location.hash) {
     var aid = location.hash;
     $('html,body').animate({scrollTop: $(aid).offset().top-86},500);
   }
