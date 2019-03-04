@@ -109,6 +109,7 @@ h3{
 }
 ul{list-style-position:inside;}
 code{font-weight:bold;}
+table{width:100%;}
 td{
   min-width:214px;
   padding:7px 8px 8px;
