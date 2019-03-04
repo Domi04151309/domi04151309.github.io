@@ -2,7 +2,5 @@
   --accent-color:#00979d;
   --header-bg-color:#0C575A;
   --header-bg-image:url(../images/header_bg_green.jpg);
-  --footer-bg-color:var(--accent-color);
-  --footer-text-color:#fff;
-  --footer-up-image:url(../images/to_top.svg);
+  --footer-up-image:url(../images/to_top_green.svg);
 }

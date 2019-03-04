@@ -24,6 +24,8 @@ html,body{
   height:100%;
   width:100%;
   font:14px verdana, sans-serif;
+  letter-spacing:.5px;
+  line-height:22px;
 }
 header,footer{
   position:fixed;
@@ -105,10 +107,6 @@ h3{
   line-height:22px;
   margin:22px 0;
 }
-p{
-  letter-spacing:.5px;
-  line-height:22px;
-}
 pre{
   overflow-x:auto;
   width:100%;
@@ -116,6 +114,7 @@ pre{
   margin:1em 0;
   color:#434f54;
 }
+ul{list-style-position:inside;}
 button{
   margin:0 0 10px;
   vertical-align:middle;
@@ -142,11 +141,11 @@ img.preview{
 footer{
   bottom:0;
   height:64px;
-  background-color:var(--footer-bg-color);
-  color:var(--footer-text-color);
+  background-color:#fff;
+  color:var(--accent-color);
 }
 footer *{
-  color:var(--footer-text-color);
+  color:var(--accent-color);
   border-radius:16px;
 }
 footer h1{

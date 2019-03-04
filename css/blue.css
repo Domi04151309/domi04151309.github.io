@@ -1,8 +1,6 @@
 :root {
   --accent-color:#1369BF;
   --header-bg-color:#041B33;
-  --header-bg-image:url(../images/header_bg.jpg);
-  --footer-bg-color:#fff;
-  --footer-text-color:var(--accent-color);
+  --header-bg-image:url(../images/header_bg_blue.jpg);
   --footer-up-image:url(../images/to_top_blue.svg);
 }
