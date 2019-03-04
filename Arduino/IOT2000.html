@@ -1,146 +1,169 @@
 ---
 title: Arduino IOT2000 Library
 ---
-		<img src="../images/Arduino/IOT2000.png" style="width:35%" alt="IOT2000 Board">
-		<h2>About the Library</h2>
-		<p>
-			This library adds more functionality to your IOT2000 with the Arduino IDE. It was developed by Dominik Reichl in 2018 and designed for the Siemens Simatic IOT2000.<br>
-			This library is free software. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.<br><br>
-			<i>You can download the library <a href="https://github.com/Domi04151309/Siemens-Simatic-IOT2000-Arduino-Library">here</a></i>
-		</p>
-		<h2>How to Install</h2>
-		<p>
-			1. Download the repository from GitHub<br>
-			2. Unzip it<br>
-			3. Copy the "Siemens-Simatic-IOT2000-Arduino-Library-master" folder into your library folder<br>
-			4. Open the Arduino IDE<br>
-			5. Click on Sketch &gt Include Library &gt Siemens Simatic IOT2000<br>
-			Done!
-		</p>
-		<h2>Functions</h2>
-			<pre>userLEDSketchRunning()</pre>
-			<p>
-				Turns on the USER LED<br>
-				(To see if the sketch is running)<br>
-			</p>
-			<pre>activateUserButton()</pre>
-			<p>
-				Makes the USER button usable<br>
-			</p>
-			<pre>readUserButton()</pre>
-			<p>
-				Reads the state of the USER button<br>
-			</p>
-			<pre>EthernetClientIOT ECIOT</pre>
-			<p>
-				EthernetClient extension<br>
-			</p>
-			<pre>eciot.standardHttpResponseHeader(EthernetClient client)</pre>
-			<p>
-				Sends a standard HTTP response header<br>
-			</p>
-			<pre>eciot.loadHTML(char* location, EthernetClient client)</pre>
-			<p>
-				location = input file<br>
-				Extension to load an HTML file for the client with some extra features<br>
-			</p>
-			<pre>getRequest gr</pre>
-			<p>
-				Extension for GET requests<br>
-			</p>
-			<pre>gr.getString(char c)</pre>
-			<p>
-				c = Input character<br>
-				Gets the input string<br>
-			</p>
-			<pre>gr.checkString(char* y)</pre>
-			<p>
-				y = Search string<br>
-				Searches for the string in the input string<br>
-			</p>
-			<pre>gr.resetString()</pre>
-			<p>
-				Clears the input string<br>
-			</p>
-      <pre>USER_LED</pre>
-			<p>
-				Constant for the user LED<br>
-			</p>
-      <pre>DI0</pre>
-			<p>
-				Constant for the I/O-Shield<br>
-			</p>
-      <pre>DI1</pre>
-			<p>
-				Constant for the I/O-Shield<br>
-			</p>
-      <pre>DI2</pre>
-			<p>
-				Constant for the I/O-Shield<br>
-			</p>
-      <pre>DI3</pre>
-			<p>
-				Constant for the I/O-Shield<br>
-			</p>
-      <pre>DI4</pre>
-			<p>
-				Constant for the I/O-Shield<br>
-			</p>
-      <pre>DQ0</pre>
-			<p>
-				Constant for the I/O-Shield<br>
-			</p>
-      <pre>DQ1</pre>
-			<p>
-				Constant for the I/O-Shield<br>
-			</p>
-      <pre>U0</pre>
-			<p>
-				Constant for the I/O-Shield<br>
-			</p>
-      <pre>I0</pre>
-			<p>
-				Constant for the I/O-Shield<br>
-			</p>
-      <pre>U1</pre>
-			<p>
-				Constant for the I/O-Shield<br>
-			</p>
-      <pre>I1</pre>
-			<p>
-				Constant for the I/O-Shield<br>
-			</p>
-			<p>
-				You can also use the functions of the Ethernet(Galileo) library when you only include this library!
-			</p>
-		<h2>Particularities</h2>
-		<p>
-			You can use the definitions on the I/O-Shield and the definition USER_LED in the Arduino IDE to control the parts.<br>
-			When you load an HTML document with the loadHTML function you can write the following in your document to get the values:<br><br>
+    <img src="../images/Arduino/IOT2000.png" style="width:35%" alt="IOT2000 Board">
+    <h2>About the Library</h2>
+    <p>
+      This library adds more functionality to your IOT2000 with the Arduino IDE. It was developed by Dominik Reichl in 2018 and designed for the Siemens Simatic IOT2000.<br>
+      This library is free software. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.<br><br>
+      <i>You can download the library <a href="https://github.com/Domi04151309/Siemens-Simatic-IOT2000-Arduino-Library">here</a></i>
+    </p>
+    <h2>How to Install</h2>
+    <p>
+      1. Download the repository from GitHub<br>
+      2. Unzip it<br>
+      3. Copy the "Siemens-Simatic-IOT2000-Arduino-Library-master" folder into your library folder<br>
+      4. Open the Arduino IDE<br>
+      5. Click on Sketch &gt Include Library &gt Siemens Simatic IOT2000<br>
+      Done!
+    </p>
+    <h2>Functions</h2>
+    <table>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>USER_LED</code>
+        <p>Constant for the user LED.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>DI0</code>
+        <p>Constant for the I/O-Shield.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>DI1</code>
+        <p>Constant for the I/O-Shield.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>DI2</code>
+        <p>Constant for the I/O-Shield.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>DI3</code>
+        <p>Constant for the I/O-Shield.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>DI4</code>
+        <p>Constant for the I/O-Shield.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>DQ0</code>
+        <p>Constant for the I/O-Shield.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>DQ1</code>
+        <p>Constant for the I/O-Shield.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>U0</code>
+        <p>Constant for the I/O-Shield.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>I0</code>
+        <p>Constant for the I/O-Shield.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>U1</code>
+        <p>Constant for the I/O-Shield.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>I1</code>
+        <p>Constant for the I/O-Shield.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>userLEDSketchRunning()</code>
+        <p>Defines the user LED as output and turns it on.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>activateUserButton()</code>
+          <p>Activates the reading of the user button.</p>
+        </td>
+      </tr>
+      <tr>
+        <td><code>bool</code></td>
+        <td><code>readUserButton()</code>
+        <p>Reads the state of the user button.</p></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><code>class</code></td>
+        <td><code>EthernetClientIOT</code>
+        <p>An extension to the default EthernetClient class.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>standardHttpResponseHeader(EthernetClient client)</code>
+        <p>Sends a standard http response header to the client.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>loadHTML(char* location,EthernetClient client)</code>
+        <p>Loads a HTML file from the internal storage and sends it to the client.</p></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><code>class</code></td>
+        <td><code>getRequest</code>
+        <p>Class that allows searching for a string in the requested URL.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>getString(char c)</code>
+        <p>Function for getting the URL.</p></td>
+      </tr>
+      <tr>
+        <td><code>bool</code></td>
+        <td><code>checkString(char* y)</code>
+        <p>Checks for a string in the URL.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>resetString()</code>
+        <p>Resets the saved string.</p></td>
+      </tr>
+    </table>
+    <p>You can also use the functions of the Ethernet(Galileo) library when you only include this library!</p>
+    <h2>Particularities</h2>
+    <p>
+      You can use the definitions on the I/O-Shield and the definition USER_LED in the Arduino IDE to control the parts.<br>
+      When you load an HTML document with the loadHTML function you can write the following in your document to get the values:<br><br>
       <span style="color:#008000">
-			&lt;!--digitalRead(0)--&gt;<br>
-			&lt;!--digitalRead(1)--&gt;<br>
-			&lt;!--digitalRead(2)--&gt;<br>
-			&lt;!--digitalRead(3)--&gt;<br>
-			&lt;!--digitalRead(4)--&gt;<br>
-			&lt;!--digitalRead(5)--&gt;<br>
-			&lt;!--digitalRead(6)--&gt;<br>
-			&lt;!--digitalRead(7)--&gt;<br>
-			&lt;!--digitalRead(8)--&gt;<br>
-			&lt;!--digitalRead(9)--&gt;<br>
-			&lt;!--digitalRead(10)--&gt;<br>
-			&lt;!--digitalRead(11)--&gt;<br>
-			&lt;!--digitalRead(12)--&gt;<br>
-			&lt;!--digitalRead(13)--&gt;<br>
-			&lt;!--analogRead(A0)--&gt;<br>
-			&lt;!--analogRead(A1)--&gt;<br>
-			&lt;!--analogRead(A2)--&gt;<br>
-			&lt;!--analogRead(A3)--&gt;<br>
-			&lt;!--analogRead(A4)--&gt;<br>
-			&lt;!--analogRead(A5)--&gt;<br>
+      &lt;!--digitalRead(0)--&gt;<br>
+      &lt;!--digitalRead(1)--&gt;<br>
+      &lt;!--digitalRead(2)--&gt;<br>
+      &lt;!--digitalRead(3)--&gt;<br>
+      &lt;!--digitalRead(4)--&gt;<br>
+      &lt;!--digitalRead(5)--&gt;<br>
+      &lt;!--digitalRead(6)--&gt;<br>
+      &lt;!--digitalRead(7)--&gt;<br>
+      &lt;!--digitalRead(8)--&gt;<br>
+      &lt;!--digitalRead(9)--&gt;<br>
+      &lt;!--digitalRead(10)--&gt;<br>
+      &lt;!--digitalRead(11)--&gt;<br>
+      &lt;!--digitalRead(12)--&gt;<br>
+      &lt;!--digitalRead(13)--&gt;<br>
+      &lt;!--analogRead(A0)--&gt;<br>
+      &lt;!--analogRead(A1)--&gt;<br>
+      &lt;!--analogRead(A2)--&gt;<br>
+      &lt;!--analogRead(A3)--&gt;<br>
+      &lt;!--analogRead(A4)--&gt;<br>
+      &lt;!--analogRead(A5)--&gt;<br>
       <span>
-		</p>
-		<h2>Examples</h2>
-		<p>
-			You can find examples in the library and also use the examples of the Ethernet(Galileo) library.
-		</p>
+    </p>
+    <h2>Examples</h2>
+    <p>
+      You can find examples in the library and also use the examples of the Ethernet(Galileo) library.
+    </p>

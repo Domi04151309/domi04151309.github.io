@@ -25,66 +25,73 @@ title: Arduino Logging Library
       Done!
     </p>
     <h2>Functions</h2>
-      <pre>Log Log</pre>
-      <p>
-        Class constructor<br>
-      </p>
-      <pre>LOG_DEBUG</pre>
-      <p>
-        Priority constant for the println method; use Log.d.<br>
-      </p>
-      <pre>LOG_ERROR</pre>
-      <p>
-        Priority constant for the println method; use Log.e.<br>
-      </p>
-      <pre>LOG_INFO</pre>
-      <p>
-        Priority constant for the println method; use Log.i.<br>
-      </p>
-      <pre>LOG_VERBOSE</pre>
-      <p>
-        Priority constant for the println method; use Log.v.<br>
-      </p>
-      <pre>LOG_WARN</pre>
-      <p>
-        Priority constant for the println method; use Log.w.<br>
-      </p>
-      <pre>Log.d(String tag, String msg)</pre>
-      <p>
-        tag = Used to identify the source of a log message.<br>
-        msg = The message you would like logged.<br>
-      </p>
-      <pre>Log.e(String tag, String msg)</pre>
-      <p>
-        tag = Used to identify the source of a log message.<br>
-        msg = The message you would like logged.<br>
-      </p>
-      <pre>Log.i(String tag, String msg)</pre>
-      <p>
-        tag = Used to identify the source of a log message.<br>
-        msg = The message you would like logged.<br>
-      </p>
-      <pre>Log.v(String tag, String msg)</pre>
-      <p>
-        tag = Used to identify the source of a log message.<br>
-        msg = The message you would like logged.<br>
-      </p>
-      <pre>Log.w(String tag, String msg)</pre>
-      <p>
-        tag = Used to identify the source of a log message.<br>
-        msg = The message you would like logged.<br>
-      </p>
-      <pre>Log.wtf(String tag, String msg)</pre>
-      <p>
-        tag = Used to identify the source of a log message.<br>
-        msg = The message you would like logged.<br>
-      </p>
-      <pre>Log.println(String priority, String tag, String msg)</pre>
-      <p>
-        priority = The priority/type of this log message.<br>
-        tag = Used to identify the source of a log message.<br>
-        msg = The message you would like logged.<br>
-      </p>
+    <table>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>LOG_DEBUG</code>
+        <p>Constant for the println function.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>LOG_ERROR</code>
+        <p>Constant for the println function.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>LOG_INFO</code>
+        <p>Constant for the println function.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>LOG_VERBOSE</code>
+        <p>Constant for the println function.</p></td>
+      </tr>
+      <tr>
+        <td><code>const</code></td>
+        <td><code>LOG_WARN</code>
+        <p>Constant for the println function.</p></td>
+      </tr>
+      <tr>
+        <td><code>class</code></td>
+        <td><code>Log</code>
+        <p>The main class of this library.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>d(String tag, String msg)</code>
+        <p>Prints a debug message to the serial monitor.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>e(String tag, String msg)</code>
+        <p>Prints an error message to the serial monitor.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>i(String tag, String msg)</code>
+        <p>Prints an info message to the serial monitor.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>v(String tag, String msg)</code>
+        <p>Prints a verbose message to the serial monitor.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>w(String tag, String msg)</code>
+        <p>Prints a warning message to the serial monitor.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>wtf(String tag, String msg)</code>
+        <p>Prints a wtf message to the serial monitor.</p></td>
+      </tr>
+      <tr>
+        <td><code>void</code></td>
+        <td><code>println(uint8_t priority, String tag, String msg)</code>
+        <p>Prints a message with the chosen priority to the serial monitor.</p></td>
+      </tr>
+    </table>
     <h2>Example</h2>
     <pre>
 #include &lt;Logging.h&gt;

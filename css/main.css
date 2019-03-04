@@ -107,14 +107,23 @@ h3{
   line-height:22px;
   margin:22px 0;
 }
-pre{
+ul{list-style-position:inside;}
+code{font-weight:bold;}
+td{
+  min-width:214px;
+  padding:7px 8px 8px;
+  vertical-align:top;
+  background:#F8F9FA;
+}
+td:first-child{background:#EEF1F2;}
+tr{border-top:1px solid #cfd8dc;}
+-pre{
   overflow-x:auto;
   width:100%;
   background-color:#f7f9f9;
   margin:1em 0;
   color:#434f54;
 }
-ul{list-style-position:inside;}
 button{
   margin:0 0 10px;
   vertical-align:middle;
@@ -165,4 +174,5 @@ footer h1:hover{background:rgba(0,0,0,.05);}
   background:rgba(0,0,0,.05) var(--footer-up-image) no-repeat;
   background-size:48px 48px;
 }
+@media screen and (max-width:800px){td,tr{display:block;}}
 @media print{header,footer{display:none;}}
