@@ -118,7 +118,7 @@ td{
 }
 td:first-child{background:#EEF1F2;}
 tr{border-top:1px solid #cfd8dc;}
--pre{
+pre{
   overflow-x:auto;
   width:100%;
   background-color:#f7f9f9;
