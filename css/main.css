@@ -74,6 +74,11 @@ img{
   max-width:100%;
   height:auto;
 }
+.pixel{
+  height:128px;
+  width:128px;
+  image-rendering:pixelated;
+}
 article{
   max-width:780px;
   padding:74px 20px;
