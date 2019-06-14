@@ -153,6 +153,7 @@ p.preview{text-align:center;}
 img.preview{
   display:inline-block;
   max-width:190px;
+  vertical-align:middle;
 }
 footer{
   bottom:0;
