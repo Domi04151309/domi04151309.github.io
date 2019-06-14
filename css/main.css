@@ -83,6 +83,7 @@ article{
   max-width:780px;
   padding:74px 20px;
   margin:0 auto;
+  overflow-y:hidden;
 }
 a{
   color:var(--accent-color);
