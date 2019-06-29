@@ -20,7 +20,7 @@ git clone https://github.com/Domi04151309/MacBuntu-Extras
 sudo mkdir /MacBuntu
 
 echo "Getting wallpapers..."
-sudo cp MacBuntu-Extras/macos/10-14-Day.jpg /MacBuntu
+sudo cp MacBuntu-Extras/macos/10-15-light.jpg /MacBuntu
 cp -R ./MacBuntu-Extras/macos ./
 
 echo "Getting fonts..."
@@ -33,13 +33,13 @@ echo "Applying themes..."
 gsettings set org.gnome.desktop.interface gtk-theme 'MacBuntu-OS-MJV'
 gsettings set org.gnome.desktop.interface cursor-theme 'mac-cursors'
 gsettings set org.gnome.desktop.interface icon-theme 'MacBuntu-OS'
-gsettings set org.gnome.shell.extensions.user-theme name 'MacBuntu-OS-3.2'
+gsettings set org.gnome.shell.extensions.user-theme name 'MacBuntu-Sierra-light'
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
 gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Lucida Grande 11'
 gsettings set org.gnome.desktop.interface font-name 'Lucida Grande 11'
 gsettings set org.gnome.desktop.interface document-font-name 'Lucida Grande 11'
-gsettings set org.gnome.desktop.background picture-uri file:///MacBuntu/10-14-Day.jpg
+gsettings set org.gnome.desktop.background picture-uri file:///MacBuntu/10-15-light.jpg
 
 echo "Configuring Plank..."
 rm -rf ~/.config/plank
