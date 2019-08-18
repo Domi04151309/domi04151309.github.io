@@ -5,7 +5,7 @@ var CACHE_NAME = 'domi-cache-{{ site.time | date: "%Y-%m-%d-%H:%M" }}';
 var urlsToCache = [
   '/',
   '/offline',
-  '/images/error.png',
+  '/images/error.svg',
   '/css/main.css',
   '/css/home.css',
   '/social_media/main.css',
@@ -46,7 +46,7 @@ self.addEventListener('fetch', function(event) {
           caches.open(CACHE_NAME).then(function(cache) {
             cache.put(event.request, responseToCache);
           });
-            
+
           return response;
         }
       );

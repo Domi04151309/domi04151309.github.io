@@ -55,7 +55,7 @@ h1.home{
     margin-bottom:48px;
   }
   span.home{
-    background:url(../images/logo_big.png) no-repeat;
+    background:url(../images/logo_big.svg) no-repeat;
     background-size:cover;
     height:256px;
     width:256px;
