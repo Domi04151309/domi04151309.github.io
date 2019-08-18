@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
   <title>Domi04151309</title>
-  <meta charset="utf-8">  
   <meta name="description" content="On this page you can find most of my projects. Also a lot of it is open-source and published under the terms of the GNU GPL 3. Improvement suggestions are always welcome." />
   <meta name="keywords" content="domi04151309, domi, 04151309" />
   <meta name="google-site-verification" content="rlunQ8lHnv4cTauqGw4DcxCdiJTHAU1-gui1zlcS64w" />
-  <link rel="stylesheet" type="text/css" href="/css/blue.css" />
-  <link rel="stylesheet" type="text/css" href="/css/main.css" />
-  <link rel="stylesheet" type="text/css" href="/css/home.css" />
-  <link rel="stylesheet" type="text/css" href="/social_media/main.css" />
+  <link rel="stylesheet" type="text/css" href="/css/blue.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/home.min.css" />
+  <link rel="stylesheet" type="text/css" href="/social_media/main.min.css" />
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="msapplication-config" content="/ieconfig.xml" />
@@ -41,7 +41,7 @@
       <div class="hero-content">
         <span class="home">Logo</span>
         <h1 class="home">I'm Dominik</h1>
-        <button class="home" onclick="expand()" title="Expand"></button>
+        <button type="button" class="home" onclick="expand()" title="Expand"></button>
       </div>
     </div>
     <div class="altBase">
@@ -153,11 +153,11 @@
   <footer>
     <a href="/Other/sources"><h1>Sources</h1></a>
     <a href="/Other/cookie_policy"><h1>Cookie Policy</h1></a>
-    <button onclick="toTop()" id="topBtn" title="Go to top"></button>
+    <button type="button" onclick="toTop()" id="topBtn" title="Go to top"></button>
   </footer>
-  <script src="/js/scrolling.js" async></script>
+  <script src="/js/scrolling.min.js" async></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/js/postprocess.js" async></script>
+  <script src="/js/postprocess.min.js" async></script>
   <script>
     let newWorker
     if ('serviceWorker' in navigator) {
@@ -176,7 +176,7 @@
           console.log('ServiceWorker registration failed: ', err);
         });
       });
-      
+
       let refreshing;
       navigator.serviceWorker.addEventListener('controllerchange', function () {
         if (refreshing) return;

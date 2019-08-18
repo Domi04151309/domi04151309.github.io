@@ -6,10 +6,12 @@ var urlsToCache = [
   '/',
   '/offline',
   '/images/error.svg',
-  '/css/main.css',
-  '/css/home.css',
-  '/social_media/main.css',
-  '/js/scrolling.js'
+  '/css/main.min.css',
+  '/css/blue.min.css',
+  '/css/green.min.css',
+  '/css/home.min.css',
+  '/social_media/main.min.css',
+  '/js/scrolling.min.js'
 ];
 
 self.addEventListener('install', function(event) {
