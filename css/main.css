@@ -216,6 +216,7 @@ footer h1:hover{
   margin:8px;
   background:var(--footer-up-image) no-repeat;
   background-size:48px 48px;
+  box-shadow:none;
 }
 #topBtn:hover{
   background:rgba(0,0,0,.05) var(--footer-up-image) no-repeat;
