@@ -98,13 +98,16 @@ h1.home{
   }
   .altBase{padding:20px 20px;
   }
+  .dark .hash{
+    color:rgba(255,255,255,.66);
+  }
   h2{
     margin-top:6px;
     margin-bottom:12px;
   }
   .dark{
     background:#252525 url(../images/darkBg.jpg);
-    color:#fff;
+    color:rgba(255,255,255,.66);
   }
   .card{
     padding:24px;
