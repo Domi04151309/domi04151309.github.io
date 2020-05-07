@@ -6,6 +6,10 @@ defaults:
     values:
       layout: "default"
   - scope:
+      path: "Android"
+    values:
+      layout: "project"
+  - scope:
       path: "Arduino"
     values:
       layout: "default_green"
