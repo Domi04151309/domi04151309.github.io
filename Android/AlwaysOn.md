@@ -22,4 +22,6 @@ previews:
   - /images/Android/AlwaysOn4.jpg
   - /images/Android/AlwaysOn5.jpg
   - /images/Android/AlwaysOn6.jpg
+  - /images/Android/AlwaysOn7.jpg
+  - /images/Android/AlwaysOn8.jpg
 ---
