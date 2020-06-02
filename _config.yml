@@ -10,6 +10,18 @@ defaults:
     values:
       layout: "project"
   - scope:
+      path: "Linux"
+    values:
+      layout: "project"
+  - scope:
+      path: "Web"
+    values:
+      layout: "project"
+  - scope:
+      path: "Windows"
+    values:
+      layout: "project"
+  - scope:
       path: "Arduino"
     values:
       layout: "default_green"
