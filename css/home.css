@@ -84,11 +84,8 @@ h1.home{
     height:72px;
     width:72px;
     outline:0;
-    border:none;
-    cursor:pointer;
     background:url(../images/expand_blue.svg) no-repeat;
     background-size:72px 72px;
-    box-shadow:none;
   }
   button.home:hover{
     animation:pop .5s;

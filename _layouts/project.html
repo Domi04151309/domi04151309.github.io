@@ -6,7 +6,7 @@ layout: default
 <p>
   {{ page.description }}<br><br>
   {% for button in page.buttons %}
-	<button type="button" onclick="location.href='{{ button.link }}'">{{ button.label }}</button>
+	<a class="btn" href="{{ button.link }}">{{ button.label }}</a>
   {% endfor %}
 </p>
 {% if page.previews %}
