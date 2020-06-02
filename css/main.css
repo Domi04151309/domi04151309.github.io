@@ -186,7 +186,7 @@ p.preview img:hover{
 }
 img.preview{
   display:inline-block;
-  max-width:190px;
+  max-height:337px;
   vertical-align:middle;
 }
 footer{
