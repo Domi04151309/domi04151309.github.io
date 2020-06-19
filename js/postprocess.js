@@ -18,8 +18,10 @@ document.querySelectorAll(".hash").forEach((item) => {
     window.history.pushState(null, null, item.href);
   });
 });
+
 setTimeout(function(){
   if (location.hash) {
+    console.log(document.getElementById(location.hash.substring(1)).offsetTop - 86);
     scrollToY(document.getElementById(location.hash.substring(1)).offsetTop - 86, 500, 'easeInOutQuint');
   }
 }, 1000);
