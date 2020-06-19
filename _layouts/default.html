@@ -5,7 +5,7 @@
   <title>Domi04151309 - {{ page.title }}</title>
   <link rel="canonical" href="{{ site.url }}{{ page.url | remove: '.html' }}" />
   <meta name="description" content="On this page you can find most of my projects. Also a lot of it is open-source and published under the terms of the GNU GPL 3. Improvement suggestions are always welcome." />
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/blue.min.css" />
+  {% if layout.green %}<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/green.min.css" />{% else %}<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/blue.min.css" />{% endif %}
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.min.css" />
   <link rel="icon" href="{{site.baseurl}}/favicon.ico">
   <link rel="apple-touch-icon" href="{{site.baseurl}}/apple-touch-icon.PNG" />
