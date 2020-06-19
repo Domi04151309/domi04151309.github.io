@@ -1,3 +1,8 @@
+function ready(callback) {
+  if (document.readyState!='loading') callback();
+  else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
+}
+
 document.querySelectorAll("h2, h3").forEach((item) => {
   const headingText = item.innerHTML.toLowerCase().trim().replace(/[\.,-\/#!?$%\^&\*;:{}=\-_`~()]/g,"").replace(/[ ]/g,"-");
   item.id = headingText;
@@ -19,9 +24,12 @@ document.querySelectorAll(".hash").forEach((item) => {
   });
 });
 
-setTimeout(function(){
+setTimeout(function() {
   if (location.hash) {
     console.log(document.getElementById(location.hash.substring(1)).offsetTop - 86);
-    scrollToY(document.getElementById(location.hash.substring(1)).offsetTop - 86, 500, 'easeInOutQuint');
+    ready(function() {
+      console.log(document.getElementById(location.hash.substring(1)).offsetTop - 86);
+      scrollToY(document.getElementById(location.hash.substring(1)).offsetTop - 86, 500, 'easeInOutQuint');
+    });
   }
 }, 1000);
