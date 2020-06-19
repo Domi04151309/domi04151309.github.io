@@ -14,16 +14,12 @@ document.querySelectorAll("img").forEach((item) => {
 document.querySelectorAll(".hash").forEach((item) => {
   item.addEventListener("click", function(e){
     e.preventDefault();
-    $('html,body').animate({
-      scrollTop: item.offsetTop - 86
-    }, 500);
+    scrollToY(item.offsetTop - 86, 500, 'easeInOutQuint');
     window.history.pushState(null, null, item.href);
   });
 });
 setTimeout(function(){
   if (location.hash) {
-    $('html,body').animate({
-      scrollTop: document.getElementById(location.hash.substring(1)).offsetTop - 86
-    }, 500);
+    scrollToY(document.getElementById(location.hash.substring(1)).offsetTop - 86, 500, 'easeInOutQuint');
   }
 }, 1000);

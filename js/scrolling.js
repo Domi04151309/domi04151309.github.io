@@ -6,27 +6,28 @@ window.requestAnimFrame = (function(){
             window.setTimeout(callback, 1000 / 60);
           };
 })();
+
 function scrollToY(scrollTargetY, speed, easing) {
     var scrollY = window.scrollY || document.documentElement.scrollTop,
         scrollTargetY = scrollTargetY || 0,
         speed = speed || 2000,
         easing = easing || 'easeOutSine',
         currentTime = 0;
-    var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, .8));
+    var time = Math.max(0.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, 0.8));
     var easingEquations = {
-            easeOutSine: function (pos) {
-                return Math.sin(pos * (Math.PI / 2));
-            },
-            easeInOutSine: function (pos) {
-                return (-0.5 * (Math.cos(Math.PI * pos) - 1));
-            },
-            easeInOutQuint: function (pos) {
-                if ((pos /= 0.5) < 1) {
-                    return 0.5 * Math.pow(pos, 5);
-                }
-                return 0.5 * (Math.pow((pos - 2), 5) + 2);
+        easeOutSine: function (pos) {
+            return Math.sin(pos * (Math.PI / 2));
+        },
+        easeInOutSine: function (pos) {
+            return (-0.5 * (Math.cos(Math.PI * pos) - 1));
+        },
+        easeInOutQuint: function (pos) {
+            if ((pos /= 0.5) < 1) {
+                return 0.5 * Math.pow(pos, 5);
             }
-        };
+            return 0.5 * (Math.pow((pos - 2), 5) + 2);
+        }
+    };
     function tick() {
         currentTime += 1 / 60;
         var p = currentTime / time;
@@ -35,18 +36,19 @@ function scrollToY(scrollTargetY, speed, easing) {
             requestAnimFrame(tick);
             window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t));
         } else {
-            console.log('scroll done');
             window.scrollTo(0, scrollTargetY);
         }
     }
     tick();
 }
+
 function expand() {
   var height = window.innerHeight
     || document.documentElement.clientHeight
     || document.body.clientHeight;
-scrollToY(height - 118, 1500, 'easeInOutQuint');
+  scrollToY(height - 118, 1500, 'easeInOutQuint');
 }
+
 function toTop() {
-scrollToY(0, 1500, 'easeInOutQuint');
+  scrollToY(0, 1500, 'easeInOutQuint');
 }
