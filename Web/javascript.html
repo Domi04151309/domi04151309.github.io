@@ -147,7 +147,7 @@ title: JavaScript Testsite
       <tr><td>Latitude:</td><td id="js17_8">&#10008;</td></tr>
       <tr><td>Longitude:</td><td id="js17_9">&#10008;</td></tr>
     </table>
-    <span id="loc"></span>
+    <p id="loc"><br></p>
     <script type="text/javascript">
       function reqListener () {
         console.log(this.responseText);
@@ -163,7 +163,8 @@ title: JavaScript Testsite
         document.getElementById("js17_8").innerHTML = obj.ip.latitude;
         document.getElementById("js17_9").innerHTML = obj.ip.longitude;
         var e = document.createElement('a');
-        e.setAttribute('href', 'https://www.google.de/maps/place/' + obj.ip.latitude + "," + obj.ip.longitude);
+        e.href = 'https://www.google.de/maps/place/' + obj.ip.latitude + "," + obj.ip.longitude;
+        e.classList.add("btn");
         var node = document.createTextNode('Show location on map');
         e.appendChild(node);
         var element = document.getElementById('loc');
