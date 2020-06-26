@@ -21,7 +21,3 @@ defaults:
       path: "Windows"
     values:
       layout: "project"
-  - scope:
-      path: "Arduino"
-    values:
-      layout: "default_green"
