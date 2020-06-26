@@ -2,11 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Domi04151309 - {{ page.title }}</title>
+  <title>Domi04151309{% if page.title %} - {{ page.title }}{% endif %}</title>
   <link rel="canonical" href="{{ site.url }}{{ page.url | remove: '.html' }}" />
   <meta name="description" content="On this page you can find most of my projects. Also a lot of it is open-source and published under the terms of the GNU GPL 3. Improvement suggestions are always welcome." />
-  {% if layout.green %}<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/green.min.css" />{% else %}<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/blue.min.css" />{% endif %}
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/blue.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.min.css" />{% if page.home %}
+  <meta name="keywords" content="domi04151309, domi, 04151309" />
+  <meta name="google-site-verification" content="rlunQ8lHnv4cTauqGw4DcxCdiJTHAU1-gui1zlcS64w" />
+  <link rel="stylesheet" type="text/css" href="/css/home.min.css" />
+  <link rel="stylesheet" type="text/css" href="/social_media/main.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Domi04151309",
+    "url": "https://domi04151309.github.io",
+    "sameAs": [
+      "https://twitter.com/Domi04151309",
+      "https://www.instagram.com/domi04151309/",
+      "https://www.youtube.com/channel/UCGnCS1DQZHXksuI9YEIIbgA"
+    ]
+  }
+  </script>{% endif %}
   <link rel="icon" href="{{site.baseurl}}/favicon.ico">
   <link rel="apple-touch-icon" href="{{site.baseurl}}/apple-touch-icon.PNG" />
   <meta name="msapplication-config" content="{{site.baseurl}}/ieconfig.xml" />
@@ -19,10 +36,11 @@
   <header>
     <a href="{{site.baseurl}}/" class="logo">Home</a>
     <h1>Domi04151309</h1>
-  </header>
+  </header>{% if page.home %}
+{{ content }}{% else %}
   <article>
 {{ content }}
-  </article>
+  </article>{% endif %}
   <footer>
     <a href="{{site.baseurl}}/Other/sources"><h1>Sources</h1></a>
     <a href="{{site.baseurl}}/Other/cookie_policy"><h1>Cookie Policy</h1></a>
