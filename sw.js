@@ -8,7 +8,6 @@ var urlsToCache = [
   '/images/error.svg',
   '/css/main.min.css',
   '/css/blue.min.css',
-  '/css/green.min.css',
   '/css/home.min.css',
   '/social_media/main.min.css',
   '/js/scrolling.min.js'
