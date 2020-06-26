@@ -82,7 +82,7 @@ h1{
   background:rgba(0,0,0,0) url(../images/logo_hover.png) no-repeat 20px 11px;
   background-size:58px 32px;
 }
-article,.altBase{
+main,.altBase{
   animation:transformation 1s;
 }
 img{
@@ -94,7 +94,7 @@ img{
   width:128px;
   image-rendering:pixelated;
 }
-article{
+main{
   max-width:780px;
   padding:74px 20px;
   margin:0 auto;

@@ -2,7 +2,7 @@ body{
   background:#04325A url(../images/home_bg.jpg) no-repeat;
   background-size:cover;
 }
-article {
+main {
   margin:0;
   padding:0;
   max-width:100%;
