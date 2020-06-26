@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Domi04151309{% if page.title %} - {{ page.title }}{% endif %}</title>
   <link rel="canonical" href="{{ site.url }}{{ page.url | remove: '.html' }}" />
-  <meta name="description" content="On this page you can find most of my projects. Also a lot of it is open-source and published under the terms of the GNU GPL 3. Improvement suggestions are always welcome." />
+  <meta name="description" content="{{ page.description | default: "On this page, you can find most of the projects I am working on in my free time. Most of them are open-source software and improvement suggestions are always welcome." | replace: "<br>", " "}}" />
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/blue.min.css" />
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.min.css" />{% if page.home %}
   <meta name="keywords" content="domi04151309, domi, 04151309" />
