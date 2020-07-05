@@ -96,7 +96,7 @@ img{
 }
 main{
   max-width:780px;
-  padding:74px 20px;
+  padding:74px 24px;
   margin:0 auto;
   overflow-y:hidden;
 }
@@ -113,6 +113,7 @@ a:hover{
   margin-left:-18px;
   font-weight:400;
   color:rgba(0,0,0,.6);
+  font-style:normal;
 }
 h2{
   color:var(--accent-color);
