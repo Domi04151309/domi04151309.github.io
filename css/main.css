@@ -100,6 +100,9 @@ main{
   margin:0 auto;
   overflow-y:hidden;
 }
+a *{
+  transition-duration:.25s;
+}
 a{
   color:var(--accent-color);
   text-decoration:none;
