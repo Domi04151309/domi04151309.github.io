@@ -31,7 +31,6 @@
 *{
   padding:0;
   margin:0;
-  transition-duration:.25s;
 }
 html,body{
   color:rgba(0,0,0,.6);
@@ -104,6 +103,7 @@ main{
 a{
   color:var(--accent-color);
   text-decoration:none;
+  transition-duration:.25s;
 }
 a:hover{
   text-decoration:underline;
@@ -181,6 +181,7 @@ button {
   display:inline-block;
   border:0;
   cursor:pointer;
+  transition-duration:.25s;
 }
 .unavailable{
   background:#595959;
