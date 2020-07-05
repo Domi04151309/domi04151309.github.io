@@ -57,7 +57,7 @@ h1.home{
   overflow:hidden;
 }
 .subtitle{
-  margin-bottom:3px;
+  margin-bottom:7px;
 }
 @media only screen and (min-width:500px) and (min-height:600px){
   .hero-image{

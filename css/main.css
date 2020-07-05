@@ -39,6 +39,7 @@ html,body{
   width:100%;
   font:14px verdana, sans-serif;
   line-height:1.5;
+  letter-spacing:.25px;
 }
 header,footer{
   position:fixed;
@@ -102,7 +103,6 @@ main{
 }
 a{
   color:var(--accent-color);
-  font-style:italic;
   text-decoration:none;
 }
 a:hover{
@@ -113,13 +113,12 @@ a:hover{
   margin-left:-18px;
   font-weight:400;
   color:rgba(0,0,0,.6);
-  font-style:normal;
 }
 h2{
   color:var(--accent-color);
   font-size:18px;
   font-weight:normal;
-  margin-bottom:3px;
+  margin-bottom:7px;
   margin-top:32px;
 }
 h3{
@@ -128,6 +127,9 @@ h3{
   letter-spacing:.5px;
   line-height:22px;
   margin:22px 0;
+}
+.p-margin{
+  margin-bottom:14px;
 }
 ul{
   list-style-position:inside;
@@ -168,7 +170,6 @@ pre{
   color: #fff;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
   font-size: 12px;
-  font-style: normal;
   line-height: 1.25;
 }
 .btn:hover {
@@ -210,7 +211,6 @@ footer *{
   border-radius:16px;
 }
 footer h1{
-  font-style:normal;
   margin:5px;
 }
 footer h1:hover{
