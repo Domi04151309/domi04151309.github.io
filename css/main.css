@@ -32,6 +32,11 @@
   padding:0;
   margin:0;
 }
+html{
+  -webkit-text-size-adjust:none;
+  -moz-text-size-adjust:none;
+  -ms-text-size-adjust:none;
+}
 html,body{
   color:rgba(0,0,0,.6);
   height:100%;
