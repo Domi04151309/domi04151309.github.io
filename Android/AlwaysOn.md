@@ -3,8 +3,9 @@ title: AlwaysOn
 icon: /images/Icons/AlwaysOn.png
 description: |
   AlwaysOn is an app for every device with an AMOLED or OLED display.
-  It keeps your screen on while the clock and battery percentage are displayed but it does not drain your battery.<br>
-  Also, icons appear when you plug in your headphones or start charging your device.
+  It adds an always-on display with various customization options regarding the watch face, the behavior, and the background.
+  Take a look at your phone and have everything you need in one place\: the time, the date, the battery state, your notifications, and more.
+  As an additional feature you can enable charging and headphones animations that appear when plugging in headphones or your charging cable.
 buttons:
   - 0:
     link: https://play.google.com/store/apps/details?id=io.github.domi04151309.alwayson
