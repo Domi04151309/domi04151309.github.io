@@ -4,7 +4,7 @@ icon: /images/Icons/AlwaysOn.png
 description: |
   AlwaysOn is an app for every device with an AMOLED or OLED display.
   It adds an always-on display with various customization options regarding the watch face, the behavior, and the background.
-  Take a look at your phone and have everything you need in one place\: the time, the date, the battery state, your notifications, and more.
+  Take a look at your phone and have everything you need in one place: the time, the date, the battery state, your notifications, and more.
   As an additional feature you can enable charging and headphones animations that appear when plugging in headphones or your charging cable.
 buttons:
   - 0:
