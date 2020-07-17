@@ -181,8 +181,11 @@ pre {
   line-height: 1.25;
 }
 .btn:hover {
-  background: #1260AE;
+  filter: brightness(1.2);
   text-decoration: none;
+}
+.btn:active {
+  filter: brightness(1.4);
 }
 button {
   vertical-align: middle;
