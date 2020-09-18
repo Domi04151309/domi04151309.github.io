@@ -21,10 +21,10 @@ buttons:
     link: https://developer.android.com/studio/index
     label: Android Studio
 previews:
-  - /images/Android/HomeApp1.jpg
-  - /images/Android/HomeApp2.jpg
-  - /images/Android/HomeApp3.jpg
-  - /images/Android/HomeApp4.jpg
-  - /images/Android/HomeApp5.jpg
-  - /images/Android/HomeApp6.jpg
+  - https://raw.githubusercontent.com/Domi04151309/HomeApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg
+  - https://raw.githubusercontent.com/Domi04151309/HomeApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg
+  - https://raw.githubusercontent.com/Domi04151309/HomeApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg
+  - https://raw.githubusercontent.com/Domi04151309/HomeApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg
+  - https://raw.githubusercontent.com/Domi04151309/HomeApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg
+  - https://raw.githubusercontent.com/Domi04151309/HomeApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg
 ---

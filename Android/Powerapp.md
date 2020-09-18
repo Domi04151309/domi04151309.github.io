@@ -15,7 +15,7 @@ buttons:
     link: https://developer.android.com/studio/index
     label: Android Studio
 previews:
-  - https://raw.githubusercontent.com/Domi04151309/PowerApp/master/preview.jpg
-  - https://raw.githubusercontent.com/Domi04151309/PowerApp/master/preview2.jpg
-  - https://raw.githubusercontent.com/Domi04151309/PowerApp/master/preview3.jpg
+  - https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg
+  - https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg
+  - https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg
 ---

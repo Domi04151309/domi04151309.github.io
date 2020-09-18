@@ -14,7 +14,7 @@ buttons:
     link: https://developer.android.com/studio/index
     label: Android Studio
 previews:
-  - /images/Android/HomeworkApp1.jpg
-  - /images/Android/HomeworkApp2.jpg
-  - /images/Android/HomeworkApp3.jpg
+  - https://raw.githubusercontent.com/Domi04151309/HomeworkApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg
+  - https://raw.githubusercontent.com/Domi04151309/HomeworkApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg
+  - https://raw.githubusercontent.com/Domi04151309/HomeworkApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg
 ---

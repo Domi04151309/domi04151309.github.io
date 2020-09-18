@@ -16,9 +16,9 @@ buttons:
     link: https://developer.android.com/studio/index
     label: Android Studio
 previews:
-  - /images/Android/pods/1.jpg
-  - /images/Android/pods/2.jpg
-  - /images/Android/pods/3.jpg
-  - /images/Android/pods/4.jpg
-  - /images/Android/pods/5.jpg
+  - https://raw.githubusercontent.com/Domi04151309/PodsCompanion/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg
+  - https://raw.githubusercontent.com/Domi04151309/PodsCompanion/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg
+  - https://raw.githubusercontent.com/Domi04151309/PodsCompanion/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg
+  - https://raw.githubusercontent.com/Domi04151309/PodsCompanion/master/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg
+  - https://raw.githubusercontent.com/Domi04151309/PodsCompanion/master/fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg
 ---

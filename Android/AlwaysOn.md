@@ -17,12 +17,12 @@ buttons:
     link: https://developer.android.com/studio/index
     label: Android Studio
 previews:
-  - /images/Android/AlwaysOn1.jpg
-  - /images/Android/AlwaysOn2.jpg
-  - /images/Android/AlwaysOn3.jpg
-  - /images/Android/AlwaysOn4.jpg
-  - /images/Android/AlwaysOn5.jpg
-  - /images/Android/AlwaysOn6.jpg
-  - /images/Android/AlwaysOn7.jpg
-  - /images/Android/AlwaysOn8.jpg
+  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg
+  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg
+  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg
+  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg
+  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg
+  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg
+  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/7.jpg
+  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/8.jpg
 ---
