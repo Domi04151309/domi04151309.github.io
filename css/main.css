@@ -42,8 +42,8 @@ html, body {
   height: 100%;
   width: 100%;
   font: 14px verdana, sans-serif;
-  line-height: 1.5;
-  letter-spacing: .25px;
+  line-height: 1.8;
+  letter-spacing: .1px;
 }
 header, footer {
   position: fixed;
