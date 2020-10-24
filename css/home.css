@@ -55,7 +55,7 @@ h1.home {
   min-width: 192px;
 }
 .card, .img-card {
-  margin: 36px;
+  margin: 36px 0;
 }
 .about-img {
   background: url(../images/workspace.svg) center no-repeat;
@@ -125,6 +125,9 @@ h1.home {
   }
 }
 @media only screen and (min-width: 1000px) and (min-height: 600px) {
+  .card, .img-card {
+    margin: 36px;
+  }
   .socialDiv {
     margin-top: 26px;
     margin-bottom: -36px;
