@@ -101,7 +101,7 @@ img {
 }
 main {
   max-width: 780px;
-  padding: 74px 24px;
+  padding: 86px 32px;
   margin: 0 auto;
   overflow-y: hidden;
 }
@@ -214,31 +214,32 @@ img.preview {
 }
 footer {
   bottom: 0;
-  height: 64px;
+  height: 54px;
   background-color: #fff;
   color: var(--accent-color);
 }
 footer * {
   color: var(--accent-color);
   border-radius: 16px;
+  margin: 8px;
 }
 footer h1 {
-  margin: 5px;
+  padding: 12px;
+  height: 14px;
 }
 footer h1:hover {
   background: rgba(0, 0, 0, .05);
 }
 #topBtn {
   float: right;
-  height: 48px;
-  width: 48px;
-  margin: 8px;
+  height: 38px;
+  width: 38px;
   background: var(--footer-up-image) no-repeat;
-  background-size: 48px 48px;
+  background-size: 38px 38px;
 }
 #topBtn:hover {
   background: rgba(0, 0, 0, .05) var(--footer-up-image) no-repeat;
-  background-size: 48px 48px;
+  background-size: 38px 38px;
 }
 @media screen and (max-width: 800px) {
   td, tr {

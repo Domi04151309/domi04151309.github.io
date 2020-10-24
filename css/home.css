@@ -40,7 +40,7 @@ h1.home {
   text-transform: none;
 }
 .altBaseFrame {
-  padding: 54px 0 64px;
+  padding: 54px 0;
 }
 .altBase {
   max-width: 1080px;
