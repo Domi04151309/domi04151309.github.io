@@ -1,5 +1,5 @@
 .socialDiv{
-  text-align:center;margin-top:-20px;
+  text-align:center;
 }
 .social{
   box-sizing:content-box;
@@ -10,6 +10,7 @@
   background-repeat:no-repeat;
   background-size:500%;
   font-size:0;
+  vertical-align:middle;
   transition:none;
 }
 .twitter{
@@ -41,11 +42,4 @@
 }
 .youtube:hover{
   background-position:100% 100%;
-}
-@media only screen and (min-width: 500px) and (min-height: 600px) {
-  .socialDiv{
-    margin-top:0px;
-    height:64px;
-    padding-bottom:10px;
-  }
 }
