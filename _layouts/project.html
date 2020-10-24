@@ -13,7 +13,7 @@ layout: default
 <h2>Previews</h2>
 <p class="preview">
   {% for image in page.previews %}
-  <img class="preview" src="{{ image }}" alt="Preview">
+  <img class="preview" src="{% if page.github %}https://raw.githubusercontent.com/{{ page.github }}/fastlane/metadata/android/en-US/images/phoneScreenshots/{{ image }}{% else %}{{ image }}{% endif %}" alt="Preview">
   {% endfor %}
 </p>
 {% endif %}

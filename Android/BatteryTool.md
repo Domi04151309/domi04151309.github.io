@@ -1,5 +1,6 @@
 ---
 title: Battery Tool
+github: Domi04151309/BatteryTool/main
 icon: /images/Icons/BatteryTool.png
 description: |
   Battery Tool helps you save battery by stopping apps that are running in the background.
@@ -18,7 +19,7 @@ buttons:
     link: https://developer.android.com/studio/index
     label: Android Studio
 previews:
-  - https://raw.githubusercontent.com/Domi04151309/BatteryTool/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg
-  - https://raw.githubusercontent.com/Domi04151309/BatteryTool/main/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg
-  - https://raw.githubusercontent.com/Domi04151309/BatteryTool/main/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 ---

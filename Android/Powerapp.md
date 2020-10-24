@@ -1,5 +1,6 @@
 ---
 title: Power App
+github: Domi04151309/PowerApp/master
 icon: /images/Icons/Powerapp.png
 description: |
   This App offers you a lot of different power options like shutting down, rebooting, soft rebooting, rebooting into recovery, rebooting into the bootloader, restarting System UI and turning off your screen.<br><br>
@@ -15,7 +16,7 @@ buttons:
     link: https://developer.android.com/studio/index
     label: Android Studio
 previews:
-  - https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg
-  - https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg
-  - https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 ---

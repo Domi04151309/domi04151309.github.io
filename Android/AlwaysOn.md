@@ -1,5 +1,6 @@
 ---
 title: AlwaysOn
+github: Domi04151309/AlwaysOn/master
 icon: /images/Icons/AlwaysOn.png
 description: |
   AlwaysOn is an app for every device with an AMOLED or OLED display.
@@ -17,12 +18,12 @@ buttons:
     link: https://developer.android.com/studio/index
     label: Android Studio
 previews:
-  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg
-  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg
-  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg
-  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg
-  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg
-  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg
-  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/7.jpg
-  - https://raw.githubusercontent.com/Domi04151309/AlwaysOn/master/fastlane/metadata/android/en-US/images/phoneScreenshots/8.jpg
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  - 4.jpg
+  - 5.jpg
+  - 6.jpg
+  - 7.jpg
+  - 8.jpg
 ---

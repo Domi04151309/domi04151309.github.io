@@ -1,5 +1,6 @@
 ---
 title: Pods Companion
+github: Domi04151309/PodsCompanion/master
 icon: /images/Icons/PodsCompanion.png
 description: |
   Pods Companion allows you to use your AirPods™ how they were intended to be used.
@@ -16,9 +17,9 @@ buttons:
     link: https://developer.android.com/studio/index
     label: Android Studio
 previews:
-  - https://raw.githubusercontent.com/Domi04151309/PodsCompanion/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg
-  - https://raw.githubusercontent.com/Domi04151309/PodsCompanion/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg
-  - https://raw.githubusercontent.com/Domi04151309/PodsCompanion/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg
-  - https://raw.githubusercontent.com/Domi04151309/PodsCompanion/master/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg
-  - https://raw.githubusercontent.com/Domi04151309/PodsCompanion/master/fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  - 4.jpg
+  - 5.jpg
 ---
