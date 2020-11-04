@@ -46,7 +46,7 @@ function expand() {
   var height = window.innerHeight
     || document.documentElement.clientHeight
     || document.body.clientHeight;
-  scrollToY(height - 118, 1500, 'easeInOutQuint');
+  scrollToY(height - 108, 1500, 'easeInOutQuint');
 }
 
 function toTop() {

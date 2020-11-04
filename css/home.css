@@ -103,7 +103,7 @@ h1.home {
     padding: 20px 32px;
   }
   .hero-image {
-    height: calc(100vh - 118px);
+    height: calc(100vh - 108px);
     background: #E6E6E6 url(../images/home_bg.jpg) no-repeat;
     background-size: cover;
   }
