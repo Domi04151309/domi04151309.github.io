@@ -79,6 +79,25 @@ h1.home {
 .dark .hash {
   color: rgba(255,255,255,.6);
 }
+.project-card {
+  vertical-align: middle;
+  display: block;
+  margin: 0 0 10px;
+  border-radius: 4px;
+  border: rgba(255,255,255,.6) solid 1px;
+  padding: 8px 48px;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-repeat: no-repeat;
+  background-size: auto 32px;
+  background-position: 8px center;
+}
+.project-card:hover {
+  border: #fff solid 1px;
+  color: #fff;
+  text-decoration: none;
+}
 @media only screen and (min-width: 500px) and (min-height: 600px) {
   .altBase {
     padding: 20px 32px;
