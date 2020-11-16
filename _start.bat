@@ -1,2 +1,3 @@
-start chrome http://127.0.0.1:4000
-bundle exec jekyll serve
+start chrome http://localhost:4000
+start cmd.exe /c "atom %CD%"
+start cmd.exe /c "bundle exec jekyll serve"
