@@ -20,8 +20,7 @@
   height: 96px;
   width: 100%;
   text-align: center;
-  background: #E6E6E6 url(../images/home_bg_mobile.jpg) no-repeat;
-  background-size: cover;
+  background: center/cover #E6E6E6 url(../images/home_bg_mobile.jpg) no-repeat;
   overflow: hidden;
 }
 .hero-content {
@@ -104,8 +103,7 @@ h1.home {
   }
   .hero-image {
     height: calc(100vh - 108px);
-    background: #E6E6E6 url(../images/home_bg.jpg) no-repeat;
-    background-size: cover;
+    background: #E6E6E6 center/cover url(../images/home_bg.jpg) no-repeat;
   }
   .home,span.home,button.home {
     display: block;
@@ -113,8 +111,7 @@ h1.home {
     margin-bottom: 48px;
   }
   span.home {
-    background: url(../images/logo_big.svg) no-repeat;
-    background-size: cover;
+    background: center/cover url(../images/logo_big.svg) no-repeat;
     height: 256px;
     width: 256px;
     font-size: 0;
@@ -126,8 +123,7 @@ h1.home {
     height: 72px;
     width: 72px;
     outline: 0;
-    background: url(../images/expand_blue.svg) no-repeat;
-    background-size: 72px 72px;
+    background: center/cover url(../images/expand_blue.svg) no-repeat;
   }
   button.home:hover {
     animation: pop .5s;
