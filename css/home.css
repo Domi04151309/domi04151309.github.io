@@ -17,7 +17,7 @@ p, h1.home {
   line-height: 1.8;
   letter-spacing: .1px;
 }
-a {
+a:not(.hash) {
   font: 14px verdana, sans-serif;
 }
 .home:not(h1) {
