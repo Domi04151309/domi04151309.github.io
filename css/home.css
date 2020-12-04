@@ -12,13 +12,8 @@
     transform: translateY(+20px);
   }
 }
-p, h1.home {
-  font: 16.5px 'Times New Roman', serif;
-  line-height: 1.8;
-  letter-spacing: .1px;
-}
-a:not(.hash) {
-  font: 14px verdana, sans-serif;
+h1.home {
+  font-family: Georgia, serif;
 }
 .home:not(h1) {
   display: none;
@@ -105,6 +100,13 @@ h1.home {
   text-decoration: none;
 }
 @media only screen and (min-width: 500px) and (min-height: 600px) {
+  p {
+    font-family: Georgia, serif;
+    font-size: 16px;
+  }
+  p a {
+    font: 14px verdana, sans-serif;
+  }
   .altBase {
     padding: 20px 32px;
   }
