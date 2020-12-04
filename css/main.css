@@ -96,7 +96,6 @@ img {
 .pixel {
   height: 128px;
   width: 128px;
-  image-rendering: pixelated;
 }
 main {
   max-width: 780px;

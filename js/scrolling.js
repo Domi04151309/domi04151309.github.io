@@ -2,7 +2,7 @@ window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
           window.webkitRequestAnimationFrame ||
           window.mozRequestAnimationFrame    ||
-          function( callback ){
+          function (callback) {
             window.setTimeout(callback, 1000 / 60);
           };
 })();
@@ -15,13 +15,13 @@ function scrollToY(scrollTargetY, speed, easing) {
         currentTime = 0;
     var time = Math.max(0.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, 0.8));
     var easingEquations = {
-        easeOutSine: function (pos) {
+        easeOutSine: (pos) => {
             return Math.sin(pos * (Math.PI / 2));
         },
-        easeInOutSine: function (pos) {
+        easeInOutSine: (pos) => {
             return (-0.5 * (Math.cos(Math.PI * pos) - 1));
         },
-        easeInOutQuint: function (pos) {
+        easeInOutQuint: (pos) => {
             if ((pos /= 0.5) < 1) {
                 return 0.5 * Math.pow(pos, 5);
             }

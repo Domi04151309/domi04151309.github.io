@@ -12,7 +12,7 @@ document.querySelectorAll("img").forEach((item) => {
 });
 
 document.querySelectorAll(".hash").forEach((item) => {
-  item.addEventListener("click", function(e){
+  item.addEventListener("click", (e) => {
     e.preventDefault();
     scrollToY(item.offsetTop - 86, 500, 'easeInOutQuint');
     window.history.pushState(null, null, item.href);

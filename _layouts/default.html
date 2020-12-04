@@ -50,8 +50,8 @@
   <script>
     let newWorker
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('{{ site.baseurl }}/sw.js').then( registration => {
            registration.addEventListener('updatefound', () => {
             newWorker = registration.installing;
             newWorker.addEventListener('statechange', () => {
@@ -65,13 +65,13 @@
             });
           });
           console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
+        }, err => {
           console.log('ServiceWorker registration failed: ', err);
         });
       });
 
       let refreshing;
-      navigator.serviceWorker.addEventListener('controllerchange', function () {
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
         if (refreshing) return;
         window.location.reload();
         refreshing = true;
