@@ -63,7 +63,7 @@ h1.home {
   background: url(../images/creative_process.svg) center no-repeat;
 }
 .insta-img {
-  background: url(../social_media/3_instagram_hover.svg) center no-repeat;
+  background: url(../images/instagram.svg) center no-repeat;
 }
 .languages-img {
   background: url(../images/coding.svg) center no-repeat;
@@ -139,10 +139,6 @@ h1.home {
 @media only screen and (min-width: 1000px) and (min-height: 600px) {
   .card, .img-card {
     margin: 36px;
-  }
-  .socialDiv {
-    margin-top: 26px;
-    margin-bottom: -36px;
   }
   .row {
     display: flex;
