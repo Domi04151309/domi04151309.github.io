@@ -10,8 +10,16 @@
 @keyframes pop {
   50% {
     transform: translateY(+20px);
-    }
   }
+}
+p, h1.home {
+  font: 16.5px 'Times New Roman', serif;
+  line-height: 1.8;
+  letter-spacing: .1px;
+}
+a {
+  font: 14px verdana, sans-serif;
+}
 .home:not(h1) {
   display: none;
 }
@@ -86,7 +94,6 @@ h1.home {
   border: rgba(255,255,255,.6) solid 1px;
   padding: 8px 48px;
   color: inherit;
-  font-size: inherit;
   line-height: inherit;
   background-repeat: no-repeat;
   background-size: auto 32px;
