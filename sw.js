@@ -7,7 +7,6 @@ var urlsToCache = [
   '/offline',
   '/images/error.svg',
   '/css/main.min.css',
-  '/css/blue.min.css',
   '/css/home.min.css',
   '/js/scrolling.min.js'
 ];

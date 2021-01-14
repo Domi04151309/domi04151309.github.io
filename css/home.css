@@ -22,6 +22,8 @@ h1.home {
   display: block;
   height: 112px;
   width: 100%;
+  margin-top: -56px;
+  padding-top: 56px;
   text-align: center;
   background: center/cover #E6E6E6 url(../images/home_bg_mobile.jpg) no-repeat;
   overflow: hidden;
@@ -42,7 +44,7 @@ h1.home {
   text-transform: none;
 }
 .altBaseFrame {
-  padding: 54px 0;
+  padding: 54px 0 0;
 }
 .altBase {
   max-width: 1080px;
@@ -111,7 +113,8 @@ h1.home {
     padding: 20px 32px;
   }
   .hero-image {
-    height: calc(100vh - 108px);
+    height: 100vh;
+    padding-top: 0;
     background: #E6E6E6 center/cover url(../images/home_bg.jpg) no-repeat;
   }
   .home,span.home,button.home {
@@ -145,7 +148,7 @@ h1.home {
     margin-bottom: 12px;
   }
 }
-@media only screen and (min-width: 1000px) and (min-height: 600px) {
+@media only screen and (min-width: 720px) and (min-height: 600px) {
   .card, .img-card {
     margin: 36px;
   }

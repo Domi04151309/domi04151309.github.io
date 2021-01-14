@@ -5,7 +5,6 @@
   <title>Dominik{% if page.title %} - {{ page.title }}{% endif %}</title>
   <link rel="canonical" href="{{ site.url }}{{ page.url | remove: '.html' }}" />
   <meta name="description" content="{{ page.description | default: "On this page, you can find most of the projects I am working on in my free time. Most of them are open-source software and improvement suggestions are always welcome." | replace: "<br>", " "}}" />
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/blue.min.css" />
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.min.css" />{% if page.home %}
   <meta name="keywords" content="domi04151309, domi, dominik, 04151309" />
   <meta name="google-site-verification" content="rlunQ8lHnv4cTauqGw4DcxCdiJTHAU1-gui1zlcS64w" />
@@ -27,9 +26,11 @@
   <main>
 {{ content }}
 </main>{% endif %}
+
+  <button type="button" onclick="toTop()" id="topBtn" title="Go to top"></button>
   <footer>
-    <a href="{{site.baseurl}}/Other/sources"><h1>Sources</h1></a>
-    <button type="button" onclick="toTop()" id="topBtn" title="Go to top"></button>
+    <a href="{{site.baseurl}}/Other/sources">Sources</a>
+    <span>&copy; 2020 - {{ site.time | date: "%Y" }} Domi04151309</span>
   </footer>
   <script src="{{site.baseurl}}/js/scrolling.min.js"></script>
   <script type="module" src="{{site.baseurl}}/js/postprocess.min.js"></script>
