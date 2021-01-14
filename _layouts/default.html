@@ -29,7 +29,7 @@
 
   <button type="button" onclick="toTop()" id="topBtn" title="Go to top"></button>
   <footer>
-    <a href="{{site.baseurl}}/Other/sources">Sources</a>
+    {% unless page.sources %}<a href="{{site.baseurl}}/Other/sources">Sources</a>{% endunless %}
     <span>&copy; 2020 - {{ site.time | date: "%Y" }} Domi04151309</span>
   </footer>
   <script src="{{site.baseurl}}/js/scrolling.min.js"></script>
