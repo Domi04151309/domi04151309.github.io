@@ -37,8 +37,7 @@
   }
 }
 * {
-  padding: 0;
-  margin: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 html {
   -webkit-text-size-adjust: none;
@@ -46,9 +45,9 @@ html {
   -ms-text-size-adjust: none;
 }
 html, body {
-  color: var(--text-color-secondary);
   height: 100%;
   width: 100%;
+  margin: 0;
   font: 14px verdana, sans-serif;
   line-height: 1.8;
   letter-spacing: .1px;
@@ -66,12 +65,13 @@ header {
   box-shadow: 0 0 4px rgba(0, 0, 0, .5);
 }
 h1 {
-  color: var(--text-color);
   display: inline-block;
-  font-weight: 500;
+  color: var(--text-color);
+  font-weight: normal;
   font-size: 14px;
   letter-spacing: 3px;
   line-height: 18px;
+  margin: 0;
   padding: 18px 9px;
   text-decoration: none;
   text-transform: uppercase;
@@ -90,8 +90,20 @@ h1 {
 .logo:hover {
   background-color: var(--hover-color);
 }
-main, .altBase {
-  animation: transformation 1s;
+main {
+  max-width: 780px;
+  padding: 86px 32px 32px;
+  margin: 0 auto;
+  overflow-y: hidden;
+}
+h2 {
+  margin-bottom: .42em;
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: normal;
+}
+p, ul, footer span, table, pre, h3 {
+  color: var(--text-color-secondary);
 }
 img {
   max-width: 100%;
@@ -101,14 +113,36 @@ img {
   height: 128px;
   width: 128px;
 }
-main {
-  max-width: 780px;
-  padding: 86px 32px 32px;
-  margin: 0 auto;
-  overflow-y: hidden;
+p {
+  margin: .5em 0;
 }
-header, button, a, a * {
-  transition-duration: .25s;
+ul {
+  list-style-position: inside;
+  padding: 0;
+}
+code {
+  font-weight: bold;
+}
+table {
+  width: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+td {
+  min-width: 214px;
+  padding: 8px;
+  vertical-align: top;
+  background: #F8F8F8;
+}
+td:first-child {
+  background: #eee;
+}
+pre {
+  overflow-x: auto;
+  width: calc(100% - 2 * var(--border-radius));
+  background: #f9f9f9;
+  padding: var(--border-radius);
+  border-radius: var(--border-radius);
 }
 a {
   color: var(--accent-color);
@@ -120,53 +154,7 @@ a:hover {
 .hash {
   float: left;
   margin-left: -22px;
-  font-weight: 400;
   color: var(--text-color-secondary);
-}
-h2 {
-  color: var(--accent-color);
-  font-size: 18px;
-  font-weight: normal;
-  margin-bottom: 7px;
-  margin-top: 32px;
-}
-h3 {
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: .5px;
-  line-height: 22px;
-  margin: 22px 0;
-}
-.p-margin {
-  margin-bottom: 14px;
-}
-ul {
-  list-style-position: inside;
-}
-code {
-  font-weight: bold;
-}
-table {
-  width: 100%;
-  border-radius: 16px;
-  overflow: hidden;
-}
-td {
-  min-width: 214px;
-  padding: 7px 8px 8px;
-  vertical-align: top;
-  background: #F8F8F8;
-}
-td:first-child {
-  background: #eee;
-}
-pre {
-  overflow-x: auto;
-  width: calc(100% - 2 * var(--border-radius));
-  background: #f9f9f9;
-  margin: 1em 0;
-  padding: var(--border-radius);
-  border-radius: var(--border-radius);
 }
 .btn {
   display: inline-block;
@@ -194,25 +182,18 @@ button {
   border: 0;
   cursor: pointer;
 }
-.unavailable {
-  background: #595959;
-  cursor: not-allowed;
-}
-.unavailable:hover {
-  background: #515151;
-}
-div.previews {
+.previews {
   display: grid;
   grid-template-columns: repeat(3, 3fr);
   grid-gap: 16px;
 }
-div.previews > * {
+.previews > * {
   display: block;
   border-radius: var(--border-radius);
   overflow: hidden;
   font-size: 0;
 }
-div.previews > *:hover {
+.previews > *:hover {
   box-shadow: var(--card-shadow);
 }
 footer {
@@ -221,10 +202,7 @@ footer {
 }
 footer * {
   display: block;
-  height: 14px;
-  padding: 18px 9px;
-  font-weight: 500;
-  font-size: 14px;
+  padding: 16px 8px;
   letter-spacing: 3px;
   line-height: 18px;
   text-transform: uppercase;
@@ -243,16 +221,21 @@ footer a:hover {
   right: 16px;
   height: 56px;
   width: 56px;
-  line-height: 56px;
-  text-align: center;
   border-radius: 50%;
   background: center/32px #fff url(../images/to_top_blue.svg) no-repeat;
   box-shadow: var(--card-shadow);
   outline: 0;
   cursor: pointer;
+  z-index: 3;
 }
 #topBtn:hover {
   filter: brightness(95%);
+}
+main, .altBase, footer {
+  animation: transformation 1s;
+}
+header, button, a, a * {
+  transition-duration: .25s;
 }
 @media screen and (max-width: 800px) {
   td, tr {
@@ -260,7 +243,7 @@ footer a:hover {
   }
 }
 @media print {
-  header, footer {
+  header, #topBtn {
     display: none;
   }
 }

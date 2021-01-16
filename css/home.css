@@ -22,8 +22,7 @@ h1.home {
   display: block;
   height: 112px;
   width: 100%;
-  margin-top: -56px;
-  padding-top: 56px;
+  padding-top: 54px;
   text-align: center;
   background: center/cover #E6E6E6 url(../images/home_bg_mobile.jpg) no-repeat;
   overflow: hidden;
@@ -43,22 +42,16 @@ h1.home {
   letter-spacing: 1px;
   text-transform: none;
 }
-.altBaseFrame {
-  padding: 54px 0 0;
-}
 .altBase {
   max-width: 1080px;
   padding: 20px 48px;
   margin: 0 auto;
 }
-.subtitle {
-  margin-bottom: 7px;
-}
-.img-card {
+.img.card {
   min-height: 192px;
   min-width: 192px;
 }
-.card, .img-card {
+.card {
   margin: 36px 0;
 }
 .about-img {
@@ -78,13 +71,9 @@ h1.home {
 }
 .dark {
   background: #121212;
-  color: rgba(255,255,255,.6);
+  --text-color-secondary: rgba(255, 255, 255, .6);
 }
-.dark .hash {
-  color: rgba(255,255,255,.6);
-}
-.project-card {
-  vertical-align: middle;
+.project-cards > a {
   display: block;
   margin: 0 0 10px;
   padding: 8px 48px;
@@ -97,7 +86,7 @@ h1.home {
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
 }
-.project-card:hover {
+.project-cards > a:hover {
   background-color: rgba(255, 255, 255, .09);
   color: #fff;
   text-decoration: none;
@@ -118,7 +107,7 @@ h1.home {
     padding-top: 0;
     background: #E6E6E6 center/cover url(../images/home_bg.jpg) no-repeat;
   }
-  .home,span.home,button.home {
+  .home, span.home, button.home {
     display: block;
     margin: auto;
     margin-bottom: 48px;
@@ -141,16 +130,9 @@ h1.home {
   button.home:hover {
     animation: pop .5s;
   }
-  h2 {
-    margin-top: 6px;
-    margin-bottom: 12px;
-  }
-  .subtitle {
-    margin-bottom: 12px;
-  }
 }
 @media only screen and (min-width: 720px) and (min-height: 600px) {
-  .card, .img-card {
+  .card {
     margin: 36px;
   }
   .row {
