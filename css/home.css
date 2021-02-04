@@ -3,9 +3,6 @@
     opacity: 0;
     transform: translateY(-25%);
   }
-  100% {
-    opacity: 1;
-  }
 }
 @keyframes pop {
   50% {
