@@ -99,7 +99,7 @@ h2 {
   font-size: 18px;
   font-weight: normal;
 }
-p, ul, footer span, table, pre, h3 {
+p, ul, footer div, table, pre, h3 {
   color: var(--text-color-secondary);
 }
 img {
@@ -197,8 +197,7 @@ footer {
   text-align: center;
   padding: 16px;
 }
-footer * {
-  display: block;
+footer *:not(nav) {
   padding: 16px 8px;
   letter-spacing: 3px;
   line-height: 18px;
@@ -206,11 +205,15 @@ footer * {
   border-radius: var(--border-radius);
 }
 footer a {
+  display: inline-block;
   color: var(--accent-color);
 }
 footer a:hover {
   background: var(--hover-color);
   text-decoration: none;
+}
+#topBtn.hidden {
+  opacity: 0;
 }
 #topBtn {
   position: fixed;

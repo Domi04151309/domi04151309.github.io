@@ -25,12 +25,15 @@ setTimeout(function(){
   }
 }, 1500);
 
-var i = null;
-var headers = null;
+const headers = document.getElementsByTagName('HEADER')
+const topBtn = document.getElementById('topBtn')
+let i = 0
 
-document.addEventListener('scroll', () => {
-  headers = document.getElementsByTagName('HEADER')
+function checkClasses() {
   for (i = 0; i < headers.length; i++) {
     headers[i].classList.toggle('header-shadow', window.pageYOffset > 0)
   }
-})
+  topBtn.classList.toggle('hidden', window.pageYOffset == 0)
+}
+checkClasses()
+document.addEventListener('scroll', checkClasses)

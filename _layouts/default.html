@@ -1,3 +1,6 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,21 +24,29 @@
   <header>
     <a href="{{site.baseurl}}/" class="logo">Home</a>
     <h1>Domi04151309</h1>
-  </header>{% if page.home %}
-{{ content }}{% else %}
-  <main>
-{{ content }}
-</main>{% endif %}
-
-  <button type="button" onclick="toTop()" id="topBtn" title="Go to top"></button>
+  </header>
+  {% if page.home %}
+    {{ content }}
+  {% else %}
+    <main>
+      {{ content }}
+    </main>
+  {% endif %}
+  <aside>
+    <button type="button" onclick="toTop()" id="topBtn" class="hidden" title="{{ strings.toTop }}"></button>
+  </aside>
   <footer>
-    {% unless page.sources %}<a href="{{site.baseurl}}/Other/sources">Sources</a>{% endunless %}
-    <span>&copy; 2020 - {{ site.time | date: "%Y" }} Domi04151309</span>
+    {% unless page.sources %}
+      <nav>
+        <a href="{{site.baseurl}}/Other/sources">Sources</a>
+      </nav>
+    {% endunless %}
+    <div>&copy; {{ site.time | date: "%Y" }} Domi04151309</div>
   </footer>
   <script src="{{site.baseurl}}/js/scrolling.min.js"></script>
   <script type="module" src="{{site.baseurl}}/js/postprocess.min.js"></script>
   <script>
-    let newWorker
+    let newWorker;
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('{{ site.baseurl }}/sw.js').then( registration => {
@@ -51,7 +62,7 @@
               }
             });
           });
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          console.log('ServiceWorker registration successful');
         }, err => {
           console.log('ServiceWorker registration failed: ', err);
         });

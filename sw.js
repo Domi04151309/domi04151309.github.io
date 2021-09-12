@@ -1,8 +1,8 @@
 ---
 layout: null
 ---
-var CACHE_NAME = 'domi-cache-{{ site.time | date: "%Y-%m-%d-%H:%M" }}';
-var urlsToCache = [
+const CACHE_NAME = 'domi-{{ site.time | date: "%Y%m%d-%H%M" }}';
+const urlsToCache = [
   '/',
   '/offline',
   '/images/error.svg',
@@ -40,9 +40,10 @@ self.addEventListener('fetch', event => {
             return response;
           }
 
-          var responseToCache = response.clone();
+          const responseToCache = response.clone();
 
           caches.open(CACHE_NAME).then(cache => {
+            if (event.request.url.indexOf('http') !== 0) return;
             cache.put(event.request, responseToCache);
           });
 
@@ -50,14 +51,14 @@ self.addEventListener('fetch', event => {
         }
       );
     }).catch(() => {
-      return caches.match('/offline');
+      return caches.match('{{ site.baseurl }}/');
     })
   );
 });
 
 self.addEventListener('activate', event => {
 
-  var cacheWhitelist = [CACHE_NAME];
+  const cacheWhitelist = [CACHE_NAME];
 
   event.waitUntil(
     caches.keys().then(cacheNames => {

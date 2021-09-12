@@ -68,6 +68,8 @@ h1.home {
 }
 .dark {
   background: #121212;
+  --accent-color: #2196F3;
+  --text-color: #fff;
   --text-color-secondary: rgba(255, 255, 255, .6);
 }
 .project-cards > a {
@@ -85,7 +87,7 @@ h1.home {
 }
 .project-cards > a:hover {
   background-color: rgba(255, 255, 255, .09);
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
 }
 @media only screen and (min-width: 500px) and (min-height: 600px) {
