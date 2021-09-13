@@ -1,5 +1,6 @@
 ---
 layout: compress
+defaultDescription: "On this page, you can find most of the projects I am working on in my free time. Most of them are open-source software and improvement suggestions are always welcome."
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -7,17 +8,27 @@ layout: compress
   <meta charset="utf-8">
   <title>Dominik{% if page.title %} - {{ page.title }}{% endif %}</title>
   <link rel="canonical" href="{{ site.url }}{{ page.url | remove: '.html' }}" />
-  <meta name="description" content="{{ page.description | default: "On this page, you can find most of the projects I am working on in my free time. Most of them are open-source software and improvement suggestions are always welcome." | replace: "<br>", " "}}" />
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.min.css" />{% if page.home %}
-  <meta name="keywords" content="domi04151309, domi, dominik, 04151309" />
-  <meta name="google-site-verification" content="rlunQ8lHnv4cTauqGw4DcxCdiJTHAU1-gui1zlcS64w" />
-  <link rel="stylesheet" type="text/css" href="/css/home.min.css" />{% endif %}
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.min.css" />
+  <noscript><style>header{background:#fff;box-shadow:0 0 4px rgba(0,0,0,.5);}</style></noscript>
   <link rel="icon" href="{{site.baseurl}}/favicon.ico">
-  <link rel="apple-touch-icon" href="{{site.baseurl}}/apple-touch-icon.PNG" />
-  <meta name="msapplication-config" content="{{site.baseurl}}/ieconfig.xml" />
+  <link rel="apple-touch-icon" href="{{site.baseurl}}/apple-touch-icon.png" />
+  <link rel="manifest" href="{{site.baseurl}}/pwa/manifest.json">{% if page.home %}
+  <link rel="preload" as="image" href="/images/home_bg_mobile.jpg" media="screen and (max-width: 720px), screen and (max-height: 512px)" />
+  <link rel="preload" as="image" href="/images/home_bg.jpg" media="screen and (min-width: 720px) and (min-height: 512px)" />
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/home.min.css" />
+  <meta name="keywords" content="domi04151309, domi, dominik, 04151309" />
+  <meta name="google-site-verification" content="rlunQ8lHnv4cTauqGw4DcxCdiJTHAU1-gui1zlcS64w" />{% endif %}
+  <meta name="description" content="{{ page.description | default: layout.defaultDescription | strip_html }}" />
   <meta name="theme-color" content="#000000">
-  <meta property="og:image" content="{{site.baseurl}}/preview.jpg">
-  <link rel="manifest" href="{{site.baseurl}}/pwa/manifest.json">
+  <meta property="og:url" content="{{ site.url }}{{ page.url | remove: '.html' }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anvil{% if page.title %} - {{ page.title }}{% endif %}">
+  <meta property="og:description" content="{{ page.description | default: layout.defaultDescription | strip_html }}">
+  <meta property="og:image" content="{{ site.url }}/preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anvil{% if page.title %} - {{ page.title }}{% endif %}">
+  <meta name="twitter:description" content="{{ page.description | default: layout.defaultDescription | strip_html }}">
+  <meta name="twitter:image" content="{{ site.url }}/preview.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -33,7 +44,7 @@ layout: compress
     </main>
   {% endif %}
   <aside>
-    <button type="button" onclick="toTop()" id="topBtn" class="hidden" title="{{ strings.toTop }}"></button>
+    <button type="button" onclick="toTop()" id="topBtn" class="hidden" title="Go to top"></button>
   </aside>
   <footer>
     {% unless page.sources %}
