@@ -92,32 +92,3 @@ title: Arduino Logging Library
         <p>Prints a message with the chosen priority to the serial monitor.</p></td>
       </tr>
     </table>
-    <h2>Example</h2>
-    <pre>
-#include &lt;Logging.h&gt;
-
-Log Log;
-
-void setup() {
-  Serial.begin(9600);
-}
-
-void loop() {
-  Log.d("Tag", "Text");
-  Log.e("Tag", "Text");
-  Log.i("Tag", "Text");
-  Log.v("Tag", "Text");
-  Log.w("Tag", "Text");
-  Log.wtf("Tag", "Text");
-  Serial.println();
-  delay(5000);
-  Log.println(LOG_DEBUG, "Tag", "Text");
-  Log.println(LOG_ERROR, "Tag", "Text");
-  Log.println(LOG_INFO, "Tag", "Text");
-  Log.println(LOG_VERBOSE, "Tag", "Text");
-  Log.println(LOG_WARN, "Tag", "Text");
-  Log.wtf("Tag", "Text");
-  Serial.println();
-  delay(5000);
-}
-    </pre>
