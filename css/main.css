@@ -48,6 +48,8 @@ html, body {
   font: 14px verdana, sans-serif;
   line-height: 1.8;
   letter-spacing: .1px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 54px;
 }
 header {
   position: fixed;
@@ -212,23 +214,21 @@ footer a:hover {
   background: var(--hover-color);
   text-decoration: none;
 }
-#topBtn.hidden {
+#to-top.hidden {
   opacity: 0;
 }
-#topBtn {
+#to-top {
   position: fixed;
   bottom: 16px;
   right: 16px;
   height: 56px;
   width: 56px;
   border-radius: 50%;
-  background: center/32px #fff url(../images/to_top_blue.svg) no-repeat;
+  background: center/32px #fff url(../images/to_top.svg) no-repeat;
   box-shadow: var(--card-shadow);
-  outline: 0;
-  cursor: pointer;
   z-index: 3;
 }
-#topBtn:hover {
+#to-top:focus, #to-top:hover {
   filter: brightness(95%);
 }
 main, .altBase, footer {

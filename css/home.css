@@ -106,7 +106,7 @@ h1.home {
     padding-top: 0;
     background: #E6E6E6 center/cover url(../images/home_bg.jpg) no-repeat;
   }
-  .home, span.home, button.home {
+  .home, span.home, a.home {
     display: block;
     margin: auto;
     margin-bottom: 48px;
@@ -120,13 +120,12 @@ h1.home {
   h1.home {
     font-size: 48px;
   }
-  button.home {
+  a.home {
     height: 72px;
     width: 72px;
-    outline: 0;
-    background: center/cover url(../images/expand_blue.svg) no-repeat;
+    background: center/cover url(../images/expand.svg) no-repeat;
   }
-  button.home:hover {
+  a.home:focus, a.home:hover {
     animation: pop .5s;
   }
 }

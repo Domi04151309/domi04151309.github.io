@@ -44,7 +44,7 @@ defaultDescription: "On this page, you can find most of the projects I am workin
     </main>
   {% endif %}
   <aside>
-    <button type="button" onclick="toTop()" id="topBtn" class="hidden" title="Go to top"></button>
+    <a id="to-top" class="hidden" href="#" title="{{ strings.toTop }}"></a>
   </aside>
   <footer>
     {% unless page.sources %}
@@ -54,7 +54,6 @@ defaultDescription: "On this page, you can find most of the projects I am workin
     {% endunless %}
     <div>&copy; {{ site.time | date: "%Y" }} Domi04151309</div>
   </footer>
-  <script src="{{site.baseurl}}/js/scrolling.min.js"></script>
   <script type="module" src="{{site.baseurl}}/js/postprocess.min.js"></script>
   <script>
     let newWorker;

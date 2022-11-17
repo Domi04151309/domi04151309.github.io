@@ -26,7 +26,7 @@ setTimeout(function(){
 }, 1500);
 
 const headers = document.getElementsByTagName('HEADER')
-const topBtn = document.getElementById('topBtn')
+const topBtn = document.getElementById('to-top')
 let i = 0
 
 function checkClasses() {
