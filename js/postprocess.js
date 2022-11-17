@@ -19,12 +19,6 @@ document.querySelectorAll('.hash').forEach(item => {
   });
 });
 
-setTimeout(function(){
-  if (location.hash) {
-    scrollToY(document.getElementById(location.hash.substring(1)).offsetTop - 86, 500, 'easeInOutQuint');
-  }
-}, 1500);
-
 const headers = document.getElementsByTagName('HEADER')
 const topBtn = document.getElementById('to-top')
 let i = 0
