@@ -1,7 +1,7 @@
 {
-  "short_name": "Domi04151309",
-  "name": "Domi04151309",
-  "description": "On this page you can find most of my projects. Also a lot of it is open-source and published under the terms of the GNU GPL 3. Improvement suggestions are always welcome.",
+  "short_name": "Dominik",
+  "name": "Dominik",
+  "description": "Hi! I'm Dominik! I'm interested in programming, and I think it's great to create new things.",
   "icons": [
     {
       "src": "/pwa/mipmap-mdpi/ic_launcher.png",
