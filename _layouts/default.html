@@ -9,31 +9,25 @@ defaultDescription: "Hi! I'm Dominik! I'm interested in programming, and I think
   <title>Dominik{% if page.title %} - {{ page.title }}{% endif %}</title>
   <link rel="canonical" href="{{ site.url }}{{ page.url | remove: '.html' }}" />
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/fonts.min.css" />
   <noscript><style>header{background:#fff;box-shadow:0 0 4px rgba(0,0,0,.5);}</style></noscript>
   <link rel="icon" href="{{site.baseurl}}/favicon.ico">
   <link rel="apple-touch-icon" href="{{site.baseurl}}/apple-touch-icon.png" />
   <link rel="manifest" href="{{site.baseurl}}/pwa/manifest.json">
-
-  <!--Save locally-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&family=Sacramento&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-
   {% if page.home %}
-  <link rel="preload" as="image" href="/images/home_bg_mobile.jpg" media="screen and (max-width: 720px), screen and (max-height: 512px)" />
-  <link rel="preload" as="image" href="/images/home_bg.jpg" media="screen and (min-width: 720px) and (min-height: 512px)" />
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/home.min.css" />
-  <meta name="keywords" content="domi04151309, domi, dominik, 04151309" />
-  <meta name="google-site-verification" content="rlunQ8lHnv4cTauqGw4DcxCdiJTHAU1-gui1zlcS64w" />{% endif %}
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/home.min.css" />
+    <meta name="keywords" content="domi04151309, domi, dominik, 04151309" />
+    <meta name="google-site-verification" content="rlunQ8lHnv4cTauqGw4DcxCdiJTHAU1-gui1zlcS64w" />
+  {% endif %}
   <meta name="description" content="{{ page.description | default: layout.defaultDescription | strip_html }}" />
   <meta name="theme-color" content="#000000">
   <meta property="og:url" content="{{ site.url }}{{ page.url | remove: '.html' }}">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Anvil{% if page.title %} - {{ page.title }}{% endif %}">
+  <meta property="og:title" content="Dominik{% if page.title %} - {{ page.title }}{% endif %}">
   <meta property="og:description" content="{{ page.description | default: layout.defaultDescription | strip_html }}">
   <meta property="og:image" content="{{ site.url }}/preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Anvil{% if page.title %} - {{ page.title }}{% endif %}">
+  <meta name="twitter:title" content="Dominik{% if page.title %} - {{ page.title }}{% endif %}">
   <meta name="twitter:description" content="{{ page.description | default: layout.defaultDescription | strip_html }}">
   <meta name="twitter:image" content="{{ site.url }}/preview.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +45,7 @@ defaultDescription: "Hi! I'm Dominik! I'm interested in programming, and I think
     </main>
   {% endif %}
   <aside>
-    <a id="to-top" class="hidden" href="#" title="{{ strings.toTop }}"></a>
+    <a id="to-top" class="hidden" href="#" title="Go to top"></a>
   </aside>
   <footer>
     <div>&copy; {{ site.time | date: "%Y" }} Domi04151309</div>
