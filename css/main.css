@@ -132,11 +132,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.hash {
-  float: left;
-  margin-left: -22px;
-  color: var(--text-color-secondary);
-}
 .btn {
   display: inline-block;
   margin: 0 0 10px;
@@ -162,20 +157,6 @@ button {
   display: inline-block;
   border: 0;
   cursor: pointer;
-}
-.previews {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  grid-gap: 16px;
-}
-.previews > * {
-  display: block;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  font-size: 0;
-}
-.previews > *:hover {
-  box-shadow: var(--card-shadow);
 }
 footer {
   text-align: center;
