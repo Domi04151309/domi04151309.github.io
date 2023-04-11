@@ -31,8 +31,7 @@
   font-size: 32px;
   line-height: 1.2;
   color: #fff;
-  font-family: 'WB Serif Display', cursive;
-  font-weight: bold;
+  font-family: 'DM Serif Display', serif;
   letter-spacing: normal;
   text-transform: none;
   margin: auto;
@@ -46,6 +45,7 @@
   height: 0px;
   letter-spacing: 2px;
   font-family: 'Sacramento', cursive;
+  font-weight: bold;
   font-style: italic;
 }
 .altBase {
@@ -60,10 +60,10 @@
 .card {
   margin: 36px 0;
 }
-.about-img {
+.workspace-img {
   background: url(../images/workspace.svg) center no-repeat;
 }
-.languages-img {
+.coding-img {
   background: url(../images/coding.svg) center no-repeat;
 }
 @media only screen and (min-width: 720px) and (min-height: 600px) {
