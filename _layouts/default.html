@@ -12,7 +12,14 @@ defaultDescription: "Hi! I'm Dominik! I'm interested in programming, and I think
   <noscript><style>header{background:#fff;box-shadow:0 0 4px rgba(0,0,0,.5);}</style></noscript>
   <link rel="icon" href="{{site.baseurl}}/favicon.ico">
   <link rel="apple-touch-icon" href="{{site.baseurl}}/apple-touch-icon.png" />
-  <link rel="manifest" href="{{site.baseurl}}/pwa/manifest.json">{% if page.home %}
+  <link rel="manifest" href="{{site.baseurl}}/pwa/manifest.json">
+
+  <!--Save locally-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&family=Sacramento&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  {% if page.home %}
   <link rel="preload" as="image" href="/images/home_bg_mobile.jpg" media="screen and (max-width: 720px), screen and (max-height: 512px)" />
   <link rel="preload" as="image" href="/images/home_bg.jpg" media="screen and (min-width: 720px) and (min-height: 512px)" />
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/home.min.css" />
