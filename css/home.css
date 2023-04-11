@@ -15,24 +15,12 @@
   width: 100%;
   padding-top: 54px;
   background-color: #000;
-  background-image: linear-gradient(
-    45deg,
-    hsl(240deg 100% 20%) 0%,
-    hsl(289deg 100% 21%) 11%,
-    hsl(315deg 100% 27%) 22%,
-    hsl(329deg 100% 36%) 33%,
-    hsl(337deg 100% 43%) 44%,
-    hsl(357deg 91% 59%) 56%,
-    hsl(17deg 100% 59%) 67%,
-    hsl(34deg 100% 53%) 78%,
-    hsl(45deg 100% 50%) 89%,
-    hsl(55deg 100% 50%) 100%
-  );
+  background-image: linear-gradient(to right, #56ccf2, #2f80ed);
   overflow: hidden;
 }
 .hero-content {
   display: flex;
-  gap: 16px;
+  gap: 1.6vw;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -50,12 +38,12 @@
   margin: auto;
   padding: 0;
 }
-.hero-content > h1 > .big-display, .hero-content > a {
+.hero-content > h1 > .big-display, .hero-content > a, .hero-content > img {
   display: none;
 }
 .hero-content > h1 > .fancy {
   display: inline-block;
-  height: 64px;
+  height: 0px;
   letter-spacing: 2px;
   font-family: 'Sacramento', cursive;
   font-style: italic;
@@ -78,7 +66,7 @@
 .languages-img {
   background: url(../images/coding.svg) center no-repeat;
 }
-@media only screen and (min-width: 500px) and (min-height: 600px) {
+@media only screen and (min-width: 720px) and (min-height: 600px) {
   .altBase {
     padding: 20px 32px;
   }
@@ -88,21 +76,21 @@
   }
   .hero-content {
     position: relative;
-    padding: 0 128px;
+    padding: 0 20vw;
   }
   .hero-content > h1::before {
     position: absolute;
     display: block;
     content: '';
-    width: 64px;
-    height: 4px;
+    width: 6.4vw;
+    height: .4vw;
     background: #fff;
-    border-radius: 2px;
-    left: 56px;
-    top: 42px;
+    border-radius: .2vw;
+    left: 12.8vw;
+    top: 3.6vw;
   }
   .hero-content > h1 {
-    font-size: 64px;
+    font-size: 6.4vw;
     margin: 0;
   }
   .hero-content > h1 > .big-display {
@@ -112,24 +100,31 @@
     position: absolute;
     display: block;
     content: '';
-    width: 256px;
-    height: 256px;
-    clip-path: path('m 179.85283,27.293932 c 20.53715,16.561381 33.58101,40.043936 31.08325,61.30183 -2.22023,21.010708 -19.42704,39.796748 -33.58102,58.829978 -14.15398,18.78605 -25.25514,38.06646 -43.57206,47.95385 -18.31691,9.88739 -44.404647,10.13458 -69.104731,3.95496 C 39.700653,193.15493 15.555626,180.30132 6.9522252,162.00964 -1.3736465,143.71797 5.5645799,119.98823 10.837632,96.25849 16.110684,72.775935 19.718562,49.293379 34.705129,31.743259 49.691699,14.193139 76.056959,2.8226381 103.53234,1.8338988 131.00771,0.84515984 159.31568,10.485367 179.85283,27.293932 Z');
-    background: center/cover url(../images/grid.svg) no-repeat;
+    top: -20vh;
+    left: -50vw;
+    width: 100vw;
+    height: 200vh;
+    clip-path: ellipse(50vw 100vh);
+    background: url(../images/grid.svg);
     z-index: -1;
   }
   .hero-content > a {
     display: inline-block;
-    height: 72px;
-    width: 72px;
+    height: 7.2vw;
+    width: 7.2vw;
     align-self: flex-end;
     background: center/cover url(../images/expand.svg) no-repeat;
   }
   .hero-content > a:focus, .hero-content > a:hover {
     animation: pop .5s;
   }
-}
-@media only screen and (min-width: 720px) and (min-height: 600px) {
+  .hero-content > img {
+    display: inline-block;
+    pointer-events: none;
+    width: 4vw;
+    margin-left: auto;
+    transform: translateX(-4vw) scale(4);
+  }
   .card {
     margin: 36px;
   }
