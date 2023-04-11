@@ -1,31 +1,14 @@
 :root {
-  --accent-color: #1369BF;
+  /* Created using the material 3 theme creator */
+  --color-primary: #0165E1;
+  --color-primary-container: #d9e2ff;
+  --color-on-primary-container: #001944;
+  --color-background: #fefbff;
   --text-color: rgba(0, 0, 0, .87);
   --text-color-secondary: rgba(0, 0, 0, .6);
   --hover-color: rgba(128, 128, 128, .125);
   --border-radius: 16px;
   --card-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
-}
-::-webkit-scrollbar {
-  width: 16px;
-  background: #F1F1F1;
-}
-::-webkit-scrollbar-button {
-  height: 16px;
-  background: #C1C1C1;
-  border: 2px solid #F1F1F1;
-  border-radius: var(--border-radius);
-}
-::-webkit-scrollbar-button:hover {
-  background: var(--accent-color);
-}
-::-webkit-scrollbar-thumb {
-  background: #C1C1C1;
-  border: 2px solid #F1F1F1;
-  border-radius: var(--border-radius);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-color);
 }
 @keyframes transformation {
   0% {
@@ -45,7 +28,8 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  font: 14px verdana, sans-serif;
+  font: 16px 'DM Sans', sans-serif;
+  background: var(--color-background);
   line-height: 1.8;
   letter-spacing: .1px;
   scroll-behavior: smooth;
@@ -60,7 +44,7 @@ header {
   z-index: 3;
 }
 .header-shadow {
-  background: #fff;
+  background: var(--color-background);
   box-shadow: 0 0 4px rgba(0, 0, 0, .5);
 }
 h1 {
@@ -96,10 +80,8 @@ main {
   overflow-y: hidden;
 }
 h2 {
-  margin-bottom: .42em;
-  color: var(--accent-color);
-  font-size: 18px;
-  font-weight: normal;
+  color: var(--text-color);
+  font-family: 'DM Serif Display', serif;
 }
 p, ul, footer div, table, pre, h3 {
   color: var(--text-color-secondary);
@@ -144,7 +126,7 @@ pre {
   border-radius: var(--border-radius);
 }
 a {
-  color: var(--accent-color);
+  color: var(--color-primary);
   text-decoration: none;
 }
 a:hover {
@@ -160,7 +142,7 @@ a:hover {
   margin: 0 0 10px;
   border: 0;
   padding: 8px 16px;
-  background: var(--accent-color);
+  background: var(--color-primary);
   color: #fff;
   font-size: 12px;
   line-height: 1.25;
@@ -208,7 +190,7 @@ footer *:not(nav) {
 }
 footer a {
   display: inline-block;
-  color: var(--accent-color);
+  color: var(--color-primary);
 }
 footer a:hover {
   background: var(--hover-color);
@@ -223,8 +205,8 @@ footer a:hover {
   right: 16px;
   height: 56px;
   width: 56px;
-  border-radius: 50%;
-  background: center/32px #fff url(../images/to_top.svg) no-repeat;
+  border-radius: 16px;
+  background: center/32px var(--color-primary-container) url(../images/to_top.svg) no-repeat;
   box-shadow: var(--card-shadow);
   z-index: 3;
 }
