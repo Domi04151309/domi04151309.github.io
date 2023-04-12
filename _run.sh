@@ -34,6 +34,6 @@ if [[ $(uname) == *"MINGW64"* ]]; then
   start atom ${PWD}
 elif [[ $(uname) == *"Linux"* ]]; then
   google-chrome http://localhost:4000 &
-  atom ${PWD} &
+  pulsar ${PWD} &
 fi
 bundle exec jekyll serve
