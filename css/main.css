@@ -79,11 +79,11 @@ main {
   margin: 0 auto;
   overflow-y: hidden;
 }
-h2 {
+h2, h3 {
   color: var(--text-color);
   font-family: 'DM Serif Display', serif;
 }
-p, ul, footer div, table, pre, h3 {
+p, ul, footer div, table, pre {
   color: var(--text-color-secondary);
 }
 img {

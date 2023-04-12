@@ -65,11 +65,34 @@
 .card {
   margin: 36px 0;
 }
-.workspace-img {
-  background: url(../images/workspace.svg) center no-repeat;
+.books-img {
+  background: url(../images/books.svg) center no-repeat;
+}
+.business-img {
+  background: url(../images/business.svg) center no-repeat;
 }
 .coding-img {
   background: url(../images/coding.svg) center no-repeat;
+}
+.workspace-img {
+  background: url(../images/workspace.svg) center no-repeat;
+}
+.experience > li {
+  list-style-type: none;
+  margin: .5rem 0;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.experience > li > img {
+  border-radius: var(--border-radius);
+}
+.experience > li > div > * {
+  margin: 0;
+  line-height: 1.3rem;
+}
+.small {
+  font-size: 12px;
 }
 @media only screen and (min-width: 720px) and (min-height: 600px) {
   .altBase {
