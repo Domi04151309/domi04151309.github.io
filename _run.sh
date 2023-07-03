@@ -1,18 +1,26 @@
 #!/bin/bash
 
+# Configure Linux path
+if [[ $(uname) == *"Linux"* ]]; then
+  export GEM_HOME="$HOME/gems"
+  export PATH="$HOME/gems/bin:$PATH"
+fi
+
 # Check if required software is installed
 echo "Checking if everything is installed..."
-if ! command -v npm &> /dev/null; then
-  echo "Warning: 'npm' is not installed!"
-  NPM_INSTALLED=false
-else
-  NPM_INSTALLED=true
-  if [[ $(npm ls --depth=-1 | grep ${PWD##*/}) != *"@"* ]]; then
-    npm install
+NPM_INSTALLED=false
+if [ -e package.json ]; then
+  if ! command -v npm &> /dev/null; then
+    echo "Warning: 'npm' is not installed!"
+  else
+    NPM_INSTALLED=true
+    if [[ $(npm ls --depth=-1 | grep ${PWD##*/}) != *"@"* ]]; then
+      npm install
+    fi
   fi
 fi
 if ! command -v bundle &> /dev/null; then
-  echo "Fatal Error: 'bundle' is not installed!"
+  echo "Error: 'bundle' is not installed!"
   read -p "Press [Enter] to return..."
   return
 fi
