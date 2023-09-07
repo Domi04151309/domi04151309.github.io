@@ -84,8 +84,18 @@
   gap: 16px;
   align-items: flex-start;
 }
-.experience > li > img {
+.experience > li > :first-child {
+  width: 48px;
+  height: 48px;
   border-radius: var(--border-radius);
+  flex: none;
+}
+.experience > li > span:first-child {
+  background-color: var(--color-primary-container);
+  background-image: url(../images/cv/school.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 32px;
 }
 .experience > li > div > * {
   margin: 0;
