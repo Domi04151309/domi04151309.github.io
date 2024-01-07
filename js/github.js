@@ -65,7 +65,40 @@ function showRepositories(repositories) {
   }
 }
 
+/**
+ * @throws {Error}
+ * @returns {void}
+ */
+function showError() {
+  if (
+    !(projectTemplate instanceof HTMLTemplateElement) ||
+    !(projectList instanceof Node)
+  ) throw new Error(INVALID_LAYOUT);
+  projectList.textContent = '';
+  const projectView = projectTemplate.content.cloneNode(true);
+  if (
+    !(projectView instanceof DocumentFragment)
+  ) throw new Error(INVALID_LAYOUT);
+
+  const title = projectView.querySelector('.project-title');
+  const description = projectView.querySelector('.project-description');
+  const language = projectView.querySelector('.project-language');
+  const stars = projectView.querySelector('.project-stars');
+  if (
+    !(title instanceof Node) ||
+    !(description instanceof Node) ||
+    !(language instanceof Node) ||
+    !(stars instanceof Node)
+  ) throw new Error(INVALID_LAYOUT);
+  title.textContent = 'Failed Loading Projects';
+  description.textContent = 'Take a look at my projects on GitHub instead.';
+  /** @type {Element} */ (language.parentNode).remove();
+  /** @type {Element} */ (stars.parentNode).remove();
+  projectList.append(projectView);
+}
+
 const repositories = await getRepositories();
 if (repositories !== null) showRepositories(repositories);
+else showError();
 
 export {};
