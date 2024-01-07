@@ -77,9 +77,11 @@
 .workspace-img {
   background: url(../images/workspace.svg) center no-repeat;
 }
-.experience > li {
+.experience > li, .projects > li {
   list-style-type: none;
   margin: .5rem 0;
+}
+.experience > li {
   display: flex;
   gap: 16px;
   align-items: flex-start;
@@ -97,12 +99,18 @@
   background-position: center;
   background-size: 32px;
 }
-.experience > li > div > * {
+.experience > li > div > *, .projects > li > * {
   margin: 0;
-  line-height: 1.3rem;
+  line-height: 1.5em;
 }
 .small {
   font-size: 12px;
+}
+
+.res-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0 32px;
 }
 
 .reveal{
@@ -198,5 +206,12 @@
   }
   .bigger-half {
     width: calc(65% - 72px);
+  }
+
+  .mobile-only {
+    display: none;
+  }
+  .res-grid-2 {
+    grid-template-columns: repeat(2, 2fr);
   }
 }
