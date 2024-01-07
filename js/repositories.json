@@ -1,0 +1,58 @@
+{
+  "AlwaysOn": [
+    "Android",
+    "detekt",
+    "Gradle",
+    "Kotlin"
+  ],
+  "BatteryTool": [
+    "Android",
+    "detekt",
+    "Gradle",
+    "Kotlin"
+  ],
+  "ESP8266SimpleHomeTemperature": [
+    "Arduino",
+    "C",
+    "Cpp"
+  ],
+  "HomeApp": [
+    "Android",
+    "detekt",
+    "Gradle",
+    "Kotlin"
+  ],
+  "PowerApp": [
+    "Android",
+    "detekt",
+    "Gradle",
+    "Kotlin"
+  ],
+  "pypu": [
+    "MyPy",
+    "Python"
+  ],
+  "repository-dashboard": [
+    "CSS",
+    "EsLint",
+    "HTML",
+    "JavaScript",
+    "TypeScript"
+  ],
+  "SMA": [
+    "CSS",
+    "EsLint",
+    "HTML",
+    "NodeJs",
+    "JavaScript",
+    "TypeScript"
+  ],
+  "Start": [
+    "CSS",
+    "EsLint",
+    "HTML",
+    "Jekyll",
+    "JavaScript",
+    "TypeScript"
+  ]
+}

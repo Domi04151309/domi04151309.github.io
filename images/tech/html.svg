@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="14.208"
+   height="16"
+   viewBox="0 0 14.208 16"
+   enable-background="new 0 0 126 126"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs39" />
+<switch
+   id="switch34"
+   transform="translate(-30.711,-87.971)">
+	<g
+   id="g32">
+		<g
+   id="g8">
+			<g
+   id="g4">
+				
+			</g>
+			
+		</g>
+		<g
+   id="g22">
+			
+			
+			
+			<g
+   id="g20">
+				
+				
+			</g>
+		</g>
+		<g
+   id="g30">
+			<polygon
+   fill="#e54b26"
+   points="31.991,102.308 30.711,87.971 44.919,87.971 43.64,102.308 37.813,103.971 "
+   id="polygon24" />
+			<polygon
+   fill="#ffffff"
+   stroke="#ffffff"
+   stroke-width="0.25"
+   stroke-miterlimit="10"
+   points="35.581,97.44 35.697,98.729 37.834,99.177 39.934,98.728 40.166,96.16 33.946,96.16 33.488,91.026 42.145,91.026 42.009,92.544 35.146,92.544 35.331,94.645 41.822,94.645 41.353,99.894 37.813,100.965 34.279,99.894 34.062,97.44 "
+   id="polygon26" />
+			<rect
+   x="33.487999"
+   y="96.924004"
+   fill="#e54b26"
+   width="2.6719999"
+   height="0.83600003"
+   id="rect28" />
+		</g>
+	</g>
+</switch>
+</svg>

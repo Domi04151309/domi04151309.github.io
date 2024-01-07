@@ -63,7 +63,10 @@
   min-width: 192px;
 }
 .card {
-  margin: 36px 0;
+  margin: 48px 0;
+}
+.app-development-img {
+  background: url(../images/app_development.svg) center no-repeat;
 }
 .books-img {
   background: url(../images/books.svg) center no-repeat;
@@ -86,31 +89,107 @@
   gap: 16px;
   align-items: flex-start;
 }
-.experience > li > :first-child {
+.experience > li > :first-child, .badge {
   width: 48px;
   height: 48px;
   border-radius: var(--border-radius);
   flex: none;
 }
-.experience > li > span:first-child {
+.experience > li > span:first-child, .badge {
   background-color: var(--color-primary-container);
   background-image: url(../images/cv/school.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 32px;
 }
-.experience > li > div > *, .projects > li > * {
+.experience > li > div > * {
   margin: 0;
   line-height: 1.5em;
+}
+.projects > li > *:not(.badge-container) {
+  margin: 0;
 }
 .small {
   font-size: 12px;
 }
 
+.badge-container {
+  display: flex;
+  gap: 8px;
+  margin: 1em 0;
+  flex-wrap: wrap;
+}
+.badge {
+  width: 54px;
+  height: 54px;
+  background-color: var(--hover-color);
+}
+.badge.android {
+  background-image: url(../images/tech/android.svg);
+}
+.badge.arduino {
+  background-image: url(../images/tech/arduino.svg);
+}
+.badge.c {
+  background-image: url(../images/tech/c.svg);
+}
+.badge.cpp {
+  background-image: url(../images/tech/cpp.svg);
+}
+.badge.css {
+  background-image: url(../images/tech/css.svg);
+}
+.badge.detekt {
+  background-image: url(../images/tech/detekt.svg);
+}
+.badge.eslint {
+  background-image: url(../images/tech/eslint.svg);
+}
+.badge.gradle {
+  background-color: #010002;
+  background-image: url(../images/tech/gradle.svg);
+}
+.badge.html {
+  background-image: url(../images/tech/html.svg);
+}
+.badge.jekyll {
+  background-size: 16px;
+  background-image: url(../images/tech/jekyll.svg);
+}
+.badge.javascript {
+  background-image: url(../images/tech/js.png);
+}
+.badge.kotlin {
+  background-color: #1B1B1B;
+  background-image: url(../images/tech/kotlin.svg);
+}
+.badge.mypy {
+  background-image: url(../images/tech/mypy.svg);
+}
+.badge.nodejs {
+  background-image: url(../images/tech/nodejs.svg);
+}
+.badge.python {
+  background-image: url(../images/tech/python.svg);
+}
+.badge.typescript {
+  background-image: url(../images/tech/ts.svg);
+}
+
+.fineprint {
+  display: block;
+  margin-top: 48px;
+  color: var(--text-color-secondary);
+}
+.fineprint a {
+  color: var(--text-color-secondary);
+  text-decoration: underline;
+}
+
 .res-grid-2 {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 0 32px;
+  gap: calc(32px - 1rem) 32px;
 }
 
 .reveal{

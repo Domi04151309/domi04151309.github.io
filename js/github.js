@@ -22,11 +22,41 @@ async function getRepositories() {
 }
 
 /**
+ * @returns {Promise<{[key: string]: Array<string>|undefined}|null>}
+ */
+async function getBadges() {
+  /** @type {{[key: string]: Array<string>|undefined}|null} */
+  let data = null;
+  try {
+    const request = await fetch(
+      '/js/repositories.json'
+    );
+    data = await request.json();
+  } catch {
+    console.warn('Failed getting project data.');
+  }
+  return data;
+}
+
+/**
+ * @param {string} name
+ * @returns {Node}
+ */
+function createBadge(name) {
+  const badge = document.createElement('div');
+  badge.classList.add('badge');
+  badge.classList.add(name.toLowerCase());
+  badge.title = name;
+  return badge;
+}
+
+/**
  * @param {Array<any>} repositories
+ * @param {{[key: string]: Array<string>|undefined}} badges
  * @throws {Error}
  * @returns {void}
  */
-function showRepositories(repositories) {
+function showRepositories(repositories, badges) {
   if (
     !(projectTemplate instanceof HTMLTemplateElement) ||
     !(projectList instanceof Node)
@@ -48,11 +78,13 @@ function showRepositories(repositories) {
     ) throw new Error(INVALID_LAYOUT);
 
     const title = projectView.querySelector('.project-title');
+    const badgeContainer = projectView.querySelector('.badge-container');
     const description = projectView.querySelector('.project-description');
     const language = projectView.querySelector('.project-language');
     const stars = projectView.querySelector('.project-stars');
     if (
       !(title instanceof Node) ||
+      !(badgeContainer instanceof Node) ||
       !(description instanceof Node) ||
       !(language instanceof Node) ||
       !(stars instanceof Node)
@@ -61,6 +93,10 @@ function showRepositories(repositories) {
     description.textContent = repository.description;
     language.textContent = repository.language;
     stars.textContent = repository.stargazers_count;
+    const badgeViews = badges[/** @type {string} */ (repository.name)]?.map(
+      tech => createBadge(tech)
+    ).filter(Boolean) ?? [];
+    badgeContainer.append(...badgeViews);
     projectList.append(projectView);
   }
 }
@@ -97,8 +133,16 @@ function showError() {
   projectList.append(projectView);
 }
 
-const repositories = await getRepositories();
-if (repositories !== null) showRepositories(repositories);
+const [repositories, badges] = await Promise.all([
+  // eslint-disable-next-line unicorn/prefer-top-level-await
+  getRepositories(),
+  // eslint-disable-next-line unicorn/prefer-top-level-await
+  getBadges()
+]);
+if (repositories !== null && badges !== null) showRepositories(
+  repositories,
+  badges
+);
 else showError();
 
 export {};
