@@ -113,5 +113,22 @@ home: true
       </div>
     </div>
 
+    <template id="project">
+      <li>
+        <h3 class="project-title"></h3>
+        <p class="project-description"></p>
+        <p class="small">Language: <span class="project-language"></span></p>
+        <p class="small"><span class="project-stars"></span> Stars on GitHub</p>
+      </li>
+    </template>
+    <div class="row reveal">
+      <div class="img card workspace-img mobile-only"></div>
+      <div class="card">
+        <h2>Public Projects</h2>
+        <ul class="projects res-grid-2"></ul>
+      </div>
+    </div>
+    <script src="{{ site.baseurl }}/js/github.js" type="module"></script>
+
   </div>
 </div>
