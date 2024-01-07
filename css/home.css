@@ -104,6 +104,18 @@
 .small {
   font-size: 12px;
 }
+
+.reveal{
+  position: relative;
+  transform: translateY(144px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.revealed{
+  transform: translateY(0);
+  opacity: 1;
+}
+
 @media only screen and (min-width: 720px) and (min-height: 600px) {
   .altBase {
     padding: 20px 32px;

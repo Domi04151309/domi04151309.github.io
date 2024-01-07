@@ -90,9 +90,15 @@ img {
   max-width: 100%;
   height: auto;
 }
-.pixel {
+.icon, .error {
+  display: block;
+  margin: 0 auto 16px;
   height: 128px;
   width: 128px;
+}
+.error {
+  height: 256px;
+  width: 256px;
 }
 p {
   margin: .5em 0;
@@ -193,6 +199,9 @@ footer a:hover {
 }
 #to-top:focus, #to-top:hover {
   filter: brightness(95%);
+}
+.text-center {
+  text-align: center;
 }
 main, .altBase, footer {
   animation: transformation 1s;

@@ -1,23 +1,15 @@
 url: https://domi04151309.github.io
 
+exclude:
+- node_modules
+- tsconfig.json
+- package-lock.json
+- package.json
+- README.md
+- tsconfig.json
+
 defaults:
   - scope:
       path: ""
     values:
       layout: "default"
-  - scope:
-      path: "Android"
-    values:
-      layout: "project"
-  - scope:
-      path: "Linux"
-    values:
-      layout: "project"
-  - scope:
-      path: "Web"
-    values:
-      layout: "project"
-  - scope:
-      path: "Windows"
-    values:
-      layout: "project"

@@ -3,11 +3,9 @@ layout: null
 ---
 const CACHE_NAME = 'domi-{{ site.time | date: "%Y%m%d-%H%M" }}';
 const urlsToCache = [
-  '/',
   '/offline',
-  '/images/error.svg',
-  '/css/main.min.css',
-  '/css/home.min.css'
+  '/images/web.svg',
+  '/css/main.min.css'
 ];
 
 self.addEventListener('install', event => {
