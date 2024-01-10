@@ -14,6 +14,7 @@ async function getRepositories() {
     const request = await fetch(
       'https://api.github.com/users/' + USERNAME + '/repos'
     );
+    if (!request.ok) throw new Error('Not ok.');
     data = await request.json();
   } catch {
     console.warn('Failed getting project data.');
@@ -32,6 +33,7 @@ async function getBadges() {
       '/js/repositories.json'
     );
     data = await request.json();
+    if (!request.ok) throw new Error('Not ok.');
   } catch {
     console.warn('Failed getting project data.');
   }
@@ -65,7 +67,8 @@ function showRepositories(repositories, badges) {
     repository => repository.description !== null &&
     repository.archived === false &&
     repository.fork === false &&
-    repository.is_template === false
+    repository.is_template === false &&
+    repository.name in badges
   );
   filtered.sort(
     (first, second) => second.stargazers_count - first.stargazers_count
