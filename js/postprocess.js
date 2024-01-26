@@ -21,8 +21,8 @@ function checkClasses() {
   );
   for (
     const header of headers
-  ) header.classList.toggle('header-shadow', window.pageYOffset > 0);
-  topButton?.classList.toggle('hidden', window.pageYOffset === 0);
+  ) header.classList.toggle('header-shadow', window.scrollY > 0);
+  topButton?.classList.toggle('hidden', window.scrollY === 0);
 }
 
 checkClasses();

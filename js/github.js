@@ -4,7 +4,17 @@ const USERNAME = 'Domi04151309';
 const INVALID_LAYOUT = 'Invalid Layout.';
 
 const projectList = document.querySelector('.projects');
-const projectTemplate = document.getElementById('project');;
+const projectTemplate = document.getElementById('project');
+
+/**
+ * @typedef {object} ProjectView
+ * @property {Element} badgeContainer
+ * @property {Node} description
+ * @property {Node} language
+ * @property {DocumentFragment} projectView
+ * @property {Node} stars
+ * @property {Node} title
+ */
 
 /**
  * @returns {Promise<Array<any>|null>}
@@ -43,6 +53,41 @@ async function getBadges() {
 }
 
 /**
+ * @throws {Error}
+ * @returns {ProjectView}
+ */
+function getProjectView() {
+  if (
+    !(projectTemplate instanceof HTMLTemplateElement)
+  ) throw new Error(INVALID_LAYOUT);
+  const projectView = projectTemplate.content.cloneNode(true);
+  if (
+    !(projectView instanceof DocumentFragment)
+  ) throw new Error(INVALID_LAYOUT);
+
+  const title = projectView.querySelector('.project-title');
+  const badgeContainer = projectView.querySelector('.badge-container');
+  const description = projectView.querySelector('.project-description');
+  const language = projectView.querySelector('.project-language');
+  const stars = projectView.querySelector('.project-stars');
+  if (
+    !(title instanceof Element) ||
+    !(badgeContainer instanceof Element) ||
+    !(description instanceof Element) ||
+    !(language instanceof Element) ||
+    !(stars instanceof Element)
+  ) throw new Error(INVALID_LAYOUT);
+  return {
+    badgeContainer,
+    description,
+    language,
+    projectView,
+    stars,
+    title
+  }
+}
+
+/**
  * @param {string} name
  * @returns {Node}
  */
@@ -62,7 +107,6 @@ function createBadge(name) {
  */
 function showRepositories(repositories, badges) {
   if (
-    !(projectTemplate instanceof HTMLTemplateElement) ||
     !(projectList instanceof Node)
   ) throw new Error(INVALID_LAYOUT);
   const filtered = repositories.filter(
@@ -77,23 +121,14 @@ function showRepositories(repositories, badges) {
   );
   projectList.textContent = '';
   for (const repository of filtered) {
-    const projectView = projectTemplate.content.cloneNode(true);
-    if (
-      !(projectView instanceof DocumentFragment)
-    ) throw new Error(INVALID_LAYOUT);
-
-    const title = projectView.querySelector('.project-title');
-    const badgeContainer = projectView.querySelector('.badge-container');
-    const description = projectView.querySelector('.project-description');
-    const language = projectView.querySelector('.project-language');
-    const stars = projectView.querySelector('.project-stars');
-    if (
-      !(title instanceof Node) ||
-      !(badgeContainer instanceof Node) ||
-      !(description instanceof Node) ||
-      !(language instanceof Node) ||
-      !(stars instanceof Node)
-    ) throw new Error(INVALID_LAYOUT);
+    const {
+      badgeContainer,
+      description,
+      language,
+      projectView,
+      stars,
+      title
+    } = getProjectView();
     title.textContent = repository.name;
     description.textContent = repository.description;
     language.textContent = repository.language;
@@ -112,27 +147,17 @@ function showRepositories(repositories, badges) {
  */
 function showError() {
   if (
-    !(projectTemplate instanceof HTMLTemplateElement) ||
     !(projectList instanceof Node)
   ) throw new Error(INVALID_LAYOUT);
   projectList.textContent = '';
-  const projectView = projectTemplate.content.cloneNode(true);
-  if (
-    !(projectView instanceof DocumentFragment)
-  ) throw new Error(INVALID_LAYOUT);
-
-  const title = projectView.querySelector('.project-title');
-  const badgeContainer = projectView.querySelector('.badge-container');
-  const description = projectView.querySelector('.project-description');
-  const language = projectView.querySelector('.project-language');
-  const stars = projectView.querySelector('.project-stars');
-  if (
-    !(title instanceof Node) ||
-    !(badgeContainer instanceof Node) ||
-    !(description instanceof Node) ||
-    !(language instanceof Node) ||
-    !(stars instanceof Node)
-  ) throw new Error(INVALID_LAYOUT);
+  const {
+    badgeContainer,
+    description,
+    language,
+    projectView,
+    stars,
+    title
+  } = getProjectView();
   title.textContent = 'Failed Loading Projects';
   description.textContent = 'Take a look at my projects on GitHub instead.';
   badgeContainer.remove();
