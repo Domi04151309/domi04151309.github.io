@@ -1,6 +1,13 @@
 const headers = document.getElementsByTagName('HEADER');
-const revealContainers = document.querySelectorAll('.reveal');
 const topButton = document.getElementById('to-top');
+let revealContainers = document.querySelectorAll('.reveal');
+
+/**
+ * @returns {void}
+ */
+export function updateRevealContainers() {
+  revealContainers = document.querySelectorAll('.reveal');
+}
 
 /**
  * @returns {void}
