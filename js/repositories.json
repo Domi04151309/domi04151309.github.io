@@ -3,6 +3,7 @@
     "Android",
     "detekt",
     "Git",
+    "GitHub-Actions",
     "Gradle",
     "Kotlin"
   ],
@@ -10,6 +11,7 @@
     "Android",
     "detekt",
     "Git",
+    "GitHub-Actions",
     "Gradle",
     "Kotlin"
   ],
@@ -23,6 +25,7 @@
     "Android",
     "detekt",
     "Git",
+    "GitHub-Actions",
     "Gradle",
     "Kotlin"
   ],
@@ -30,11 +33,13 @@
     "Android",
     "detekt",
     "Git",
+    "GitHub-Actions",
     "Gradle",
     "Kotlin"
   ],
   "pypu": [
     "Git",
+    "GitHub-Actions",
     "MyPy",
     "Python"
   ],
@@ -42,6 +47,7 @@
     "CSS",
     "EsLint",
     "Git",
+    "GitHub-Actions",
     "HTML",
     "JavaScript",
     "TypeScript"
@@ -50,6 +56,7 @@
     "CSS",
     "EsLint",
     "Git",
+    "GitHub-Actions",
     "HTML",
     "NodeJs",
     "JavaScript",
@@ -59,6 +66,7 @@
     "CSS",
     "EsLint",
     "Git",
+    "GitHub-Actions",
     "HTML",
     "Jekyll",
     "JavaScript",

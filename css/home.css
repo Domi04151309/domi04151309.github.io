@@ -148,6 +148,9 @@
 .badge.git {
   background-image: url(../images/tech/git.svg);
 }
+.badge.github-actions {
+  background-image: url(../images/tech/github-actions.svg);
+}
 .badge.gradle {
   background-color: #010002;
   background-image: url(../images/tech/gradle.svg);
