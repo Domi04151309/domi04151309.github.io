@@ -145,6 +145,9 @@
 .badge.eslint {
   background-image: url(../images/tech/eslint.svg);
 }
+.badge.git {
+  background-image: url(../images/tech/git.svg);
+}
 .badge.gradle {
   background-color: #010002;
   background-image: url(../images/tech/gradle.svg);

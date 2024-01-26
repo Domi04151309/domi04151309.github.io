@@ -2,39 +2,46 @@
   "AlwaysOn": [
     "Android",
     "detekt",
+    "Git",
     "Gradle",
     "Kotlin"
   ],
   "BatteryTool": [
     "Android",
     "detekt",
+    "Git",
     "Gradle",
     "Kotlin"
   ],
   "ESP8266SimpleHomeTemperature": [
     "Arduino",
     "C",
-    "Cpp"
+    "Cpp",
+    "Git"
   ],
   "HomeApp": [
     "Android",
     "detekt",
+    "Git",
     "Gradle",
     "Kotlin"
   ],
   "PowerApp": [
     "Android",
     "detekt",
+    "Git",
     "Gradle",
     "Kotlin"
   ],
   "pypu": [
+    "Git",
     "MyPy",
     "Python"
   ],
   "repository-dashboard": [
     "CSS",
     "EsLint",
+    "Git",
     "HTML",
     "JavaScript",
     "TypeScript"
@@ -42,6 +49,7 @@
   "SMA": [
     "CSS",
     "EsLint",
+    "Git",
     "HTML",
     "NodeJs",
     "JavaScript",
@@ -50,6 +58,7 @@
   "Start": [
     "CSS",
     "EsLint",
+    "Git",
     "HTML",
     "Jekyll",
     "JavaScript",
