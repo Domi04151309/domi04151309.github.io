@@ -1,0 +1,42 @@
+.floating-emoji {
+  position: relative;
+  max-width: 360px;
+  height: 192px;
+}
+
+.floating-emoji > * {
+  position: absolute;
+  height: 4em;
+  width: 4em;
+  animation: 4s hover infinite linear;
+}
+
+.floating-emoji > :nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.floating-emoji > :nth-child(2) {
+  top: 20%;
+  left: 85%;
+}
+
+.floating-emoji > :nth-child(3) {
+  top: 65%;
+  left: 5%;
+}
+
+.floating-emoji > :nth-child(4) {
+  top: 70%;
+  left: 80%;
+}
+
+.floating-emoji, .floating-emoji > div {
+  background: center/contain var(--floating-emoji, none) no-repeat;
+}
+
+@keyframes hover {
+  50% {
+    transform: translateY(.5em);
+  }
+}

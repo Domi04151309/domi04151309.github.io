@@ -43,7 +43,7 @@
   "start_url": "/",
   "background_color": "#000",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "any",
   "scope": "/",
   "theme_color": "#000"
 }

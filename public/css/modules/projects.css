@@ -1,0 +1,100 @@
+.projects {
+  margin: 1em 0;
+}
+
+.projects > li {
+  list-style-type: none;
+  margin: .5rem 0;
+}
+
+.projects > li > *:not(.badge-container) {
+  margin: 0;
+}
+
+.badge-container {
+  display: flex;
+  gap: 8px;
+  margin: 1em 0;
+  flex-wrap: wrap;
+}
+
+.badge {
+  width: 54px;
+  height: 54px;
+  background-color: var(--hover-color);
+}
+
+.badge.android {
+  background-image: url("../../images/tech/android.svg");
+}
+
+.badge.arduino {
+  background-image: url("../../images/tech/arduino.svg");
+}
+
+.badge.c {
+  background-image: url("../../images/tech/c.svg");
+}
+
+.badge.cpp {
+  background-image: url("../../images/tech/cpp.svg");
+}
+
+.badge.css {
+  background-image: url("../../images/tech/css.svg");
+}
+
+.badge.detekt {
+  background-image: url("../../images/tech/detekt.svg");
+}
+
+.badge.eslint {
+  background-image: url("../../images/tech/eslint.svg");
+}
+
+.badge.git {
+  background-image: url("../../images/tech/git.svg");
+}
+
+.badge.github-actions {
+  background-image: url("../../images/tech/github-actions.svg");
+}
+
+.badge.gradle {
+  background-color: #010002;
+  background-image: url("../../images/tech/gradle.svg");
+}
+
+.badge.html {
+  background-image: url("../../images/tech/html.svg");
+}
+
+.badge.jekyll {
+  background-size: 16px;
+  background-image: url("../../images/tech/jekyll.svg");
+}
+
+.badge.javascript {
+  background-image: url("../../images/tech/js.svg");
+}
+
+.badge.kotlin {
+  background-color: #1B1B1B;
+  background-image: url("../../images/tech/kotlin.svg");
+}
+
+.badge.mypy {
+  background-image: url("../../images/tech/mypy.svg");
+}
+
+.badge.nodejs {
+  background-image: url("../../images/tech/nodejs.svg");
+}
+
+.badge.python {
+  background-image: url("../../images/tech/python.svg");
+}
+
+.badge.typescript {
+  background-image: url("../../images/tech/ts.svg");
+}

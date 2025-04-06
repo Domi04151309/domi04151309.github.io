@@ -1,15 +1,7 @@
-:root {
-  /* Created using the material 3 theme creator */
-  --color-primary: #0165E1;
-  --color-primary-container: #d9e2ff;
-  --color-on-primary-container: #001944;
-  --color-background: #fefbff;
-  --text-color: rgb(0 0 0 / 87%);
-  --text-color-secondary: rgb(0 0 0 / 60%);
-  --hover-color: rgb(128 128 128 / 12.5%);
-  --border-radius: 16px;
-  --card-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
-}
+@import url("./modules/variables.css");
+@import url("./modules/fonts.css");
+@import url("./modules/layout.css");
+@import url("./modules/hover-underline.css");
 
 @keyframes transformation {
   0% {
@@ -32,70 +24,21 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  font: 16px 'DM Sans', sans-serif;
   background: var(--color-background);
+  font: 16px 'DM Sans', sans-serif;
   line-height: 1.8;
   letter-spacing: .1px;
   scroll-behavior: smooth;
   scroll-padding-top: 54px;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  height: 54px;
-  width: 100%;
-  overflow: hidden;
-  z-index: 3;
-}
-
-.header-shadow {
-  background: var(--color-background);
-  box-shadow: 0 0 4px rgb(0 0 0 / 50%);
-}
-
-h1 {
-  display: inline-block;
-  color: var(--text-color);
-  font-weight: normal;
-  font-size: 14px;
-  letter-spacing: 3px;
-  line-height: 18px;
-  margin: 0;
-  padding: 18px 9px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.logo {
-  display: block;
-  float: left;
-  height: 46px;
-  width: 95px;
-  margin: 4px;
-  background: transparent url("../images/logo.svg") no-repeat 16px 7px;
-  background-size: 58px 32px;
-  border-radius: var(--border-radius);
-  font-size: 0;
-}
-
-.logo:hover {
-  background-color: var(--hover-color);
-}
-
-main {
-  max-width: 780px;
-  padding: 86px 32px 32px;
-  margin: 0 auto;
-  overflow-y: hidden;
-}
-
 h2, h3 {
   color: var(--text-color);
   font-family: 'DM Serif Display', serif;
+  letter-spacing: .4px;
 }
 
-p, ul, footer div, table, pre {
+small, p, ul, footer div {
   color: var(--text-color-secondary);
 }
 
@@ -104,82 +47,48 @@ img {
   height: auto;
 }
 
-.icon, .error {
+.icon {
   display: block;
   margin: 0 auto 16px;
   height: 128px;
   width: 128px;
 }
 
-.error {
-  height: 256px;
-  width: 256px;
-}
-
-p {
-  margin: .5em 0;
-}
-
 ul {
-  list-style-position: inside;
+  margin-left: 24px;
   padding: 0;
-}
-
-code {
-  font-weight: bold;
-}
-
-table {
-  width: 100%;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-}
-
-td {
-  min-width: 214px;
-  padding: 8px;
-  vertical-align: top;
-  background: #F8F8F8;
-}
-
-td:first-child {
-  background: #eee;
-}
-
-pre {
-  overflow-x: auto;
-  width: calc(100% - 2 * var(--border-radius));
-  background: #f9f9f9;
-  padding: var(--border-radius);
-  border-radius: var(--border-radius);
 }
 
 a {
   color: var(--color-primary);
-  text-decoration: none;
+  text-underline-offset: 4px;
 }
 
-a:hover {
-  text-decoration: underline;
+.button-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
 }
 
 .btn {
   display: inline-block;
-  margin: 0 0 10px;
   border: 0;
-  padding: 8px 16px;
-  background: var(--color-primary);
+  padding: 0 24px;
+  background: var(--color-primary-fixed);
   color: #fff;
-  font-size: 12px;
-  line-height: 1.25;
+  font-size: 14px;
+  letter-spacing: .4px;
+  line-height: 40px;
   vertical-align: middle;
-  border-radius: var(--border-radius);
+  border-radius: 20px;
+  font-weight: bold;
   box-shadow: var(--card-shadow);
+  text-decoration: none;
 }
 
 .btn:hover {
   filter: brightness(1.2);
-  text-decoration: none;
 }
 
 .btn:active {
@@ -193,69 +102,100 @@ button {
   cursor: pointer;
 }
 
-footer {
-  text-align: center;
-  padding: 16px;
+.screenshots {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 2fr);
 }
 
-footer *:not(nav) {
-  padding: 16px 8px;
-  letter-spacing: 3px;
-  line-height: 18px;
-  text-transform: uppercase;
-  border-radius: var(--border-radius);
-}
-
-footer a {
-  display: inline-block;
-  color: var(--color-primary);
-}
-
-footer a:hover {
-  background: var(--hover-color);
-  text-decoration: none;
-}
-
-#to-top.hidden {
-  opacity: 0;
-}
-
-#to-top {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  height: 56px;
-  width: 56px;
-  border-radius: 16px;
-  background: center/32px var(--color-primary-container) url("../images/to_top.svg") no-repeat;
+.references > a > img, .screenshots > a > img {
+  display: block;
+  margin: auto;
+  border-radius: 4px;
   box-shadow: var(--card-shadow);
-  z-index: 3;
+  overflow: hidden;
 }
 
-#to-top:focus, #to-top:hover {
-  filter: brightness(95%);
+.references > a:hover, .screenshots > a:hover {
+  transform: scale(1.025);
+}
+
+.reference-list {
+  margin-left: 0;
+  list-style: none;
+}
+
+.screenshots > a > img {
+  max-height: 214px;
+}
+
+.res-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
 }
 
 .text-center {
   text-align: center;
 }
 
-main, .alt-base, footer {
-  animation: transformation 1s;
+button, a, a * {
+  transition-property: background-image, background-color, transform, filter, opacity, visibility;
+  transition-duration: var(--transition-duration);
 }
 
-header, button, a, a * {
-  transition-duration: .25s;
+[data-email] {
+  letter-spacing: -.15em;
 }
 
-@media screen and (max-width: 800px) {
-  td, tr {
-    display: block;
+label {
+  color: var(--text-color-secondary);
+}
+
+input[type="email"], input[type="text"], textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 10px 18px;
+  margin-bottom: 16px;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  background: var(--color-background);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--hover-color);
+  border-radius: calc(var(--border-radius) / 2);
+  outline: 0;
+}
+
+textarea {
+  height: 100%;
+  min-height: 192px;
+  overflow-y: auto;
+  resize: none;
+  grid-row: span 2;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+}
+
+.checkbox {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+form button {
+  width: 100%;
+}
+
+@media screen and (min-width: 780px) {
+  .res-grid-2 {
+    grid-template-columns: repeat(2, 2fr);
   }
-}
 
-@media print {
-  header, #to-top {
-    display: none;
+  .screenshots {
+    grid-template-columns: repeat(4, 4fr);
   }
 }

@@ -1,0 +1,203 @@
+---
+  home: true
+  layout: default
+---
+{% assign strings = site.data.strings[page.lang] %}
+<div role="main">
+  <div class="hero">
+    <div>
+      <div>{{ page.strings.hero_before }}</div>
+      <div class="hero-keyword">
+        <span>{{ page.strings.hero_initial }}</span>
+        <span class="hero-keyword-below"></span>
+        <span class="hero-keyword-below"></span>
+      </div>
+      <div class="hero-last-line">
+        <div>{{ page.strings.hero_after }}</div>
+      </div>
+    </div>
+    <div>Dominik</div>
+  </div>
+  <div>
+    <div class="alt-base row reveal">
+      <div
+        class="smaller-half screen workplace"
+        style="--screen-content: url('{{ site.baseurl }}/images/about_us.jpg');">
+        <div>
+          <div class="screen-buttons">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <span class="potted-flower"></span>
+        <span class="flower"></span>
+      </div>
+      <div class="bigger-half">
+        <h2>{{ page.strings.about }}</h2>
+        <p>{{ page.strings.about_text }}</p>
+        <a class="btn" href="https://github.com/Domi04151309" target="_blank">
+          {{ page.strings.about_button }}
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="swapped alt-base row reveal">
+    <div
+      class="smaller-half img floating-emoji"
+      style="--floating-emoji: url('{{ site.baseurl }}/images/emoji/thinking_face_3d.webp');">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="bigger-half">
+      <h2>{{ page.strings.username }}</h2>
+      <p>{{ page.strings.username_text }}</p>
+    </div>
+  </div>
+  <div class="alt-base row reveal">
+    <div class="smaller-half calendar">
+      <div>August</div>
+      <div>
+        {%  for index in (1..31) %}
+          <div>{{ index }}</div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="bigger-half">
+      <h2>{{ page.strings.experience }}</h2>
+      <ul class="experience">
+        <li>
+          <img width="48" src="{{ site.baseurl }}/images/cv/kit.jpeg" loading="lazy" height="48" alt="Logo">
+          <div>
+            <h3>Student Assistant</h3>
+            <p>Karlsruhe Institute of Technology (KIT) · Part-time</p>
+            <p class="small">Oct 2022 - Present</p>
+            <p class="small">Skills: Continuous Integration (CI) · OpenGL · Python (Programming Language) · Unified Modeling Language (UML)</p>
+          </div>
+        </li>
+        <li>
+          <img width="48" src="{{ site.baseurl }}/images/cv/anvil.jpeg" loading="lazy" height="48" alt="Logo">
+          <div>
+            <h3>Co-Founder</h3>
+            <p>Anvil Solutions · Self-employed</p>
+            <p class="small">Sep 2021 - Present</p>
+            <p class="small">Skills: Front-End Development · Search Engine Optimization (SEO) · Web Design · Web Development · Cascading Style Sheets (CSS) · ECMAScript · HTML · JavaScript · PHP · SQL</p>
+          </div>
+        </li>
+        <li>
+          <img width="48" src="{{ site.baseurl }}/images/cv/siemens.jpeg" loading="lazy" height="48" alt="Logo">
+          <div>
+            <h3>Intern</h3>
+            <p>Siemens · Internship</p>
+            <p class="small">Apr 2018</p>
+            <p class="small">Skills: Arduino · Microcontrollers · Java</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="swapped alt-base row reveal">
+    <div
+      class="smaller-half screen education"
+      style="--screen-content: url('{{ site.baseurl }}/images/karlsruhe.jpg');">
+      <div>
+        <div class="screen-buttons">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <span></span>
+    </div>
+    <div class="bigger-half">
+      <h2>{{ page.strings.education }}</h2>
+      <ul class="experience">
+        <li>
+          <img width="48" src="{{ site.baseurl }}/images/cv/hka.jpeg" loading="lazy" height="48" alt="Logo">
+          <div>
+            <h3>Karlsruhe University of Applied Sciences</h3>
+            <p>Bachelor of Science - B.Sc., Wirtschaftsinformatik</p>
+            <p class="small">2021 - 2025</p>
+            <p class="small">Skills: Continuous Integration (CI) · Docker · Kubernetes · Microservices · Object-Oriented Programming (OOP) · Software Development · BPMN · C# · ECMAScript · Node.js · Java · PHP · SQL · TypeScript · Unified Modeling Language (UML)</p>
+          </div>
+        </li>
+        <li>
+          <span></span>
+          <div>
+            <h3>Gymnasium</h3>
+            <p>Abitur</p>
+            <p class="small">Aug 2013 - Jul 2021</p>
+            <p class="small">Skills: Algorithms · Arduino · Data Structures · Databases · Microcontrollers · Programming · Relational Databases</p>
+          </div>
+        </li>
+        <li>
+          <span></span>
+          <div>
+            <h3>Shanghai Jinshan High School</h3>
+            <p>Student Exchange Program</p>
+            <p class="small">Oct 2018 - Nov 2018</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <template id="project">
+    <li class="reveal">
+      <h3 class="project-title"></h3>
+      <div class="badge-container"></div>
+      <p class="project-description"></p>
+      <p class="small">Language: <span class="project-language"></span></p>
+      <p class="small"><span class="project-stars"></span> Stars on GitHub</p>
+    </li>
+  </template>
+  <div class="alt-base row reveal">
+    <div
+      class="smaller-half screen lighthouse mobile-only"
+      style="--screen-content: url('{{ site.baseurl }}/images/home_bg.jpg');">
+      <div>
+        <div class="screen-buttons">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <img
+          alt="Icon"
+          loading="lazy"
+          src="{{ site.baseurl }}/images/a_light.svg">
+      </div>
+      <span></span>
+    </div>
+    <div>
+      <h2>Public Projects</h2>
+      <ul class="projects res-grid-2">
+        <li class="reveal">
+          <h3 class="project-title">Loading</h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="{{ site.baseurl }}/js/github.js" type="module"></script>
+  <div class="alt-base row">
+    <div>
+      <small class="fineprint">
+        The Android robot is reproduced or modified from work created and shared by
+        Google and used according to terms described in the
+        <a href="https://creativecommons.org/licenses/by/3.0/" rel="nofollow noopener noreferrer">Creative Commons</a> 3.0 Attribution License.
+        The detekt logo is licensed under the terms and conditions of the
+        <a href="https://github.com/detekt/detekt/blob/main/LICENSE" rel="nofollow noopener noreferrer">Apache License 2.0</a>.
+        The Git logo by
+        <a href="https://twitter.com/jasonlong" rel="nofollow noopener noreferrer">Jason Long</a>
+        is licensed under the
+        <a href="https://creativecommons.org/licenses/by/3.0/" rel="nofollow noopener noreferrer">Creative Commons Attribution 3.0 Unported License</a>.
+        The Actions icon is licensed under the terms and conditions of the
+        <a href="https://github.com/primer/octicons/blob/main/LICENSE" rel="nofollow noopener noreferrer">MIT License</a>.
+        The MyPy logo is licensed under the terms and conditions of the
+        <a href="https://github.com/python/mypy/blob/master/LICENSE" rel="nofollow noopener noreferrer">MIT License</a>.
+      </small>
+    </div>
+  </div>
+</div>
+<script type="module" src="{{ site.baseurl }}/js/index.js"></script>

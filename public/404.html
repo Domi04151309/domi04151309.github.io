@@ -1,12 +1,20 @@
 ---
 permalink: /404.html
 title: 404
+notTranslated: true
 ---
-<img src="{{site.baseurl}}/images/404.svg" alt="404" class="error">
+<style>
+.not-found {
+  width: fit-content;
+  margin: auto;
+  font: bold min(24vh, 24vw) 'DM Serif Display', serif;
+  color: var(--color-primary);
+}
+</style>
+<div class="not-found">404</div>
 <h2 class="text-center">Ooops, Something Went Wrong</h2>
+<p class="text-center">Unfortunately, the site you requested does not exist!</p>
 <p class="text-center">
-	Unfortunately the site you requested does not exist!
-</p>
-<p class="text-center">
-	Check the spelling or go back to the <a href="{{site.baseurl}}/">Mainpage</a> to find the site you were looking for.
+  Check the spelling or go back to the <a href="{{site.baseurl}}/">main page</a>
+  to find the site you were looking for.
 </p>

@@ -1,0 +1,31 @@
+.experience {
+  margin: 1em 0;
+}
+
+.experience > li {
+  display: flex;
+  list-style-type: none;
+  margin: .5rem 0;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.experience > li > :first-child, .badge {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--border-radius);
+  flex: none;
+}
+
+.experience > li > span:first-child, .badge {
+  background-color: var(--color-primary-container);
+  background-image: url("../../images/cv/school.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 32px;
+}
+
+.experience > li > div > * {
+  margin: 0;
+  line-height: 1.5em;
+}

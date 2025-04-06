@@ -1,0 +1,42 @@
+.calendar {
+  max-width: 360px;
+  color: var(--text-color-secondary);
+  border: 1px solid var(--hover-color);
+  border-radius: calc(var(--border-radius) / 2);
+  text-align: center;
+  overflow: hidden;
+  user-select: none;
+}
+
+.calendar > :nth-child(1) {
+  padding: 8px;
+  font-weight: bold;
+  letter-spacing: .4px;
+  background-color: var(--color-primary-fixed);
+  color: #fff;
+  border-bottom: 1px solid var(--hover-color);
+}
+
+.calendar > :nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(7, 7fr);
+  padding: 8px;
+  gap: 8px;
+}
+
+.calendar .today {
+  border-radius: calc(var(--border-radius) / 2);
+  color: var(--color-primary);
+  font-weight: bold;
+  box-shadow: 0 0 0 1px var(--hover-color);
+}
+
+.calendar .tomorrow {
+  font-size: 0;
+  background: center/contain url("../../images/emoji/person_running_3d_light.webp") no-repeat;
+}
+
+.calendar .day-after-tomorrow {
+  font-size: 0;
+  background: center/contain url("../../images/emoji/dashing_away_3d.webp") no-repeat;
+}

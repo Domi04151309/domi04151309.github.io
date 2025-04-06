@@ -1,0 +1,85 @@
+:root {
+  --screen-unit: 8px;
+}
+
+.screen {
+  position: relative;
+  user-select: none;
+}
+
+.screen::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: top/cover var(--screen-content, var(--color-background)) no-repeat;
+  filter: blur(calc(var(--screen-unit) * 4));
+  opacity: .5;
+  z-index: 1;
+}
+
+.screen > span {
+  --icon-size: 64px;
+
+  position: absolute;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  background: center/contain none no-repeat;
+  z-index: 3;
+}
+
+.screen > div {
+  position: relative;
+  border: 1px solid var(--hover-color);
+  border-radius: var(--screen-unit);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.screen > div::after {
+  content: '';
+  display: block;
+  aspect-ratio: 16 / 9;
+  background: top/cover var(--screen-content, var(--color-background)) no-repeat;
+}
+
+.screen > div > :not(.screen-buttons) {
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: calc(100% - 3* var(--screen-unit));
+  padding: calc(var(--screen-unit) * 2);
+}
+
+.screen > div > img:not(.screen-buttons) {
+  padding: 18%;
+  object-fit: contain;
+}
+
+.screen-buttons {
+  display: flex;
+  padding: var(--screen-unit);
+  gap: var(--screen-unit);
+  background: var(--color-background);
+  border-bottom: 1px solid var(--hover-color);
+}
+
+.screen-buttons > div {
+  width: var(--screen-unit);
+  height: var(--screen-unit);
+  border-radius: 50%;
+}
+
+.screen-buttons > div:nth-child(1) {
+  background: #FF5F56;
+}
+
+.screen-buttons > div:nth-child(2) {
+  background: #FFBD2E;
+}
+
+.screen-buttons > div:nth-child(3) {
+  background: #27C93F;
+}

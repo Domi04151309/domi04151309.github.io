@@ -1,43 +1,78 @@
 ---
 layout: compress
-defaultDescription: "Hi! I'm Dominik! I'm interested in programming, and I think it's great to create new things."
 ---
+{% assign lang = page.lang | default: 'en' %}
+{% assign strings = site.data.strings[lang] %}
+{% assign file = page.name | remove: '.html' | remove: '.md' | remove: 'index' %}
+{% assign formattedDescription = page.description | default: strings.defaultDescription | strip_newlines | strip_html | strip | truncate: 150 %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
-  <title>Dominik{% if page.title %} - {{ page.title }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}Dominik</title>
   <link rel="canonical" href="{{ site.url }}{{ page.url | remove: '.html' }}" />
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.css" />
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/fonts.css" />
-  <noscript><style>header{background:#fff;box-shadow:0 0 4px rgba(0,0,0,.5);}</style></noscript>
+  {% if layout.home %}
+    <link
+      rel="preload"
+      as="image"
+      href="{{ site.baseurl }}/images/home_bg_mobile.jpg"
+      media="screen and (max-width: 780px), screen and (max-height: 512px)" />
+    <link
+      rel="preload"
+      as="image"
+      href="{{ site.baseurl }}/images/home_bg.jpg"
+      media="screen and (min-width: 780px) and (min-height: 512px)" />
+  {% endif %}
+  {% if layout.home or layout.extended %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{site.baseurl}}/css/home.css" />
+    <meta name="keywords" content="" />
+  {% endif %}
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{site.baseurl}}/css/noscript.css" />
+  </noscript>
   <link rel="icon" href="{{site.baseurl}}/favicon.ico">
   <link rel="apple-touch-icon" href="{{site.baseurl}}/apple-touch-icon.png" />
   <link rel="manifest" href="{{site.baseurl}}/pwa/manifest.json">
-  {% if page.home %}
-    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/home.css" />
-    <meta name="keywords" content="domi04151309, domi, dominik, 04151309" />
-    <meta name="google-site-verification" content="rlunQ8lHnv4cTauqGw4DcxCdiJTHAU1-gui1zlcS64w" />
-  {% endif %}
-  <meta name="description" content="{{ page.description | default: layout.defaultDescription | strip_html }}" />
+  <meta name="description" content="{{ formattedDescription }}" />
   <meta name="theme-color" content="#000000">
   <meta property="og:url" content="{{ site.url }}{{ page.url | remove: '.html' }}">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Dominik{% if page.title %} - {{ page.title }}{% endif %}">
-  <meta property="og:description" content="{{ page.description | default: layout.defaultDescription | strip_html }}">
+  <meta
+    property="og:title"
+    content="{% if page.title %}{{ page.title }} - {% endif %}Anvil">
+  <meta property="og:description" content="{{ formattedDescription }}">
   <meta property="og:image" content="{{ site.url }}/preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dominik{% if page.title %} - {{ page.title }}{% endif %}">
-  <meta name="twitter:description" content="{{ page.description | default: layout.defaultDescription | strip_html }}">
+  <meta
+    name="twitter:title"
+    content="{% if page.title %}{{ page.title }} - {% endif %}Anvil">
+  <meta name="twitter:description" content="{{ formattedDescription }}">
   <meta name="twitter:image" content="{{ site.url }}/preview.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <header>
-    <a href="{{site.baseurl}}/" class="logo">Home</a>
-    <h1>Domi04151309</h1>
+  <header{% if layout.home %} class="home"{% endif %}>
+    <a
+      href="{{ site.baseurl }}{% if page.url contains 'de' %}/de{% endif %}/"
+      class="logo"
+      title="Home">
+    </a>
+    <h1>
+      <a
+        href="{{ site.baseurl }}{% if page.url contains 'de' %}/de{% endif %}/"
+        class="hover-underline">
+        <span>Dominik</span>
+      </a>
+    </h1>
   </header>
-  {% if page.home %}
+  {% if layout.home or layout.extended or layout.handles_main %}
     {{ content }}
   {% else %}
     <main>
@@ -45,42 +80,11 @@ defaultDescription: "Hi! I'm Dominik! I'm interested in programming, and I think
     </main>
   {% endif %}
   <aside>
-    <a id="to-top" class="hidden" href="#" title="Go to top"></a>
+    <a id="to-top" class="hidden" href="#" title="{{ strings.toTop }}"></a>
   </aside>
   <footer>
     <div>&copy; Copyright {{ site.time | date: "%Y" }}</div>
   </footer>
-  <script type="module" src="{{site.baseurl}}/js/postprocess.js"></script>
-  <script>
-    let newWorker;
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('{{ site.baseurl }}/sw.js').then( registration => {
-           registration.addEventListener('updatefound', () => {
-            newWorker = registration.installing;
-            newWorker.addEventListener('statechange', () => {
-              switch (newWorker.state) {
-                case 'installed':
-                  if (navigator.serviceWorker.controller) {
-                    newWorker.postMessage({ action: 'skipWaiting' });
-                  }
-                  break;
-              }
-            });
-          });
-          console.log('ServiceWorker registration successful');
-        }, err => {
-          console.log('ServiceWorker registration failed: ', err);
-        });
-      });
-
-      let refreshing;
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if (refreshing) return;
-        window.location.reload();
-        refreshing = true;
-      });
-    }
-  </script>
+  <script type="module" src="{{site.baseurl}}/js/layout.js"></script>
 </body>
 </html>

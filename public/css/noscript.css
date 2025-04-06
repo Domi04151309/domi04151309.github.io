@@ -1,0 +1,12 @@
+header {
+  background: var(--color-background);
+  box-shadow: 0 0 12px rgb(0 0 0 / 20%);
+}
+
+header:not(.header-shadow, .stay-dark) .logo {
+  background-image: url("../images/a.svg");
+}
+
+header:not(.header-shadow, .stay-dark) h1 {
+  color: var(--text-color);
+}

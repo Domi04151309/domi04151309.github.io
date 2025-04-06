@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: compress
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
@@ -9,7 +9,7 @@ layout: null
     <loc>{{ site.url }}/</loc>
     <priority>1.0</priority>
   </url>
-  {% for page in site.pages %}{% unless page.url contains '404' or page.home %}{% if page.url contains '.html' %}
+  {% for page in site.pages %}{% unless page.url contains '404' or page.url contains 'offline' or page.home or page.imprint or page.privacy %}{% if page.url contains '.html' %}{% assign file = page.name | remove: '.html' | remove: '.md' | remove: 'index' %}
   <url>
     <loc>{{ site.url }}{{ page.url | remove: '.html' }}</loc>
     <priority>0.8</priority>

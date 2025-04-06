@@ -1,4 +1,4 @@
-import { updateRevealContainers } from './postprocess.js';
+import { updateRevealContainers } from './layout.js';
 
 const USERNAME = 'Domi04151309';
 const INVALID_LAYOUT = 'Invalid Layout.';

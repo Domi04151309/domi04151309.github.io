@@ -1,0 +1,32 @@
+:root {
+  --color-primary: #1976D2;
+  --color-primary-container: #d4e3ff;
+  --color-primary-fixed: #1976D2;
+  --color-background: #fdfcff;
+  --color-background-alpha: rgb(253 252 255 / 80%);
+  --text-color: rgb(0 0 0 / 87%);
+  --text-color-secondary: rgb(0 0 0 / 60%);
+  --hover-color: rgb(128 128 128 / 12.5%);
+  --border-radius: 16px;
+  --card-filter: saturate(180%) blur(var(--border-radius));
+  --card-shadow: 0 4px 6px 0 rgb(0 0 0 / 10%);
+  --hover-scale: 1.025;
+  --max-width: 780px;
+
+  --transition-duration: .25s;
+}
+
+.dark {
+  --color-background: #1a1c1e;
+  --color-primary: #a5c8ff;
+  --text-color: rgb(255 255 255 / 87%);
+  --text-color-secondary: rgb(255 255 255 / 60%);
+
+  background: var(--color-background);
+}
+
+@keyframes spin {
+  100% {
+      transform:rotate(360deg);
+  }
+}
