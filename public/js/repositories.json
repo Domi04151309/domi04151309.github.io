@@ -62,7 +62,7 @@
     "JavaScript",
     "TypeScript"
   ],
-  "Start": [
+  "start": [
     "CSS",
     "EsLint",
     "Git",

@@ -24,7 +24,7 @@ async function getRepositories() {
   let data = null;
   try {
     const request = await fetch(
-      'https://api.github.com/users/' + USERNAME + '/repos'
+      `https://api.github.com/users/${USERNAME}/repos`
     );
     if (!request.ok) throw new Error('Not ok.');
     data = await request.json();
@@ -84,7 +84,7 @@ function getProjectView() {
     projectView,
     stars,
     title
-  }
+  };
 }
 
 /**
@@ -167,9 +167,7 @@ function showError() {
 }
 
 const [repositories, badges] = await Promise.all([
-  // eslint-disable-next-line unicorn/prefer-top-level-await
   getRepositories(),
-  // eslint-disable-next-line unicorn/prefer-top-level-await
   getBadges()
 ]);
 if (repositories !== null && badges !== null) showRepositories(

@@ -4,26 +4,30 @@
   --color-primary-container: #d9e2ff;
   --color-on-primary-container: #001944;
   --color-background: #fefbff;
-  --text-color: rgba(0, 0, 0, .87);
-  --text-color-secondary: rgba(0, 0, 0, .6);
-  --hover-color: rgba(128, 128, 128, .125);
+  --text-color: rgb(0 0 0 / 87%);
+  --text-color-secondary: rgb(0 0 0 / 60%);
+  --hover-color: rgb(128 128 128 / 12.5%);
   --border-radius: 16px;
-  --card-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+  --card-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
 }
+
 @keyframes transformation {
   0% {
     opacity: 0;
     transform: translateY(+10px);
   }
 }
+
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
 html {
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
 }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -35,6 +39,7 @@ html, body {
   scroll-behavior: smooth;
   scroll-padding-top: 54px;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -43,10 +48,12 @@ header {
   overflow: hidden;
   z-index: 3;
 }
+
 .header-shadow {
   background: var(--color-background);
-  box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 4px rgb(0 0 0 / 50%);
 }
+
 h1 {
   display: inline-block;
   color: var(--text-color);
@@ -59,71 +66,86 @@ h1 {
   text-decoration: none;
   text-transform: uppercase;
 }
+
 .logo {
   display: block;
   float: left;
   height: 46px;
   width: 95px;
   margin: 4px;
-  background: rgba(0, 0, 0, 0) url(../images/logo.svg) no-repeat 16px 7px;
+  background: transparent url("../images/logo.svg") no-repeat 16px 7px;
   background-size: 58px 32px;
   border-radius: var(--border-radius);
   font-size: 0;
 }
+
 .logo:hover {
   background-color: var(--hover-color);
 }
+
 main {
   max-width: 780px;
   padding: 86px 32px 32px;
   margin: 0 auto;
   overflow-y: hidden;
 }
+
 h2, h3 {
   color: var(--text-color);
   font-family: 'DM Serif Display', serif;
 }
+
 p, ul, footer div, table, pre {
   color: var(--text-color-secondary);
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 .icon, .error {
   display: block;
   margin: 0 auto 16px;
   height: 128px;
   width: 128px;
 }
+
 .error {
   height: 256px;
   width: 256px;
 }
+
 p {
   margin: .5em 0;
 }
+
 ul {
   list-style-position: inside;
   padding: 0;
 }
+
 code {
   font-weight: bold;
 }
+
 table {
   width: 100%;
   border-radius: var(--border-radius);
   overflow: hidden;
 }
+
 td {
   min-width: 214px;
   padding: 8px;
   vertical-align: top;
   background: #F8F8F8;
 }
+
 td:first-child {
   background: #eee;
 }
+
 pre {
   overflow-x: auto;
   width: calc(100% - 2 * var(--border-radius));
@@ -131,13 +153,16 @@ pre {
   padding: var(--border-radius);
   border-radius: var(--border-radius);
 }
+
 a {
   color: var(--color-primary);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
+
 .btn {
   display: inline-block;
   margin: 0 0 10px;
@@ -151,23 +176,28 @@ a:hover {
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
 }
+
 .btn:hover {
   filter: brightness(1.2);
   text-decoration: none;
 }
+
 .btn:active {
   filter: brightness(1.4);
 }
+
 button {
   vertical-align: middle;
   display: inline-block;
   border: 0;
   cursor: pointer;
 }
+
 footer {
   text-align: center;
   padding: 16px;
 }
+
 footer *:not(nav) {
   padding: 16px 8px;
   letter-spacing: 3px;
@@ -175,17 +205,21 @@ footer *:not(nav) {
   text-transform: uppercase;
   border-radius: var(--border-radius);
 }
+
 footer a {
   display: inline-block;
   color: var(--color-primary);
 }
+
 footer a:hover {
   background: var(--hover-color);
   text-decoration: none;
 }
+
 #to-top.hidden {
   opacity: 0;
 }
+
 #to-top {
   position: fixed;
   bottom: 16px;
@@ -193,29 +227,35 @@ footer a:hover {
   height: 56px;
   width: 56px;
   border-radius: 16px;
-  background: center/32px var(--color-primary-container) url(../images/to_top.svg) no-repeat;
+  background: center/32px var(--color-primary-container) url("../images/to_top.svg") no-repeat;
   box-shadow: var(--card-shadow);
   z-index: 3;
 }
+
 #to-top:focus, #to-top:hover {
   filter: brightness(95%);
 }
+
 .text-center {
   text-align: center;
 }
-main, .altBase, footer {
+
+main, .alt-base, footer {
   animation: transformation 1s;
 }
+
 header, button, a, a * {
   transition-duration: .25s;
 }
+
 @media screen and (max-width: 800px) {
   td, tr {
     display: block;
   }
 }
+
 @media print {
-  header, #topBtn {
+  header, #to-top {
     display: none;
   }
 }

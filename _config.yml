@@ -1,12 +1,6 @@
 url: https://domi04151309.github.io
 
-exclude:
-- node_modules
-- tsconfig.json
-- package-lock.json
-- package.json
-- README.md
-- tsconfig.json
+source: public
 
 defaults:
   - scope:
